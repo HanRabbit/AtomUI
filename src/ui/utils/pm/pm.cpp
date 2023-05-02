@@ -3,7 +3,7 @@
 
 /**
  * @brief 通过Page name查找获取Page id
- * @param name Page name
+ * @param name: Page name
  * @return -1: None
  * @return id: Page id
  */
