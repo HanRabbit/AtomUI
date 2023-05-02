@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "ui_utils.h": "c",
+        "ui_start.h": "c"
+    }
+}
