@@ -3,7 +3,7 @@
 // LVGL version: 8.2.0
 // Project name: atom_ui
 
-#include "lvgl.h"
+#include "ui.h"
 
 #ifndef LV_ATTRIBUTE_MEM_ALIGN
 #define LV_ATTRIBUTE_MEM_ALIGN

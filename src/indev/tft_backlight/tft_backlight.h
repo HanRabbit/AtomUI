@@ -7,6 +7,9 @@
 #include "common/log/log.h"
 #include "ui/utils/ui_utils.h"
 
+#define BL_ON 255
+#define BL_OFF 0
+
 void bl_set_brightness(uint16_t brightness);
 
 uint16_t bl_get_brightness();

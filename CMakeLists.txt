@@ -30,4 +30,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/ui/pages/_template/_template.cpp src/ui/pages/_template/_template.h)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/ui/pages/_template/_template.cpp src/ui/pages/_template/_template.h src/ui/res/rp/rp.cpp src/ui/res/rp/rp.h src/ui/pages/home/home.cpp src/ui/pages/home/home.h src/ui/res/ui_img_battery_png.c src/indev/battery/battery.cpp src/indev/battery/battery.h)
