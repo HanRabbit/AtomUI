@@ -1,5 +1,6 @@
 #include "home.h"
 #include "indev/battery/battery.h"
+#include "common/esp_sleep/esp_sleep.h"
 
 lv_obj_t *scr;
 lv_obj_t *ui_statusBar;
@@ -230,7 +231,11 @@ lv_obj_t *HomePage::page_create() {
     lv_obj_set_style_text_align(ui_Label7, LV_TEXT_ALIGN_LEFT, 0);
     lv_obj_set_style_text_font(ui_Label7, &lv_font_montserrat_12, 0);
 
+    lv_group_add_obj(ui_group, scr);
+
     lv_timer_create(battery_status_show, 500, nullptr);
+
+    esp_sleep_init();
 
     return scr;
 }
@@ -238,4 +243,3 @@ lv_obj_t *HomePage::page_create() {
 lv_obj_t *HomePage::page_delete() {
     return nullptr;
 }
-

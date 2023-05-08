@@ -10,10 +10,6 @@ TFT_eSPI tft = TFT_eSPI(SCREEN_WIDTH, SCREEN_HEIGHT); /* TFT instance */
 
 static const uint8_t DISP_DIR = 1;
 
-static const uint8_t EC_BT = 2;
-static const uint8_t EC_A = 18;
-static const uint8_t EC_B = 3;
-
 ESP32Encoder enc;
 
 static lv_disp_draw_buf_t draw_buf;
@@ -26,7 +22,6 @@ uint16_t tft_bl_ = 0;
 long enc_diff = 0, enc_diff_last = 0;
 lv_indev_state_t enc_stat;
 
-lv_group_t *ui_group;
 
 /* Display flushing */
 void my_disp_flush( lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p ) {

@@ -6,8 +6,7 @@
 
 class HomePage {
 public:
-//    static void ui_event(lv_event_t *e);
-
+    static void ui_event(lv_event_t *e);
     static lv_obj_t *page_delete();
     static lv_obj_t *page_create();
 };

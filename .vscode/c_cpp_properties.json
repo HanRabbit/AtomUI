@@ -10,6 +10,7 @@
             "includePath": [
                 "H:/Atom/Atom_UI/include",
                 "H:/Atom/Atom_UI/src",
+                "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/ESP32Encoder/src",
                 "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/lvgl",
                 "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/lvgl/src",
                 "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/TFT_eSPI",
@@ -211,7 +212,6 @@
                 "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/qio_qspi/include",
                 "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                 "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/variants/esp32s3",
-                "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/ESP32Encoder/src",
                 "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                 "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                 "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -248,6 +248,7 @@
                 "path": [
                     "H:/Atom/Atom_UI/include",
                     "H:/Atom/Atom_UI/src",
+                    "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/ESP32Encoder/src",
                     "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/lvgl",
                     "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/lvgl/src",
                     "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/TFT_eSPI",
@@ -449,7 +450,6 @@
                     "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/qio_qspi/include",
                     "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/cores/esp32",
                     "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/variants/esp32s3",
-                    "H:/Atom/Atom_UI/.pio/libdeps/esp32-s3-devkitc-1/ESP32Encoder/src",
                     "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                     "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                     "C:/Users/Han/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
