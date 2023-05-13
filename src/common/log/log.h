@@ -6,7 +6,21 @@
 #define LOG_IS_USE_SERIAL 1
 
 #if LOG_IS_USE_SERIAL
-#define Log USBSerial
+#define LOG_ USBSerial
+
+static String LOG_NAME_DEFAULT = "Atom";
+
+class Log {
+public:
+    static void error(const String& err);
+    static void error(const String& name, const String& err);
+
+    static void msg(const String& msg);
+    static void msg(const String& name, const String& msg);
+
+    static void begin(unsigned long baud);
+};
+
 #endif
 
 #endif //ATOM_UI_LOG_H

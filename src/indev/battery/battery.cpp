@@ -1,8 +1,7 @@
 #include "battery.h"
-#include "common/log/log.h"
 
 void battery_init() {
-    gpio_set_direction(GPIO_NUM_35, GPIO_MODE_INPUT);
+    gpio_set_direction((gpio_num_t)BATTERY_PIN, GPIO_MODE_INPUT);
     adc1_config_channel_atten(ADC1_CHANNEL_7, ADC_ATTEN_DB_11);
 }
 

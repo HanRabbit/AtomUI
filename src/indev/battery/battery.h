@@ -3,9 +3,8 @@
 
 #include <Arduino.h>
 #include <driver/adc.h>
-
-#define BAT_PIN 35
-
+#include "indev/io_map/io_map.h"
+#include "common/log/log.h"
 
 void battery_init();
 uint16_t get_battery();

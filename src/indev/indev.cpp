@@ -15,8 +15,6 @@ ESP32Encoder enc;
 static lv_disp_draw_buf_t draw_buf;
 static lv_color_t buf[SCREEN_WIDTH * 10 ];
 
-lv_indev_drv_t indev_drv;
-
 uint16_t tft_bl_ = 0;
 
 long enc_diff = 0, enc_diff_last = 0;
@@ -79,25 +77,16 @@ static void lv_key_read(lv_indev_drv_t* indev_driver, lv_indev_data_t* data) {
     }
 
     enc_diff_last = enc_diff;
-    
-    return;
 }
 
-void lv_set_groups() {
-    ui_group = lv_group_create();
-    lv_group_set_default(ui_group);
-    lv_group_remove_all_objs(ui_group);
-
-    /* add objects to your groups */
-
-
-    lv_indev_set_group(lv_indev_drv_register(&indev_drv), ui_group);
+void lv_set_group(lv_group_t *group) {
+    lv_group_set_default(group);
+    lv_indev_set_group(lv_indev_drv_register(&indev_drv), group);
 }
 
 void lv_encoder_drv_init() {
     pinMode(EC_BT, INPUT_PULLUP);
-    // pinMode(EC_A, INPUT_PULLUP);
-    // pinMode(EC_B, INPUT_PULLUP);
+
     enc.attachHalfQuad(EC_A, EC_B);
     enc.setCount(0);
 
@@ -129,14 +118,12 @@ void lv_disp_init() {
 }
 
 void lv_port_drv_init() {
-    Log.begin(115200);
+    Log::begin(115200);
 
     lv_disp_init();
     lv_encoder_drv_init();
     
     battery_init();
-
-    lv_set_groups();
 
     bl_set_gradual(BL_ON, 200);
 }

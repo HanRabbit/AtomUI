@@ -5,15 +5,12 @@
 #include <lvgl.h>
 #include "tft_backlight/tft_backlight.h"
 #include "battery/battery.h"
+#include "io_map/io_map.h"
 
-lv_group_t *ui_group;
-
-const uint8_t EC_BT = 2;
-const uint8_t EC_A = 18;
-const uint8_t EC_B = 3;
+static lv_indev_drv_t indev_drv;
 
 void lv_port_drv_init();
 
-void lv_set_group();
+void lv_set_group(lv_group_t *group);
 
 #endif
