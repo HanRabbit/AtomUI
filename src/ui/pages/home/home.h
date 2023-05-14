@@ -4,12 +4,20 @@
 #include <lvgl.h>
 #include <Arduino.h>
 #include "ui/utils/ui_utils.h"
+#include "home_events.h"
+
+//static lv_obj_t *ui_Panel1;
+//static lv_obj_t *ui_Image1;
+//static lv_obj_t *ui_Label4;
+//static lv_obj_t *ui_Image2;
+//static lv_obj_t *ui_Label5;
+//static lv_obj_t *ui_Image3;
+//static lv_obj_t *ui_Label6;
+//static lv_obj_t *ui_Image4;
+//static lv_obj_t *ui_Label7;
 
 class HomePage {
 public:
-    static void ui_event(lv_event_t *e);
-    static void ui_timer_handle();
-
     static lv_obj_t *page_delete();
     static lv_obj_t *page_create();
 };

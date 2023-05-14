@@ -1,7 +1,12 @@
 #include "home.h"
-#include "indev/battery/battery.h"
 #include "common/esp_sleep/esp_sleep.h"
-#include "indev/wifi/wifi.h"
+
+LV_IMG_DECLARE(ui_img_wifi_png);   // assets\WIFI.png
+LV_IMG_DECLARE(ui_img_battery_png);   // assets\BATTERY.png
+LV_IMG_DECLARE(ui_img_wifi_closed_png);
+//LV_IMG_DECLARE( ui_img_link_png);   // assets\LINK.png
+//LV_IMG_DECLARE( ui_img_time_png);   // assets\TIME.png
+//LV_IMG_DECLARE( ui_img_follows_png);   // assets\FOLLOWS.png
 
 lv_obj_t *scr;
 lv_obj_t *ui_statusBar;
@@ -14,40 +19,7 @@ lv_obj_t *ui_timePanel;
 lv_obj_t *ui_Bar2;
 lv_obj_t *ui_timeLabel;
 lv_obj_t *ui_Label2;
-lv_obj_t *ui_Label3;
-//lv_obj_t *ui_Panel1;
-//lv_obj_t *ui_Image1;
-//lv_obj_t *ui_Label4;
-//lv_obj_t *ui_Image2;
-//lv_obj_t *ui_Label5;
-//lv_obj_t *ui_Image3;
-//lv_obj_t *ui_Label6;
-//lv_obj_t *ui_Image4;
-//lv_obj_t *ui_Label7;
-
-LV_IMG_DECLARE(ui_img_wifi_png);   // assets\WIFI.png
-LV_IMG_DECLARE(ui_img_battery_png);   // assets\BATTERY.png
-LV_IMG_DECLARE(ui_img_wifi_closed_png);
-//LV_IMG_DECLARE( ui_img_link_png);   // assets\LINK.png
-//LV_IMG_DECLARE( ui_img_time_png);   // assets\TIME.png
-//LV_IMG_DECLARE( ui_img_follows_png);   // assets\FOLLOWS.png
-
-void battery_status_show(lv_timer_t *timer) {
-    lv_label_set_text(ui_battery_label, ((String)get_battery() + "%").c_str());
-}
-
-void HomePage::ui_event(lv_event_t *e) {
-    lv_event_code_t e_code = lv_event_get_code(e);
-    if (e_code == LV_EVENT_SCREEN_LOADED) {
-        anim_zoom_fade_out(ui_timePanel, 0);
-        anim_down(ui_statusBar, 400);
-    }
-}
-
-void HomePage::ui_timer_handle() {
-//    lv_timer_create(battery_status_show, 500, nullptr);
-    lv_timer_create(wifi_status_update, 1000, nullptr);
-}
+lv_obj_t *ui_yearLabel;
 
 lv_obj_t *HomePage::page_create() {
     scr = lv_obj_create(nullptr);
@@ -64,7 +36,7 @@ lv_obj_t *HomePage::page_create() {
     lv_obj_clear_flag( ui_statusBar, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
     lv_obj_set_style_radius(ui_statusBar, 0, 0);
     lv_obj_set_style_bg_color(ui_statusBar, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT );
-    lv_obj_set_style_bg_opa(ui_statusBar, 255, 0);
+    lv_obj_set_style_bg_opa(ui_statusBar, 0, 0);
     lv_obj_set_style_border_width(ui_statusBar, 0, 0);
 
     ui_wifiMode = lv_label_create(ui_statusBar);
@@ -136,7 +108,7 @@ lv_obj_t *HomePage::page_create() {
     lv_obj_set_x( ui_timeLabel, 0 );
     lv_obj_set_y( ui_timeLabel, -16 );
     lv_obj_set_align( ui_timeLabel, LV_ALIGN_CENTER );
-    lv_label_set_text(ui_timeLabel,"13:01");
+    lv_label_set_text(ui_timeLabel,"00:00");
     lv_obj_set_style_text_letter_space(ui_timeLabel, 2, 0);
     lv_obj_set_style_text_line_space(ui_timeLabel, 0, 0);
     lv_obj_set_style_text_font(ui_timeLabel, &lv_font_montserrat_40, 0);
@@ -148,14 +120,14 @@ lv_obj_t *HomePage::page_create() {
     lv_label_set_text(ui_Label2,"Wed");
     lv_obj_set_style_text_font(ui_Label2, &lv_font_montserrat_14, 0);
 
-    ui_Label3 = lv_label_create(ui_timePanel);
-    lv_obj_set_width( ui_Label3, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height( ui_Label3, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_align( ui_Label3, LV_ALIGN_BOTTOM_RIGHT );
-    lv_label_set_text(ui_Label3,"2023-4-15");
-    lv_obj_set_style_text_letter_space(ui_Label3, 2, 0);
-    lv_obj_set_style_text_line_space(ui_Label3, 0, 0);
-    lv_obj_set_style_text_font(ui_Label3, &lv_font_montserrat_14, 0);
+    ui_yearLabel = lv_label_create(ui_timePanel);
+    lv_obj_set_width(ui_yearLabel, LV_SIZE_CONTENT);  /// 1
+    lv_obj_set_height(ui_yearLabel, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_align(ui_yearLabel, LV_ALIGN_BOTTOM_RIGHT );
+    lv_label_set_text(ui_yearLabel, "2023-4-15");
+    lv_obj_set_style_text_letter_space(ui_yearLabel, 2, 0);
+    lv_obj_set_style_text_line_space(ui_yearLabel, 0, 0);
+    lv_obj_set_style_text_font(ui_yearLabel, &lv_font_montserrat_14, 0);
 
 //    ui_Panel1 = lv_obj_create(scr);
 //    lv_obj_set_width( ui_Panel1, 300);
@@ -246,9 +218,7 @@ lv_obj_t *HomePage::page_create() {
 //    lv_obj_set_style_text_align(ui_Label7, LV_TEXT_ALIGN_LEFT, 0);
 //    lv_obj_set_style_text_font(ui_Label7, &lv_font_montserrat_12, 0);
 
-    lv_obj_add_event_cb(scr, ui_event, LV_EVENT_ALL, nullptr);
-
-    ui_timer_handle();
+    ui_events_handle();
 
     esp_sleep_init();
 
