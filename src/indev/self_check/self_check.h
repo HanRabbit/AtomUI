@@ -8,6 +8,8 @@
 
 #define SYS_SELF_CHECK_OK 0
 
+static uint8_t sys_self_check_code = 0;
+
 uint8_t sys_indev_check();
 
 #endif //ATOM_UI_SELF_CHECK_H

@@ -1,6 +1,7 @@
 #include "home.h"
 #include "indev/battery/battery.h"
 #include "common/esp_sleep/esp_sleep.h"
+#include "indev/wifi/wifi.h"
 
 lv_obj_t *scr;
 lv_obj_t *ui_statusBar;
@@ -14,28 +15,42 @@ lv_obj_t *ui_Bar2;
 lv_obj_t *ui_timeLabel;
 lv_obj_t *ui_Label2;
 lv_obj_t *ui_Label3;
-lv_obj_t *ui_Panel1;
-lv_obj_t *ui_Image1;
-lv_obj_t *ui_Label4;
-lv_obj_t *ui_Image2;
-lv_obj_t *ui_Label5;
-lv_obj_t *ui_Image3;
-lv_obj_t *ui_Label6;
-lv_obj_t *ui_Image4;
-lv_obj_t *ui_Label7;
+//lv_obj_t *ui_Panel1;
+//lv_obj_t *ui_Image1;
+//lv_obj_t *ui_Label4;
+//lv_obj_t *ui_Image2;
+//lv_obj_t *ui_Label5;
+//lv_obj_t *ui_Image3;
+//lv_obj_t *ui_Label6;
+//lv_obj_t *ui_Image4;
+//lv_obj_t *ui_Label7;
 
-LV_IMG_DECLARE( ui_img_wifi_png);   // assets\WIFI.png
-LV_IMG_DECLARE( ui_img_battery_png);   // assets\BATTERY.png
-LV_IMG_DECLARE( ui_img_link_png);   // assets\LINK.png
-LV_IMG_DECLARE( ui_img_time_png);   // assets\TIME.png
-LV_IMG_DECLARE( ui_img_follows_png);   // assets\FOLLOWS.png
+LV_IMG_DECLARE(ui_img_wifi_png);   // assets\WIFI.png
+LV_IMG_DECLARE(ui_img_battery_png);   // assets\BATTERY.png
+LV_IMG_DECLARE(ui_img_wifi_closed_png);
+//LV_IMG_DECLARE( ui_img_link_png);   // assets\LINK.png
+//LV_IMG_DECLARE( ui_img_time_png);   // assets\TIME.png
+//LV_IMG_DECLARE( ui_img_follows_png);   // assets\FOLLOWS.png
 
 void battery_status_show(lv_timer_t *timer) {
     lv_label_set_text(ui_battery_label, ((String)get_battery() + "%").c_str());
 }
 
+void HomePage::ui_event(lv_event_t *e) {
+    lv_event_code_t e_code = lv_event_get_code(e);
+    if (e_code == LV_EVENT_SCREEN_LOADED) {
+        anim_zoom_fade_out(ui_timePanel, 0);
+        anim_down(ui_statusBar, 400);
+    }
+}
+
+void HomePage::ui_timer_handle() {
+//    lv_timer_create(battery_status_show, 500, nullptr);
+    lv_timer_create(wifi_status_update, 1000, nullptr);
+}
+
 lv_obj_t *HomePage::page_create() {
-    scr = lv_obj_create(NULL);
+    scr = lv_obj_create(nullptr);
     lv_obj_clear_flag( scr, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
     lv_obj_set_style_bg_color(scr, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT );
     lv_obj_set_style_bg_opa(scr, 255, 0);
@@ -58,11 +73,11 @@ lv_obj_t *HomePage::page_create() {
     lv_obj_set_x( ui_wifiMode, 20 );
     lv_obj_set_y( ui_wifiMode, 0 );
     lv_obj_set_align( ui_wifiMode, LV_ALIGN_LEFT_MID );
-    lv_label_set_text(ui_wifiMode,"STA");
+    lv_label_set_text(ui_wifiMode,"");
     lv_obj_set_style_text_font(ui_wifiMode, &lv_font_montserrat_12, 0);
 
     ui_wifiIcon = lv_img_create(ui_statusBar);
-    lv_img_set_src(ui_wifiIcon, &ui_img_wifi_png);
+    lv_img_set_src(ui_wifiIcon, &ui_img_wifi_closed_png);
     lv_obj_set_width( ui_wifiIcon, LV_SIZE_CONTENT);  /// 1
     lv_obj_set_height( ui_wifiIcon, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_align( ui_wifiIcon, LV_ALIGN_LEFT_MID );
@@ -142,96 +157,98 @@ lv_obj_t *HomePage::page_create() {
     lv_obj_set_style_text_line_space(ui_Label3, 0, 0);
     lv_obj_set_style_text_font(ui_Label3, &lv_font_montserrat_14, 0);
 
-    ui_Panel1 = lv_obj_create(scr);
-    lv_obj_set_width( ui_Panel1, 300);
-    lv_obj_set_height( ui_Panel1, 66);
-    lv_obj_set_x( ui_Panel1, 0 );
-    lv_obj_set_y( ui_Panel1, 80 );
-    lv_obj_set_align( ui_Panel1, LV_ALIGN_CENTER );
-    lv_obj_clear_flag( ui_Panel1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
-    lv_obj_set_style_bg_color(ui_Panel1, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT );
-    lv_obj_set_style_bg_opa(ui_Panel1, 255, 0);
-    lv_obj_set_style_border_width(ui_Panel1, 0, 0);
+//    ui_Panel1 = lv_obj_create(scr);
+//    lv_obj_set_width( ui_Panel1, 300);
+//    lv_obj_set_height( ui_Panel1, 66);
+//    lv_obj_set_x( ui_Panel1, 0 );
+//    lv_obj_set_y( ui_Panel1, 80 );
+//    lv_obj_set_align( ui_Panel1, LV_ALIGN_CENTER );
+//    lv_obj_clear_flag( ui_Panel1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
+//    lv_obj_set_style_bg_color(ui_Panel1, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT );
+//    lv_obj_set_style_bg_opa(ui_Panel1, 255, 0);
+//    lv_obj_set_style_border_width(ui_Panel1, 0, 0);
+//
+//    ui_Image1 = lv_img_create(ui_Panel1);
+//    lv_img_set_src(ui_Image1, &ui_img_link_png);
+//    lv_obj_set_width( ui_Image1, LV_SIZE_CONTENT);  /// 1
+//    lv_obj_set_height( ui_Image1, LV_SIZE_CONTENT);   /// 1
+//    lv_obj_add_flag( ui_Image1, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
+//    lv_obj_clear_flag( ui_Image1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
+//
+//    ui_Label4 = lv_label_create(ui_Panel1);
+//    lv_obj_set_width( ui_Label4, LV_SIZE_CONTENT);  /// 1
+//    lv_obj_set_height( ui_Label4, LV_SIZE_CONTENT);   /// 1
+//    lv_obj_set_x( ui_Label4, 26 );
+//    lv_obj_set_y( ui_Label4, 3 );
+//    lv_label_set_text(ui_Label4,"PING: 45ms");
+//    lv_obj_set_style_text_letter_space(ui_Label4, 2, 0);
+//    lv_obj_set_style_text_line_space(ui_Label4, 0, 0);
+//    lv_obj_set_style_text_font(ui_Label4, &lv_font_montserrat_12, 0);
+//
+//    ui_Image2 = lv_img_create(ui_Panel1);
+//    lv_img_set_src(ui_Image2, &ui_img_time_png);
+//    lv_obj_set_width( ui_Image2, LV_SIZE_CONTENT);  /// 1
+//    lv_obj_set_height( ui_Image2, LV_SIZE_CONTENT);   /// 1
+//    lv_obj_set_x( ui_Image2, -92 );
+//    lv_obj_set_y( ui_Image2, 0 );
+//    lv_obj_set_align( ui_Image2, LV_ALIGN_TOP_RIGHT );
+//    lv_obj_add_flag( ui_Image2, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
+//    lv_obj_clear_flag( ui_Image2, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
+//
+//    ui_Label5 = lv_label_create(ui_Panel1);
+//    lv_obj_set_width( ui_Label5, 86);
+//    lv_obj_set_height( ui_Label5, LV_SIZE_CONTENT);   /// 1
+//    lv_obj_set_x( ui_Label5, 0 );
+//    lv_obj_set_y( ui_Label5, 2 );
+//    lv_obj_set_align( ui_Label5, LV_ALIGN_TOP_RIGHT );
+//    lv_label_set_text(ui_Label5,"START: 40s");
+//    lv_obj_set_style_text_letter_space(ui_Label5, 2, 0);
+//    lv_obj_set_style_text_line_space(ui_Label5, 0, 0);
+//    lv_obj_set_style_text_align(ui_Label5, LV_TEXT_ALIGN_LEFT, 0);
+//    lv_obj_set_style_text_font(ui_Label5, &lv_font_montserrat_12, 0);
+//
+//    ui_Image3 = lv_img_create(ui_Panel1);
+//    lv_img_set_src(ui_Image3, &ui_img_follows_png);
+//    lv_obj_set_width( ui_Image3, LV_SIZE_CONTENT);  /// 1
+//    lv_obj_set_height( ui_Image3, LV_SIZE_CONTENT);   /// 1
+//    lv_obj_set_align( ui_Image3, LV_ALIGN_BOTTOM_LEFT );
+//    lv_obj_add_flag( ui_Image3, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
+//    lv_obj_clear_flag( ui_Image3, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
+//
+//    ui_Label6 = lv_label_create(ui_Panel1);
+//    lv_obj_set_width( ui_Label6, LV_SIZE_CONTENT);  /// 1
+//    lv_obj_set_height( ui_Label6, LV_SIZE_CONTENT);   /// 1
+//    lv_obj_set_x( ui_Label6, 26 );
+//    lv_obj_set_y( ui_Label6, 0 );
+//    lv_obj_set_align( ui_Label6, LV_ALIGN_BOTTOM_LEFT );
+//    lv_label_set_text(ui_Label6,"FOLLOWS: 45");
+//    lv_obj_set_style_text_letter_space(ui_Label6, 2, 0);
+//    lv_obj_set_style_text_line_space(ui_Label6, 0, 0);
+//    lv_obj_set_style_text_font(ui_Label6, &lv_font_montserrat_12, 0);
+//
+//    ui_Image4 = lv_img_create(ui_Panel1);
+//    lv_img_set_src(ui_Image4, &ui_img_follows_png);
+//    lv_obj_set_width( ui_Image4, LV_SIZE_CONTENT);
+//    lv_obj_set_height( ui_Image4, LV_SIZE_CONTENT);
+//    lv_obj_set_x( ui_Image4, -92 );
+//    lv_obj_set_y( ui_Image4, 0 );
+//    lv_obj_set_align( ui_Image4, LV_ALIGN_BOTTOM_RIGHT );
+//    lv_obj_add_flag( ui_Image4, LV_OBJ_FLAG_ADV_HITTEST );
+//    lv_obj_clear_flag( ui_Image4, LV_OBJ_FLAG_SCROLLABLE );
+//
+//    ui_Label7 = lv_label_create(ui_Panel1);
+//    lv_obj_set_width( ui_Label7, 86);
+//    lv_obj_set_height( ui_Label7, LV_SIZE_CONTENT);
+//    lv_obj_set_align( ui_Label7, LV_ALIGN_BOTTOM_RIGHT );
+//    lv_label_set_text(ui_Label7,"APPS: 8");
+//    lv_obj_set_style_text_letter_space(ui_Label7, 2, 0);
+//    lv_obj_set_style_text_line_space(ui_Label7, 0, 0);
+//    lv_obj_set_style_text_align(ui_Label7, LV_TEXT_ALIGN_LEFT, 0);
+//    lv_obj_set_style_text_font(ui_Label7, &lv_font_montserrat_12, 0);
 
-    ui_Image1 = lv_img_create(ui_Panel1);
-    lv_img_set_src(ui_Image1, &ui_img_link_png);
-    lv_obj_set_width( ui_Image1, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height( ui_Image1, LV_SIZE_CONTENT);   /// 1
-    lv_obj_add_flag( ui_Image1, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
-    lv_obj_clear_flag( ui_Image1, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
+    lv_obj_add_event_cb(scr, ui_event, LV_EVENT_ALL, nullptr);
 
-    ui_Label4 = lv_label_create(ui_Panel1);
-    lv_obj_set_width( ui_Label4, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height( ui_Label4, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_x( ui_Label4, 26 );
-    lv_obj_set_y( ui_Label4, 3 );
-    lv_label_set_text(ui_Label4,"PING: 45ms");
-    lv_obj_set_style_text_letter_space(ui_Label4, 2, 0);
-    lv_obj_set_style_text_line_space(ui_Label4, 0, 0);
-    lv_obj_set_style_text_font(ui_Label4, &lv_font_montserrat_12, 0);
-
-    ui_Image2 = lv_img_create(ui_Panel1);
-    lv_img_set_src(ui_Image2, &ui_img_time_png);
-    lv_obj_set_width( ui_Image2, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height( ui_Image2, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_x( ui_Image2, -92 );
-    lv_obj_set_y( ui_Image2, 0 );
-    lv_obj_set_align( ui_Image2, LV_ALIGN_TOP_RIGHT );
-    lv_obj_add_flag( ui_Image2, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
-    lv_obj_clear_flag( ui_Image2, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
-
-    ui_Label5 = lv_label_create(ui_Panel1);
-    lv_obj_set_width( ui_Label5, 86);
-    lv_obj_set_height( ui_Label5, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_x( ui_Label5, 0 );
-    lv_obj_set_y( ui_Label5, 2 );
-    lv_obj_set_align( ui_Label5, LV_ALIGN_TOP_RIGHT );
-    lv_label_set_text(ui_Label5,"START: 40s");
-    lv_obj_set_style_text_letter_space(ui_Label5, 2, 0);
-    lv_obj_set_style_text_line_space(ui_Label5, 0, 0);
-    lv_obj_set_style_text_align(ui_Label5, LV_TEXT_ALIGN_LEFT, 0);
-    lv_obj_set_style_text_font(ui_Label5, &lv_font_montserrat_12, 0);
-
-    ui_Image3 = lv_img_create(ui_Panel1);
-    lv_img_set_src(ui_Image3, &ui_img_follows_png);
-    lv_obj_set_width( ui_Image3, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height( ui_Image3, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_align( ui_Image3, LV_ALIGN_BOTTOM_LEFT );
-    lv_obj_add_flag( ui_Image3, LV_OBJ_FLAG_ADV_HITTEST );   /// Flags
-    lv_obj_clear_flag( ui_Image3, LV_OBJ_FLAG_SCROLLABLE );    /// Flags
-
-    ui_Label6 = lv_label_create(ui_Panel1);
-    lv_obj_set_width( ui_Label6, LV_SIZE_CONTENT);  /// 1
-    lv_obj_set_height( ui_Label6, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_x( ui_Label6, 26 );
-    lv_obj_set_y( ui_Label6, 0 );
-    lv_obj_set_align( ui_Label6, LV_ALIGN_BOTTOM_LEFT );
-    lv_label_set_text(ui_Label6,"FOLLOWS: 45");
-    lv_obj_set_style_text_letter_space(ui_Label6, 2, 0);
-    lv_obj_set_style_text_line_space(ui_Label6, 0, 0);
-    lv_obj_set_style_text_font(ui_Label6, &lv_font_montserrat_12, 0);
-
-    ui_Image4 = lv_img_create(ui_Panel1);
-    lv_img_set_src(ui_Image4, &ui_img_follows_png);
-    lv_obj_set_width( ui_Image4, LV_SIZE_CONTENT);
-    lv_obj_set_height( ui_Image4, LV_SIZE_CONTENT);
-    lv_obj_set_x( ui_Image4, -92 );
-    lv_obj_set_y( ui_Image4, 0 );
-    lv_obj_set_align( ui_Image4, LV_ALIGN_BOTTOM_RIGHT );
-    lv_obj_add_flag( ui_Image4, LV_OBJ_FLAG_ADV_HITTEST );
-    lv_obj_clear_flag( ui_Image4, LV_OBJ_FLAG_SCROLLABLE );
-
-    ui_Label7 = lv_label_create(ui_Panel1);
-    lv_obj_set_width( ui_Label7, 86);
-    lv_obj_set_height( ui_Label7, LV_SIZE_CONTENT);
-    lv_obj_set_align( ui_Label7, LV_ALIGN_BOTTOM_RIGHT );
-    lv_label_set_text(ui_Label7,"APPS: 8");
-    lv_obj_set_style_text_letter_space(ui_Label7, 2, 0);
-    lv_obj_set_style_text_line_space(ui_Label7, 0, 0);
-    lv_obj_set_style_text_align(ui_Label7, LV_TEXT_ALIGN_LEFT, 0);
-    lv_obj_set_style_text_font(ui_Label7, &lv_font_montserrat_12, 0);
-
-    lv_timer_create(battery_status_show, 500, nullptr);
+    ui_timer_handle();
 
     esp_sleep_init();
 

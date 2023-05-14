@@ -2,6 +2,7 @@
 #define ATOM_UI_LOG_H
 
 #include <Arduino.h>
+#include "error_codes.h"
 
 #define LOG_IS_USE_SERIAL 1
 
