@@ -1,16 +1,14 @@
 #include "app.h"
 #include "pages/startup/startup.h"
 #include "pages/error/error.h"
-#include "pages/home/home.h"
+#include "pages/msg_page/msg_page.h"
+//#include "pages/home/home.h"
 
 PageManager pageManager;
 
 void go_into_home(lv_timer_t *timer) {
-//    if (sys_indev_check() == SYS_SELF_CHECK_OK) {
-        pageManager.push("PAGE/HOME");
-//    } else {
-//        pageManager.push("PAGE/ERROR", PM_SCR_ANIM_FADE_ON);
-//    }
+    pageManager.push("PAGE/MSG")
+    
     lv_timer_del(timer);
 }
 
@@ -21,9 +19,12 @@ void app_init() {
     pageManager.add_page("PAGE/ERROR",
                          ErrorPage::page_create,
                          ErrorPage::page_delete);
-    pageManager.add_page("PAGE/HOME",
-                         HomePage::page_create,
-                         HomePage::page_delete);
+    pageManager.add_page("PAGE/MSG",
+                         MsgPage::page_create,
+                         MsgPage::page_delete);
+//    pageManager.add_page("PAGE/HOME",
+//                         HomePage::page_create,
+//                         HomePage::page_delete);
 
     /* Start Push */
     pageManager.push("PAGE/STARTUP");

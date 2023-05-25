@@ -1,7 +1,7 @@
 #ifndef ATOM_UI_HOME_H
 #define ATOM_UI_HOME_H
 
-#include <lvgl.h>
+#include "lvgl.h"
 #include <Arduino.h>
 #include "ui/utils/ui_utils.h"
 #include "home_events.h"
