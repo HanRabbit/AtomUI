@@ -15,6 +15,9 @@ ESP32Encoder enc;
 static lv_disp_draw_buf_t draw_buf;
 static lv_color_t buf[SCREEN_WIDTH * 10 ];
 
+lv_indev_t *indev;
+lv_group_t *ui_group;
+
 uint16_t tft_bl_ = 0;
 
 long enc_diff = 0, enc_diff_last = 0;
@@ -43,23 +46,6 @@ void Key_Scan() {
         enc_stat = LV_INDEV_STATE_REL;	//松开
 
     enc_diff = enc.getCount() / 2;
-
-    // if(digitalRead(EC_A) == 0 && digitalRead(EC_B) == 0 && but_flag)	    //编码器左转
-    // {
-   	//  	enc_diff --;
-    //     but_flag = false;
-    // }
-    // else if(digitalRead(EC_A) == 1 && digitalRead(EC_B) == 1 && but_flag)       //编码器右转
-    // {
-    // 	enc_diff ++;
-    //     but_flag = false;
-    // }
-    // else if(digitalRead(EC_A) == 1 && digitalRead(EC_B) == 0)
-    //     but_flag = true;
-
-    // USBSerial.println(enc_diff);
-    // USBSerial.println("EC_A=" + String(digitalRead(EC_A)));
-    // USBSerial.println("EC_B=" + String(digitalRead(EC_B)));
 }
 
 static void lv_key_read(lv_indev_drv_t* indev_driver, lv_indev_data_t* data) {
@@ -79,9 +65,10 @@ static void lv_key_read(lv_indev_drv_t* indev_driver, lv_indev_data_t* data) {
     enc_diff_last = enc_diff;
 }
 
-void lv_set_group(lv_group_t *group) {
-    lv_group_set_default(group);
-    lv_indev_set_group(lv_indev_drv_register(&indev_drv), group);
+void lv_group_init() {
+    lv_group_remove_all_objs(ui_group);
+    lv_group_set_default(ui_group);
+    lv_indev_set_group(lv_indev_drv_register(&indev_drv), ui_group);
 }
 
 void lv_encoder_drv_init() {
@@ -93,7 +80,7 @@ void lv_encoder_drv_init() {
     lv_indev_drv_init(&indev_drv);
     indev_drv.type = LV_INDEV_TYPE_ENCODER;
     indev_drv.read_cb = lv_key_read;
-    lv_indev_drv_register(&indev_drv);
+    indev = lv_indev_drv_register(&indev_drv);
 }
 
 void lv_disp_init() {
@@ -124,6 +111,8 @@ void lv_port_drv_init() {
     lv_encoder_drv_init();
     
     battery_init();
+
+    // lv_group_init();
 
     bl_set_gradual(BL_ON, 200);
 }

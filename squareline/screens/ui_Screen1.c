@@ -76,6 +76,84 @@ void ui_Screen1_screen_init(void)
     lv_obj_set_style_bg_opa(ui_timePanel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(ui_timePanel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    ui_hourMinPanel = lv_obj_create(ui_timePanel);
+    lv_obj_set_width(ui_hourMinPanel, 114);
+    lv_obj_set_height(ui_hourMinPanel, 50);
+    lv_obj_set_x(ui_hourMinPanel, 0);
+    lv_obj_set_y(ui_hourMinPanel, -10);
+    lv_obj_set_align(ui_hourMinPanel, LV_ALIGN_CENTER);
+    lv_obj_clear_flag(ui_hourMinPanel, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_bg_color(ui_hourMinPanel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_hourMinPanel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui_hourMinPanel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    ui_minRoller2 = lv_roller_create(ui_hourMinPanel);
+    lv_roller_set_options(ui_minRoller2, "1\n2\n3\n4", LV_ROLLER_MODE_NORMAL);
+    lv_obj_set_width(ui_minRoller2, 28);
+    lv_obj_set_height(ui_minRoller2, 42);
+    lv_obj_set_x(ui_minRoller2, 40);
+    lv_obj_set_y(ui_minRoller2, 0);
+    lv_obj_set_align(ui_minRoller2, LV_ALIGN_CENTER);
+    lv_obj_set_style_text_font(ui_minRoller2, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_minRoller2, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_minRoller2, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui_minRoller2, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    lv_obj_set_style_bg_color(ui_minRoller2, lv_color_hex(0xFFFFFF), LV_PART_SELECTED | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_minRoller2, 0, LV_PART_SELECTED | LV_STATE_DEFAULT);
+
+    ui_minRoller1 = lv_roller_create(ui_hourMinPanel);
+    lv_roller_set_options(ui_minRoller1, "1\n2\n3\n4", LV_ROLLER_MODE_NORMAL);
+    lv_obj_set_width(ui_minRoller1, 28);
+    lv_obj_set_height(ui_minRoller1, 42);
+    lv_obj_set_x(ui_minRoller1, 20);
+    lv_obj_set_y(ui_minRoller1, 0);
+    lv_obj_set_align(ui_minRoller1, LV_ALIGN_CENTER);
+    lv_obj_set_style_text_font(ui_minRoller1, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_minRoller1, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_minRoller1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui_minRoller1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    lv_obj_set_style_bg_color(ui_minRoller1, lv_color_hex(0xFFFFFF), LV_PART_SELECTED | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_minRoller1, 0, LV_PART_SELECTED | LV_STATE_DEFAULT);
+
+    ui_Label13 = lv_label_create(ui_hourMinPanel);
+    lv_obj_set_width(ui_Label13, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_Label13, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_align(ui_Label13, LV_ALIGN_CENTER);
+    lv_label_set_text(ui_Label13, ":");
+    lv_obj_set_style_text_font(ui_Label13, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    ui_hourRoller2 = lv_roller_create(ui_hourMinPanel);
+    lv_roller_set_options(ui_hourRoller2, "1\n2\n3\n4", LV_ROLLER_MODE_NORMAL);
+    lv_obj_set_width(ui_hourRoller2, 28);
+    lv_obj_set_height(ui_hourRoller2, 42);
+    lv_obj_set_x(ui_hourRoller2, -20);
+    lv_obj_set_y(ui_hourRoller2, 0);
+    lv_obj_set_align(ui_hourRoller2, LV_ALIGN_CENTER);
+    lv_obj_set_style_text_font(ui_hourRoller2, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_hourRoller2, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_hourRoller2, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui_hourRoller2, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    lv_obj_set_style_bg_color(ui_hourRoller2, lv_color_hex(0xFFFFFF), LV_PART_SELECTED | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_hourRoller2, 0, LV_PART_SELECTED | LV_STATE_DEFAULT);
+
+    ui_hourRoller1 = lv_roller_create(ui_hourMinPanel);
+    lv_roller_set_options(ui_hourRoller1, "1\n2\n3\n4", LV_ROLLER_MODE_NORMAL);
+    lv_obj_set_width(ui_hourRoller1, 28);
+    lv_obj_set_height(ui_hourRoller1, 42);
+    lv_obj_set_x(ui_hourRoller1, -40);
+    lv_obj_set_y(ui_hourRoller1, 0);
+    lv_obj_set_align(ui_hourRoller1, LV_ALIGN_CENTER);
+    lv_obj_set_style_text_font(ui_hourRoller1, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_hourRoller1, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_hourRoller1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui_hourRoller1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    lv_obj_set_style_bg_color(ui_hourRoller1, lv_color_hex(0xFFFFFF), LV_PART_SELECTED | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_hourRoller1, 0, LV_PART_SELECTED | LV_STATE_DEFAULT);
+
     ui_Bar2 = lv_bar_create(ui_timePanel);
     lv_bar_set_value(ui_Bar2, 100, LV_ANIM_OFF);
     lv_obj_set_width(ui_Bar2, 140);
@@ -191,83 +269,5 @@ void ui_Screen1_screen_init(void)
     lv_obj_set_style_text_line_space(ui_Label7, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui_Label7, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_Label7, &lv_font_montserrat_12, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    ui_hourMinPanel = lv_obj_create(ui_Screen1);
-    lv_obj_set_width(ui_hourMinPanel, 114);
-    lv_obj_set_height(ui_hourMinPanel, 50);
-    lv_obj_set_x(ui_hourMinPanel, 0);
-    lv_obj_set_y(ui_hourMinPanel, -24);
-    lv_obj_set_align(ui_hourMinPanel, LV_ALIGN_CENTER);
-    lv_obj_clear_flag(ui_hourMinPanel, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-    lv_obj_set_style_bg_color(ui_hourMinPanel, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_hourMinPanel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui_hourMinPanel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    ui_minRoller2 = lv_roller_create(ui_hourMinPanel);
-    lv_roller_set_options(ui_minRoller2, "1\n2\n3\n4", LV_ROLLER_MODE_NORMAL);
-    lv_obj_set_width(ui_minRoller2, 28);
-    lv_obj_set_height(ui_minRoller2, 42);
-    lv_obj_set_x(ui_minRoller2, 40);
-    lv_obj_set_y(ui_minRoller2, 0);
-    lv_obj_set_align(ui_minRoller2, LV_ALIGN_CENTER);
-    lv_obj_set_style_text_font(ui_minRoller2, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui_minRoller2, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_minRoller2, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui_minRoller2, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    lv_obj_set_style_bg_color(ui_minRoller2, lv_color_hex(0xFFFFFF), LV_PART_SELECTED | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_minRoller2, 0, LV_PART_SELECTED | LV_STATE_DEFAULT);
-
-    ui_minRoller1 = lv_roller_create(ui_hourMinPanel);
-    lv_roller_set_options(ui_minRoller1, "1\n2\n3\n4", LV_ROLLER_MODE_NORMAL);
-    lv_obj_set_width(ui_minRoller1, 28);
-    lv_obj_set_height(ui_minRoller1, 42);
-    lv_obj_set_x(ui_minRoller1, 20);
-    lv_obj_set_y(ui_minRoller1, 0);
-    lv_obj_set_align(ui_minRoller1, LV_ALIGN_CENTER);
-    lv_obj_set_style_text_font(ui_minRoller1, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui_minRoller1, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_minRoller1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui_minRoller1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    lv_obj_set_style_bg_color(ui_minRoller1, lv_color_hex(0xFFFFFF), LV_PART_SELECTED | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_minRoller1, 0, LV_PART_SELECTED | LV_STATE_DEFAULT);
-
-    ui_Label13 = lv_label_create(ui_hourMinPanel);
-    lv_obj_set_width(ui_Label13, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Label13, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_align(ui_Label13, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Label13, ":");
-    lv_obj_set_style_text_font(ui_Label13, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    ui_hourRoller2 = lv_roller_create(ui_hourMinPanel);
-    lv_roller_set_options(ui_hourRoller2, "1\n2\n3\n4", LV_ROLLER_MODE_NORMAL);
-    lv_obj_set_width(ui_hourRoller2, 28);
-    lv_obj_set_height(ui_hourRoller2, 42);
-    lv_obj_set_x(ui_hourRoller2, -20);
-    lv_obj_set_y(ui_hourRoller2, 0);
-    lv_obj_set_align(ui_hourRoller2, LV_ALIGN_CENTER);
-    lv_obj_set_style_text_font(ui_hourRoller2, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui_hourRoller2, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_hourRoller2, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui_hourRoller2, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    lv_obj_set_style_bg_color(ui_hourRoller2, lv_color_hex(0xFFFFFF), LV_PART_SELECTED | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_hourRoller2, 0, LV_PART_SELECTED | LV_STATE_DEFAULT);
-
-    ui_hourRoller1 = lv_roller_create(ui_hourMinPanel);
-    lv_roller_set_options(ui_hourRoller1, "1\n2\n3\n4", LV_ROLLER_MODE_NORMAL);
-    lv_obj_set_width(ui_hourRoller1, 28);
-    lv_obj_set_height(ui_hourRoller1, 42);
-    lv_obj_set_x(ui_hourRoller1, -40);
-    lv_obj_set_y(ui_hourRoller1, 0);
-    lv_obj_set_align(ui_hourRoller1, LV_ALIGN_CENTER);
-    lv_obj_set_style_text_font(ui_hourRoller1, &lv_font_montserrat_34, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui_hourRoller1, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_hourRoller1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui_hourRoller1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    lv_obj_set_style_bg_color(ui_hourRoller1, lv_color_hex(0xFFFFFF), LV_PART_SELECTED | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_hourRoller1, 0, LV_PART_SELECTED | LV_STATE_DEFAULT);
 
 }

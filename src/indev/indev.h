@@ -11,6 +11,6 @@ static lv_indev_drv_t indev_drv;
 
 void lv_port_drv_init();
 
-void lv_set_group(lv_group_t *group);
+// void lv_set_group(lv_group_t *group);
 
 #endif

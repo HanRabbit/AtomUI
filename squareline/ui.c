@@ -9,6 +9,7 @@
 ///////////////////// VARIABLES ////////////////////
 void anim_down_Animation(lv_obj_t * TargetObject, int delay);
 void anim_zoom_fade_out_Animation(lv_obj_t * TargetObject, int delay);
+void side_bar_spread_Animation(lv_obj_t * TargetObject, int delay);
 
 // SCREEN: ui_Screen1
 void ui_Screen1_screen_init(void);
@@ -20,6 +21,12 @@ lv_obj_t * ui_atomLabel;
 lv_obj_t * ui_batteryIcon;
 lv_obj_t * ui_Label1;
 lv_obj_t * ui_timePanel;
+lv_obj_t * ui_hourMinPanel;
+lv_obj_t * ui_minRoller2;
+lv_obj_t * ui_minRoller1;
+lv_obj_t * ui_Label13;
+lv_obj_t * ui_hourRoller2;
+lv_obj_t * ui_hourRoller1;
 lv_obj_t * ui_Bar2;
 lv_obj_t * ui_Label2;
 lv_obj_t * ui_Label3;
@@ -32,12 +39,6 @@ lv_obj_t * ui_Image3;
 lv_obj_t * ui_Label6;
 lv_obj_t * ui_Image4;
 lv_obj_t * ui_Label7;
-lv_obj_t * ui_hourMinPanel;
-lv_obj_t * ui_minRoller2;
-lv_obj_t * ui_minRoller1;
-lv_obj_t * ui_Label13;
-lv_obj_t * ui_hourRoller2;
-lv_obj_t * ui_hourRoller1;
 
 // SCREEN: ui_Screen2
 void ui_Screen2_screen_init(void);
@@ -47,6 +48,40 @@ lv_obj_t * ui_Label9;
 lv_obj_t * ui_Label10;
 lv_obj_t * ui_Label11;
 lv_obj_t * ui_Label12;
+
+// SCREEN: ui_Screen3
+void ui_Screen3_screen_init(void);
+lv_obj_t * ui_Screen3;
+lv_obj_t * ui_Panel6;
+lv_obj_t * ui_Panel5;
+lv_obj_t * ui_statusBar1;
+lv_obj_t * ui_wifiMode1;
+lv_obj_t * ui_wifiIcon1;
+lv_obj_t * ui_atomLabel1;
+lv_obj_t * ui_batteryIcon1;
+lv_obj_t * ui_Label8;
+lv_obj_t * ui_timePanel1;
+lv_obj_t * ui_hourMinPanel1;
+lv_obj_t * ui_minRoller3;
+lv_obj_t * ui_minRoller4;
+lv_obj_t * ui_Label14;
+lv_obj_t * ui_hourRoller3;
+lv_obj_t * ui_hourRoller4;
+lv_obj_t * ui_Bar1;
+lv_obj_t * ui_Label15;
+lv_obj_t * ui_Label16;
+lv_obj_t * ui_Panel2;
+lv_obj_t * ui_Image5;
+lv_obj_t * ui_Label17;
+lv_obj_t * ui_Image6;
+lv_obj_t * ui_Label18;
+lv_obj_t * ui_Image7;
+lv_obj_t * ui_Label19;
+lv_obj_t * ui_Image8;
+lv_obj_t * ui_Label20;
+lv_obj_t * ui_Panel7;
+lv_obj_t * ui_Button2;
+lv_obj_t * ui_Image10;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -121,6 +156,28 @@ void anim_zoom_fade_out_Animation(lv_obj_t * TargetObject, int delay)
     lv_anim_start(&PropertyAnimation_1);
 
 }
+void side_bar_spread_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 400);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_width);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 36);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_ease_out);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, true);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
 
 ///////////////////// FUNCTIONS ////////////////////
 
@@ -134,6 +191,7 @@ void ui_init(void)
     lv_disp_set_theme(dispp, theme);
     ui_Screen1_screen_init();
     ui_Screen2_screen_init();
+    ui_Screen3_screen_init();
     ui____initial_actions0 = lv_obj_create(NULL);
     lv_disp_load_scr(ui_Screen1);
 }
