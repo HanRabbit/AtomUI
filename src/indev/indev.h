@@ -7,6 +7,8 @@
 #include "battery/battery.h"
 #include "io_map/io_map.h"
 
+#define ENC_IO_PUSHED 0
+
 static lv_indev_drv_t indev_drv;
 
 void lv_port_drv_init();
