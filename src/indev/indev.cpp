@@ -1,5 +1,6 @@
 #include <TFT_eSPI.h>
 #include "indev.h"
+#include "common/log/log.h"
 #include "ESP32Encoder.h"
 
 /* Change to screen resolution */
@@ -20,7 +21,7 @@ lv_group_t *ui_group;
 
 uint16_t tft_bl_ = 0;
 
-long enc_diff = 0, enc_diff_last = 0;
+int16_t enc_diff = 0, enc_diff_last = 0;
 lv_indev_state_t enc_stat;
 
 
@@ -40,12 +41,14 @@ void my_disp_flush( lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *colo
 void Key_Scan() {
     static bool but_flag = true;
 	
-    if(digitalRead(EC_BT) == 0)	//编码器的按键
+    if(digitalRead(EC_BT) == LOW)	//编码器的按键
         enc_stat = LV_INDEV_STATE_PR;	//按下
     else
         enc_stat = LV_INDEV_STATE_REL;	//松开
 
     enc_diff = enc.getCount() / 2;
+
+    Log::msg("ENCODER: ", String(enc_diff));
 }
 
 static void lv_key_read(lv_indev_drv_t* indev_driver, lv_indev_data_t* data) {
@@ -53,21 +56,24 @@ static void lv_key_read(lv_indev_drv_t* indev_driver, lv_indev_data_t* data) {
 
     if (enc_diff > enc_diff_last) {
         data->enc_diff = -1;
-        data->state = enc_stat;
     } else if (enc_diff < enc_diff_last) {
         data->enc_diff = 1;
-        data->state = enc_stat;
     } else {
         data->enc_diff = 0;
-        data->state = enc_stat;
     }
+    data->state = enc_stat;
 
     enc_diff_last = enc_diff;
 }
 
-void lv_group_init() {
-    lv_group_remove_all_objs(ui_group);
+void lv_set_groups() {
+    ui_group = lv_group_create();
     lv_group_set_default(ui_group);
+    lv_group_remove_all_objs(ui_group);
+
+    /* add objects to your groups */
+
+
     lv_indev_set_group(lv_indev_drv_register(&indev_drv), ui_group);
 }
 
@@ -112,7 +118,7 @@ void lv_port_drv_init() {
     
     battery_init();
 
-    // lv_group_init();
+    lv_set_groups();
 
     bl_set_gradual(BL_ON, 200);
 }

@@ -1,4 +1,4 @@
-# AtomUI
+# Atom UI: 一个基于LVGL的轻量化UI框架
 
 ## UI 架构
 > 基于 **LVGL** 8.3.4
