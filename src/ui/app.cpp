@@ -1,7 +1,6 @@
 #include "app.h"
 #include "pages/startup/startup.h"
 #include "pages/error/error.h"
-#include "pages/msg_page/msg_page.h"
 #include "pages/home/home.h"
 
 PageManager pageManager;
@@ -19,9 +18,6 @@ void app_init() {
     pageManager.add_page("PAGE/ERROR",
                          ErrorPage::page_create,
                          ErrorPage::page_delete);
-    pageManager.add_page("PAGE/MSG",
-                         MsgPage::page_create,
-                         MsgPage::page_delete);
     pageManager.add_page("PAGE/HOME",
                          HomePage::page_create,
                          HomePage::page_delete);

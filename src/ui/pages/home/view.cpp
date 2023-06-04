@@ -1,5 +1,6 @@
 #include "view.h"
 
+extern lv_obj_t *ui_wifi_icon, *ui_wifi_mode;
 extern lv_obj_t *ui_root_panel, *ui_menu_panel;
 extern lv_obj_t *ui_side_bar_panel, *ui_info_label;
 
@@ -30,16 +31,16 @@ void create_status_bar(lv_obj_t *root) {
     lv_obj_set_style_bg_opa(ui_status_bar, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(ui_status_bar, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    lv_obj_t *ui_wifi_mode = lv_label_create(ui_status_bar);
+    ui_wifi_mode = lv_label_create(ui_status_bar);
     lv_obj_set_width(ui_wifi_mode, LV_SIZE_CONTENT);
     lv_obj_set_height(ui_wifi_mode, LV_SIZE_CONTENT);
     lv_obj_set_x(ui_wifi_mode, 20);
     lv_obj_set_y(ui_wifi_mode, 0);
     lv_obj_set_align(ui_wifi_mode, LV_ALIGN_LEFT_MID);
-    lv_label_set_text(ui_wifi_mode, "STA");
+    lv_label_set_text(ui_wifi_mode, "");
     lv_obj_set_style_text_font(ui_wifi_mode, &lv_font_montserrat_12, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    lv_obj_t *ui_wifi_icon = lv_img_create(ui_status_bar);
+    ui_wifi_icon = lv_img_create(ui_status_bar);
     lv_img_set_src(ui_wifi_icon, &ui_img_wifi_closed_png);
     lv_obj_set_width(ui_wifi_icon, LV_SIZE_CONTENT);
     lv_obj_set_height(ui_wifi_icon, LV_SIZE_CONTENT);
@@ -214,7 +215,7 @@ void create_side_bar_panel(lv_obj_t *root) {
     lv_obj_set_flex_align(ui_side_bar_panel, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_add_flag(ui_side_bar_panel, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_set_style_radius(ui_side_bar_panel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui_side_bar_panel, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_side_bar_panel, lv_color_hex(HOME_SIDE_BAR_BG_COLOR), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_side_bar_panel, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(ui_side_bar_panel, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_scroll_snap_y(ui_side_bar_panel, LV_SCROLL_SNAP_CENTER);
@@ -229,20 +230,20 @@ void create_side_bar_button(const void *img_src, lv_event_cb_t button_event) {
     lv_obj_t *ui_side_bar_btn;
     ui_side_bar_btn = lv_btn_create(ui_side_bar_panel);
     lv_obj_set_width(ui_side_bar_btn, 36);
-    lv_obj_set_height(ui_side_bar_btn, 42);
+    lv_obj_set_height(ui_side_bar_btn, 60);
     lv_obj_set_x(ui_side_bar_btn, -10);
     lv_obj_set_y(ui_side_bar_btn, 0);
     lv_obj_set_align(ui_side_bar_btn, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_side_bar_btn, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
     lv_obj_clear_flag(ui_side_bar_btn, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_add_flag(ui_side_bar_btn, LV_OBJ_FLAG_SNAPABLE);
-    lv_obj_set_style_radius(ui_side_bar_btn, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui_side_bar_btn, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui_side_bar_btn, 6, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_side_bar_btn, lv_color_hex(HOME_SIDE_BAR_BG_COLOR), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(ui_side_bar_btn, lv_color_hex(0x2A82E4), LV_PART_MAIN | LV_STATE_FOCUSED);
     lv_obj_set_style_bg_opa(ui_side_bar_btn, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_outline_width(ui_side_bar_btn, 0, LV_PART_MAIN | LV_STATE_FOCUSED);
     lv_obj_add_event_cb(ui_side_bar_btn, side_bar_button_event, LV_EVENT_FOCUSED, nullptr);
-    lv_obj_add_event_cb(ui_side_bar_btn, button_event, LV_EVENT_CLICKED, nullptr);
+    lv_obj_add_event_cb(ui_side_bar_btn, button_event, LV_EVENT_ALL, nullptr);
 
     lv_obj_t *ui_side_bar_btn_img = lv_img_create(ui_side_bar_btn);
     lv_img_set_src(ui_side_bar_btn_img, img_src);
@@ -266,9 +267,10 @@ void home_ui_init(lv_obj_t *scr) {
     create_side_bar_panel(ui_root_panel);
 
     HomeApp homeApp[10] {};
-    homeApp[0].app_init("H1", &ui_img_app_png, nullptr);
-    homeApp[1].app_init("H2", &ui_img_app_png, nullptr);
-    homeApp[2].app_init("H3", &ui_img_app_png, nullptr);
+    homeApp[0].app_init("APPS", &ui_img_app_png, nullptr);
+    homeApp[1].app_init("MENU", &ui_img_menu_png, nullptr);
+    homeApp[2].app_init("POWER", &ui_img_power_2_png, nullptr);
+    homeApp[3].app_init("SETTINGS", &ui_img_settings_png, nullptr);
 }
 
 void HomeApp::app_init(const char *app_name_, const void *icon_src_, lv_event_cb_t app_event_) {

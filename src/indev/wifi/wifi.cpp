@@ -1,7 +1,7 @@
 #include "wifi.h"
 
-extern lv_obj_t *ui_wifiMode;
-extern lv_obj_t *ui_wifiIcon;
+extern lv_obj_t *ui_wifi_mode;
+extern lv_obj_t *ui_wifi_icon;
 extern lv_img_dsc_t ui_img_wifi_closed_png;
 extern lv_img_dsc_t ui_img_wifi_png;
 
@@ -20,7 +20,7 @@ void wifi_status_update(lv_timer_t *timer) {
             time_has_been_corrected = true;
         }
 
-        lv_img_set_src(ui_wifiIcon, &ui_img_wifi_png);
+        lv_img_set_src(ui_wifi_icon, &ui_img_wifi_png);
         switch (WiFiClass::getMode()) {
             case WIFI_MODE_NULL:
                 WiFi_MODE = "NULL";
@@ -39,8 +39,8 @@ void wifi_status_update(lv_timer_t *timer) {
                 break;
         }
     } else {
-        lv_img_set_src(ui_wifiIcon, &ui_img_wifi_closed_png);
+        lv_img_set_src(ui_wifi_icon, &ui_img_wifi_closed_png);
         WiFi_MODE = "";
     }
-    lv_label_set_text(ui_wifiMode, WiFi_MODE.c_str());
+    lv_label_set_text(ui_wifi_mode, WiFi_MODE.c_str());
 }

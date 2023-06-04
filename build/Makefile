@@ -202,6 +202,30 @@ src/common/log/log.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/common/log/log.cpp.s
 .PHONY : src/common/log/log.cpp.s
 
+src/common/lv_msg/msg.obj: src/common/lv_msg/msg.cpp.obj
+.PHONY : src/common/lv_msg/msg.obj
+
+# target to build an object file
+src/common/lv_msg/msg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj
+.PHONY : src/common/lv_msg/msg.cpp.obj
+
+src/common/lv_msg/msg.i: src/common/lv_msg/msg.cpp.i
+.PHONY : src/common/lv_msg/msg.i
+
+# target to preprocess a source file
+src/common/lv_msg/msg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.i
+.PHONY : src/common/lv_msg/msg.cpp.i
+
+src/common/lv_msg/msg.s: src/common/lv_msg/msg.cpp.s
+.PHONY : src/common/lv_msg/msg.s
+
+# target to generate assembly for a file
+src/common/lv_msg/msg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.s
+.PHONY : src/common/lv_msg/msg.cpp.s
+
 src/common/time/time.obj: src/common/time/time.cpp.obj
 .PHONY : src/common/time/time.obj
 
@@ -513,6 +537,30 @@ src/ui/pages/home/home.s: src/ui/pages/home/home.cpp.s
 src/ui/pages/home/home.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/home.cpp.s
 .PHONY : src/ui/pages/home/home.cpp.s
+
+src/ui/pages/home/view.obj: src/ui/pages/home/view.cpp.obj
+.PHONY : src/ui/pages/home/view.obj
+
+# target to build an object file
+src/ui/pages/home/view.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/view.cpp.obj
+.PHONY : src/ui/pages/home/view.cpp.obj
+
+src/ui/pages/home/view.i: src/ui/pages/home/view.cpp.i
+.PHONY : src/ui/pages/home/view.i
+
+# target to preprocess a source file
+src/ui/pages/home/view.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/view.cpp.i
+.PHONY : src/ui/pages/home/view.cpp.i
+
+src/ui/pages/home/view.s: src/ui/pages/home/view.cpp.s
+.PHONY : src/ui/pages/home/view.s
+
+# target to generate assembly for a file
+src/ui/pages/home/view.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/view.cpp.s
+.PHONY : src/ui/pages/home/view.cpp.s
 
 src/ui/pages/msg_page/msg_page.obj: src/ui/pages/msg_page/msg_page.cpp.obj
 .PHONY : src/ui/pages/msg_page/msg_page.obj
@@ -915,6 +963,9 @@ help:
 	@echo ... src/common/log/log.obj
 	@echo ... src/common/log/log.i
 	@echo ... src/common/log/log.s
+	@echo ... src/common/lv_msg/msg.obj
+	@echo ... src/common/lv_msg/msg.i
+	@echo ... src/common/lv_msg/msg.s
 	@echo ... src/common/time/time.obj
 	@echo ... src/common/time/time.i
 	@echo ... src/common/time/time.s
@@ -954,6 +1005,9 @@ help:
 	@echo ... src/ui/pages/home/home.obj
 	@echo ... src/ui/pages/home/home.i
 	@echo ... src/ui/pages/home/home.s
+	@echo ... src/ui/pages/home/view.obj
+	@echo ... src/ui/pages/home/view.i
+	@echo ... src/ui/pages/home/view.s
 	@echo ... src/ui/pages/msg_page/msg_page.obj
 	@echo ... src/ui/pages/msg_page/msg_page.i
 	@echo ... src/ui/pages/msg_page/msg_page.s

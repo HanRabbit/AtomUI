@@ -5,6 +5,9 @@
 #include <lvgl.h>
 #include "ui/res/rp/rp.h"
 
+#define HOME_SIDE_BAR_OUT_TIME 1
+#define HOME_SIDE_BAR_BG_COLOR 0x0
+
 class HomeApp {
 public:
     const void *icon_src;

@@ -1,11 +1,11 @@
 #include "home.h"
 #include "view.h"
 #include "ui/utils/ui_utils.h"
-
-#define HOME_SIDE_BAR_OUT_TIME 1
+#include "indev/wifi/wifi.h"
 
 extern String APP_NAMES[20];
 
+lv_obj_t *ui_wifi_icon, *ui_wifi_mode;
 lv_obj_t *ui_root_panel, *ui_menu_panel;
 lv_obj_t *ui_side_bar_panel, *ui_info_label;
 
@@ -19,11 +19,18 @@ void pull_info(const char *info) {
 
 void side_bar_button_event(lv_event_t *e) {
     lv_obj_t *target = lv_event_get_target(e);
-    if (focus_num == 0) {
-        anim_side_bar_spread(ui_side_bar_panel, 0);
+    lv_event_code_t e_code = lv_event_get_code(e);
+    if (e_code == LV_EVENT_FOCUSED) {
+        if (focus_num == 0) {
+            anim_side_bar_spread(ui_side_bar_panel, 0);
+        }
+        pull_info(APP_NAMES[lv_obj_get_child_id(target)].c_str());
+        focus_num++;
     }
-    focus_num ++;
-    pull_info(APP_NAMES[lv_obj_get_child_id(target)].c_str());
+    if (e_code == LV_EVENT_PRESSED) {
+        anim_side_bar_spread(ui_side_bar_panel, 0);
+        focus_num ++;
+    }
 }
 
 /* 检测侧边栏操作超时 */
@@ -51,6 +58,8 @@ lv_obj_t *HomePage::page_create() {
 
     /* 动画处理 */
     lv_timer_create(side_bar_in_out_timer, 1000, nullptr);
+
+    lv_timer_create(wifi_status_update, 1000, nullptr);
 
     return scr;
 }

@@ -13,6 +13,12 @@
 },
 {
   "directory": "H:/Atom/Atom_UI/build",
+  "command": "C:\\Users\\Han\\.platformio\\packages\\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\\bin\\xtensa-esp32s3-elf-g++.exe   -std=gnu++11 -fexceptions -fno-rtti -Os -mlongcalls -ffunction-sections -fdata-sections -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -ggdb -freorder-blocks -Wwrite-strings -fstack-protector -fstrict-volatile-bitfields -Wno-error=unused-but-set-variable -fno-jump-tables -fno-tree-switch-conversion -MMD -g -std=gnu++11 -o CMakeFiles\\Z_DUMMY_TARGET.dir\\src\\common\\lv_msg\\msg.cpp.obj -c H:\\Atom\\Atom_UI\\src\\common\\lv_msg\\msg.cpp",
+  "file": "H:/Atom/Atom_UI/src/common/lv_msg/msg.cpp",
+  "output": "CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj"
+},
+{
+  "directory": "H:/Atom/Atom_UI/build",
   "command": "C:\\Users\\Han\\.platformio\\packages\\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\\bin\\xtensa-esp32s3-elf-g++.exe   -std=gnu++11 -fexceptions -fno-rtti -Os -mlongcalls -ffunction-sections -fdata-sections -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -ggdb -freorder-blocks -Wwrite-strings -fstack-protector -fstrict-volatile-bitfields -Wno-error=unused-but-set-variable -fno-jump-tables -fno-tree-switch-conversion -MMD -g -std=gnu++11 -o CMakeFiles\\Z_DUMMY_TARGET.dir\\src\\common\\time\\time.cpp.obj -c H:\\Atom\\Atom_UI\\src\\common\\time\\time.cpp",
   "file": "H:/Atom/Atom_UI/src/common/time/time.cpp",
   "output": "CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj"
@@ -88,6 +94,12 @@
   "command": "C:\\Users\\Han\\.platformio\\packages\\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\\bin\\xtensa-esp32s3-elf-g++.exe   -std=gnu++11 -fexceptions -fno-rtti -Os -mlongcalls -ffunction-sections -fdata-sections -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -ggdb -freorder-blocks -Wwrite-strings -fstack-protector -fstrict-volatile-bitfields -Wno-error=unused-but-set-variable -fno-jump-tables -fno-tree-switch-conversion -MMD -g -std=gnu++11 -o CMakeFiles\\Z_DUMMY_TARGET.dir\\src\\ui\\pages\\home\\home.cpp.obj -c H:\\Atom\\Atom_UI\\src\\ui\\pages\\home\\home.cpp",
   "file": "H:/Atom/Atom_UI/src/ui/pages/home/home.cpp",
   "output": "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/home.cpp.obj"
+},
+{
+  "directory": "H:/Atom/Atom_UI/build",
+  "command": "C:\\Users\\Han\\.platformio\\packages\\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\\bin\\xtensa-esp32s3-elf-g++.exe   -std=gnu++11 -fexceptions -fno-rtti -Os -mlongcalls -ffunction-sections -fdata-sections -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -ggdb -freorder-blocks -Wwrite-strings -fstack-protector -fstrict-volatile-bitfields -Wno-error=unused-but-set-variable -fno-jump-tables -fno-tree-switch-conversion -MMD -g -std=gnu++11 -o CMakeFiles\\Z_DUMMY_TARGET.dir\\src\\ui\\pages\\home\\view.cpp.obj -c H:\\Atom\\Atom_UI\\src\\ui\\pages\\home\\view.cpp",
+  "file": "H:/Atom/Atom_UI/src/ui/pages/home/view.cpp",
+  "output": "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/view.cpp.obj"
 },
 {
   "directory": "H:/Atom/Atom_UI/build",
