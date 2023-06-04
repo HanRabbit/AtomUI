@@ -2,6 +2,7 @@
 #include "view.h"
 #include "ui/utils/ui_utils.h"
 #include "indev/wifi/wifi.h"
+#include "common/log/log.h"
 
 extern String APP_NAMES[20];
 
@@ -20,16 +21,12 @@ void pull_info(const char *info) {
 void side_bar_button_event(lv_event_t *e) {
     lv_obj_t *target = lv_event_get_target(e);
     lv_event_code_t e_code = lv_event_get_code(e);
-    if (e_code == LV_EVENT_FOCUSED) {
+    if (e_code == LV_EVENT_FOCUSED || e_code == LV_EVENT_CLICKED) {
         if (focus_num == 0) {
             anim_side_bar_spread(ui_side_bar_panel, 0);
         }
         pull_info(APP_NAMES[lv_obj_get_child_id(target)].c_str());
         focus_num++;
-    }
-    if (e_code == LV_EVENT_PRESSED) {
-        anim_side_bar_spread(ui_side_bar_panel, 0);
-        focus_num ++;
     }
 }
 

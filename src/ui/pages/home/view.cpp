@@ -242,8 +242,8 @@ void create_side_bar_button(const void *img_src, lv_event_cb_t button_event) {
     lv_obj_set_style_bg_color(ui_side_bar_btn, lv_color_hex(0x2A82E4), LV_PART_MAIN | LV_STATE_FOCUSED);
     lv_obj_set_style_bg_opa(ui_side_bar_btn, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_outline_width(ui_side_bar_btn, 0, LV_PART_MAIN | LV_STATE_FOCUSED);
-    lv_obj_add_event_cb(ui_side_bar_btn, side_bar_button_event, LV_EVENT_FOCUSED, nullptr);
-    lv_obj_add_event_cb(ui_side_bar_btn, button_event, LV_EVENT_ALL, nullptr);
+    lv_obj_add_event_cb(ui_side_bar_btn, side_bar_button_event, LV_EVENT_ALL, nullptr);
+    lv_obj_add_event_cb(ui_side_bar_btn, button_event, LV_EVENT_CLICKED, nullptr);
 
     lv_obj_t *ui_side_bar_btn_img = lv_img_create(ui_side_bar_btn);
     lv_img_set_src(ui_side_bar_btn_img, img_src);
