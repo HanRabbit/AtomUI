@@ -162,7 +162,7 @@ void ui_Screen1_screen_init(void)
     lv_obj_set_y(ui_Bar2, 10);
     lv_obj_set_align(ui_Bar2, LV_ALIGN_CENTER);
 
-    lv_obj_set_style_bg_color(ui_Bar2, lv_color_hex(0x2A82E4), LV_PART_INDICATOR | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_Bar2, lv_color_hex(0xFFFFFF), LV_PART_INDICATOR | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_Bar2, 255, LV_PART_INDICATOR | LV_STATE_DEFAULT);
 
     ui_Label2 = lv_label_create(ui_timePanel);

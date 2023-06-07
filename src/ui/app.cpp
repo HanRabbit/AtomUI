@@ -24,5 +24,5 @@ void app_init() {
 
     /* Start Push */
     pageManager.push("PAGE/STARTUP");
-    lv_timer_create(go_into_home, 4000, nullptr);
+    lv_timer_create(go_into_home, 6000, nullptr);
 }

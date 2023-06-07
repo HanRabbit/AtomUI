@@ -8,6 +8,8 @@
 
 /* Battery */
 #define BATTERY_PIN 35
+#define BATTERY_STDBY 36
+#define BATTERY_CH 37
 
 /* SD Card */
 #define SD_CLK 48

@@ -2,5 +2,7 @@
     "files.associations": {
         "ui_utils.h": "c",
         "ui_start.h": "c"
-    }
+    },
+    "editor.fontFamily": "Menlo, HarmonyOS Sans SC, monospace",
+    "editor.fontSize": 18
 }

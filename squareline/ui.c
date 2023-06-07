@@ -10,6 +10,36 @@
 void anim_down_Animation(lv_obj_t * TargetObject, int delay);
 void anim_zoom_fade_out_Animation(lv_obj_t * TargetObject, int delay);
 void side_bar_spread_Animation(lv_obj_t * TargetObject, int delay);
+void fade_out_Animation(lv_obj_t * TargetObject, int delay);
+
+// SCREEN: ui_Screen1
+void ui_Screen1_screen_init(void);
+lv_obj_t * ui_Screen1;
+lv_obj_t * ui_statusBar;
+lv_obj_t * ui_wifiMode;
+lv_obj_t * ui_wifiIcon;
+lv_obj_t * ui_atomLabel;
+lv_obj_t * ui_batteryIcon;
+lv_obj_t * ui_Label1;
+lv_obj_t * ui_timePanel;
+lv_obj_t * ui_hourMinPanel;
+lv_obj_t * ui_minRoller2;
+lv_obj_t * ui_minRoller1;
+lv_obj_t * ui_Label13;
+lv_obj_t * ui_hourRoller2;
+lv_obj_t * ui_hourRoller1;
+lv_obj_t * ui_Bar2;
+lv_obj_t * ui_Label2;
+lv_obj_t * ui_Label3;
+lv_obj_t * ui_Panel1;
+lv_obj_t * ui_Image1;
+lv_obj_t * ui_Label4;
+lv_obj_t * ui_Image2;
+lv_obj_t * ui_Label5;
+lv_obj_t * ui_Image3;
+lv_obj_t * ui_Label6;
+lv_obj_t * ui_Image4;
+lv_obj_t * ui_Label7;
 
 // SCREEN: ui_Screen2
 void ui_Screen2_screen_init(void);
@@ -52,7 +82,7 @@ lv_obj_t * ui_Image8;
 lv_obj_t * ui_Label20;
 lv_obj_t * ui_Panel7;
 lv_obj_t * ui_Button2;
-lv_obj_t * ui_Image2;
+lv_obj_t * ui_Image10;
 lv_obj_t * ui____initial_actions0;
 const lv_img_dsc_t * ui_imgset_power_[1] = {&ui_img_power_2_png};
 
@@ -150,6 +180,28 @@ void side_bar_spread_Animation(lv_obj_t * TargetObject, int delay)
     lv_anim_start(&PropertyAnimation_0);
 
 }
+void fade_out_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 400);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_0, 255, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_ease_out);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, true);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
 
 ///////////////////// FUNCTIONS ////////////////////
 
@@ -161,8 +213,9 @@ void ui_init(void)
     lv_theme_t * theme = lv_theme_default_init(dispp, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED),
                                                true, LV_FONT_DEFAULT);
     lv_disp_set_theme(dispp, theme);
+    ui_Screen1_screen_init();
     ui_Screen2_screen_init();
     ui_Screen3_screen_init();
     ui____initial_actions0 = lv_obj_create(NULL);
-    lv_disp_load_scr(ui_Screen2);
+    lv_disp_load_scr(ui_Screen1);
 }

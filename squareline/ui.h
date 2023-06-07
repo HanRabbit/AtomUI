@@ -27,6 +27,35 @@ extern "C" {
 void anim_down_Animation(lv_obj_t * TargetObject, int delay);
 void anim_zoom_fade_out_Animation(lv_obj_t * TargetObject, int delay);
 void side_bar_spread_Animation(lv_obj_t * TargetObject, int delay);
+void fade_out_Animation(lv_obj_t * TargetObject, int delay);
+// SCREEN: ui_Screen1
+void ui_Screen1_screen_init(void);
+extern lv_obj_t * ui_Screen1;
+extern lv_obj_t * ui_statusBar;
+extern lv_obj_t * ui_wifiMode;
+extern lv_obj_t * ui_wifiIcon;
+extern lv_obj_t * ui_atomLabel;
+extern lv_obj_t * ui_batteryIcon;
+extern lv_obj_t * ui_Label1;
+extern lv_obj_t * ui_timePanel;
+extern lv_obj_t * ui_hourMinPanel;
+extern lv_obj_t * ui_minRoller2;
+extern lv_obj_t * ui_minRoller1;
+extern lv_obj_t * ui_Label13;
+extern lv_obj_t * ui_hourRoller2;
+extern lv_obj_t * ui_hourRoller1;
+extern lv_obj_t * ui_Bar2;
+extern lv_obj_t * ui_Label2;
+extern lv_obj_t * ui_Label3;
+extern lv_obj_t * ui_Panel1;
+extern lv_obj_t * ui_Image1;
+extern lv_obj_t * ui_Label4;
+extern lv_obj_t * ui_Image2;
+extern lv_obj_t * ui_Label5;
+extern lv_obj_t * ui_Image3;
+extern lv_obj_t * ui_Label6;
+extern lv_obj_t * ui_Image4;
+extern lv_obj_t * ui_Label7;
 // SCREEN: ui_Screen2
 void ui_Screen2_screen_init(void);
 extern lv_obj_t * ui_Screen2;
@@ -67,7 +96,7 @@ extern lv_obj_t * ui_Image8;
 extern lv_obj_t * ui_Label20;
 extern lv_obj_t * ui_Panel7;
 extern lv_obj_t * ui_Button2;
-extern lv_obj_t * ui_Image2;
+extern lv_obj_t * ui_Image10;
 extern lv_obj_t * ui____initial_actions0;
 
 LV_IMG_DECLARE(ui_img_wifi_closed_png);    // assets\WIFI_CLOSED.png
@@ -75,7 +104,7 @@ LV_IMG_DECLARE(ui_img_battery_png);    // assets\BATTERY.png
 LV_IMG_DECLARE(ui_img_link_png);    // assets\LINK.png
 LV_IMG_DECLARE(ui_img_time_png);    // assets\TIME.png
 LV_IMG_DECLARE(ui_img_follows_png);    // assets\FOLLOWS.png
-LV_IMG_DECLARE(ui_img_settings_png);    // assets\SETTINGS.png
+LV_IMG_DECLARE(ui_img_app_png);    // assets\APP.png
 LV_IMG_DECLARE(ui_img_power_2_png);    // assets\POWER_2.png
 
 void ui_init(void);

@@ -327,12 +327,12 @@ void ui_Screen3_screen_init(void)
     lv_obj_set_style_bg_color(ui_Button2, lv_color_hex(0x2A82E4), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_Button2, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    ui_Image2 = lv_img_create(ui_Button2);
-    lv_img_set_src(ui_Image2, &ui_img_settings_png);
-    lv_obj_set_width(ui_Image2, LV_SIZE_CONTENT);   /// 1
-    lv_obj_set_height(ui_Image2, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_align(ui_Image2, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_Image2, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
-    lv_obj_clear_flag(ui_Image2, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    ui_Image10 = lv_img_create(ui_Button2);
+    lv_img_set_src(ui_Image10, &ui_img_app_png);
+    lv_obj_set_width(ui_Image10, LV_SIZE_CONTENT);   /// 1
+    lv_obj_set_height(ui_Image10, LV_SIZE_CONTENT);    /// 1
+    lv_obj_set_align(ui_Image10, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_Image10, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
+    lv_obj_clear_flag(ui_Image10, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
 }

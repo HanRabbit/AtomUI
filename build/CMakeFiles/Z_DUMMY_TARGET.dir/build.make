@@ -96,24 +96,10 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/common/log/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/common/log/log.cpp.s"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Atom\Atom_UI\src\common\log\log.cpp -o CMakeFiles\Z_DUMMY_TARGET.dir\src\common\log\log.cpp.s
 
-CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj: H:/Atom/Atom_UI/src/common/lv_msg/msg.cpp
-CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj"
-	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\common\lv_msg\msg.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\common\lv_msg\msg.cpp.obj -c H:\Atom\Atom_UI\src\common\lv_msg\msg.cpp
-
-CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.i"
-	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Atom\Atom_UI\src\common\lv_msg\msg.cpp > CMakeFiles\Z_DUMMY_TARGET.dir\src\common\lv_msg\msg.cpp.i
-
-CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.s"
-	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Atom\Atom_UI\src\common\lv_msg\msg.cpp -o CMakeFiles\Z_DUMMY_TARGET.dir\src\common\lv_msg\msg.cpp.s
-
 CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj: H:/Atom/Atom_UI/src/common/time/time.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\common\time\time.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\common\time\time.cpp.obj -c H:\Atom\Atom_UI\src\common\time\time.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.i: cmake_force
@@ -127,7 +113,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.obj: H:/Atom/Atom_UI/src/indev/battery/battery.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\battery\battery.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\battery\battery.cpp.obj -c H:\Atom\Atom_UI\src\indev\battery\battery.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.i: cmake_force
@@ -141,7 +127,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.obj: H:/Atom/Atom_UI/src/indev/indev.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\indev.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\indev.cpp.obj -c H:\Atom\Atom_UI\src\indev\indev.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.i: cmake_force
@@ -155,7 +141,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/sd/sd.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/sd/sd.cpp.obj: H:/Atom/Atom_UI/src/indev/sd/sd.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/sd/sd.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/sd/sd.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/sd/sd.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/sd/sd.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\sd\sd.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\sd\sd.cpp.obj -c H:\Atom\Atom_UI\src\indev\sd\sd.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/sd/sd.cpp.i: cmake_force
@@ -169,7 +155,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/sd/sd.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/self_check/self_check.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/self_check/self_check.cpp.obj: H:/Atom/Atom_UI/src/indev/self_check/self_check.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/self_check/self_check.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/self_check/self_check.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/self_check/self_check.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/self_check/self_check.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\self_check\self_check.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\self_check\self_check.cpp.obj -c H:\Atom\Atom_UI\src\indev\self_check\self_check.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/self_check/self_check.cpp.i: cmake_force
@@ -183,7 +169,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/self_check/self_check.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/tft_backlight/tft_backlight.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/tft_backlight/tft_backlight.cpp.obj: H:/Atom/Atom_UI/src/indev/tft_backlight/tft_backlight.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/tft_backlight/tft_backlight.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/tft_backlight/tft_backlight.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/tft_backlight/tft_backlight.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/tft_backlight/tft_backlight.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\tft_backlight\tft_backlight.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\tft_backlight\tft_backlight.cpp.obj -c H:\Atom\Atom_UI\src\indev\tft_backlight\tft_backlight.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/tft_backlight/tft_backlight.cpp.i: cmake_force
@@ -197,7 +183,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/tft_backlight/tft_backlight.cpp.s: cmake
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/wifi/wifi.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/wifi/wifi.cpp.obj: H:/Atom/Atom_UI/src/indev/wifi/wifi.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/wifi/wifi.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/wifi/wifi.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/wifi/wifi.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/wifi/wifi.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\wifi\wifi.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\indev\wifi\wifi.cpp.obj -c H:\Atom\Atom_UI\src\indev\wifi\wifi.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/wifi/wifi.cpp.i: cmake_force
@@ -211,7 +197,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/wifi/wifi.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj: H:/Atom/Atom_UI/src/main.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\main.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\main.cpp.obj -c H:\Atom\Atom_UI\src\main.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i: cmake_force
@@ -225,7 +211,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.obj: H:/Atom/Atom_UI/src/ui/app.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\app.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\app.cpp.obj -c H:\Atom\Atom_UI\src\ui\app.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.i: cmake_force
@@ -239,7 +225,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.obj: H:/Atom/Atom_UI/src/ui/pages/_template/_template.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\_template\_template.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\_template\_template.cpp.obj -c H:\Atom\Atom_UI\src\ui\pages\_template\_template.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.i: cmake_force
@@ -253,7 +239,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.s: cmake_forc
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.obj: H:/Atom/Atom_UI/src/ui/pages/_test/_test.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\_test\_test.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\_test\_test.cpp.obj -c H:\Atom\Atom_UI\src\ui\pages\_test\_test.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.i: cmake_force
@@ -267,7 +253,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.obj: H:/Atom/Atom_UI/src/ui/pages/error/error.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\error\error.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\error\error.cpp.obj -c H:\Atom\Atom_UI\src\ui\pages\error\error.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.i: cmake_force
@@ -277,6 +263,20 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.i: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.s"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Atom\Atom_UI\src\ui\pages\error\error.cpp -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\error\error.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.obj: H:/Atom/Atom_UI/src/ui/pages/home/app.cpp
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.obj"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\home\app.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\home\app.cpp.obj -c H:\Atom\Atom_UI\src\ui\pages\home\app.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.i"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Atom\Atom_UI\src\ui\pages\home\app.cpp > CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\home\app.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.s"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Atom\Atom_UI\src\ui\pages\home\app.cpp -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\home\app.cpp.s
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/home.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/home.cpp.obj: H:/Atom/Atom_UI/src/ui/pages/home/home.cpp
@@ -306,24 +306,10 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/view.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/view.cpp.s"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Atom\Atom_UI\src\ui\pages\home\view.cpp -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\home\view.cpp.s
 
-CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
-CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.obj: H:/Atom/Atom_UI/src/ui/pages/msg_page/msg_page.cpp
-CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.obj"
-	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\msg_page\msg_page.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\msg_page\msg_page.cpp.obj -c H:\Atom\Atom_UI\src\ui\pages\msg_page\msg_page.cpp
-
-CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.i"
-	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E H:\Atom\Atom_UI\src\ui\pages\msg_page\msg_page.cpp > CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\msg_page\msg_page.cpp.i
-
-CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.s"
-	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S H:\Atom\Atom_UI\src\ui\pages\msg_page\msg_page.cpp -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\msg_page\msg_page.cpp.s
-
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.obj: H:/Atom/Atom_UI/src/ui/pages/page.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\page.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\page.cpp.obj -c H:\Atom\Atom_UI\src\ui\pages\page.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.i: cmake_force
@@ -337,7 +323,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.obj: H:/Atom/Atom_UI/src/ui/pages/startup/startup.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\startup\startup.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\pages\startup\startup.cpp.obj -c H:\Atom\Atom_UI\src\ui\pages\startup\startup.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.i: cmake_force
@@ -351,7 +337,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.obj: H:/Atom/Atom_UI/src/ui/res/rp/rp.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\rp\rp.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\rp\rp.cpp.obj -c H:\Atom\Atom_UI\src\ui\res\rp\rp.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.i: cmake_force
@@ -365,7 +351,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_app_png.c
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_app_png.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_app_png.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_app_png.c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.i: cmake_force
@@ -375,6 +361,20 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.i: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.s"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S H:\Atom\Atom_UI\src\ui\res\ui_img_app_png.c -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_app_png.c.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_atom_gif.c
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.obj"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_atom_gif.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_atom_gif.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_atom_gif.c
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.i"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E H:\Atom\Atom_UI\src\ui\res\ui_img_atom_gif.c > CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_atom_gif.c.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.s"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S H:\Atom\Atom_UI\src\ui\res\ui_img_atom_gif.c -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_atom_gif.c.s
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_battery_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_battery_png.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_battery_png.c
@@ -418,10 +418,24 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_link_png.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_link_png.c.s"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S H:\Atom\Atom_UI\src\ui\res\ui_img_link_png.c -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_link_png.c.s
 
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_loading.c
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.obj"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_loading.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_loading.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_loading.c
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.i"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E H:\Atom\Atom_UI\src\ui\res\ui_img_loading.c > CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_loading.c.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.s"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S H:\Atom\Atom_UI\src\ui\res\ui_img_loading.c -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_loading.c.s
+
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_logo.c
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_logo.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_logo.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_logo.c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.i: cmake_force
@@ -432,10 +446,52 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.s"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S H:\Atom\Atom_UI\src\ui\res\ui_img_logo.c -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_logo.c.s
 
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_menu_png.c
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.obj"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_menu_png.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_menu_png.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_menu_png.c
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.i"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E H:\Atom\Atom_UI\src\ui\res\ui_img_menu_png.c > CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_menu_png.c.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.s"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S H:\Atom\Atom_UI\src\ui\res\ui_img_menu_png.c -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_menu_png.c.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_power_2_png.c
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.obj"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_power_2_png.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_power_2_png.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_power_2_png.c
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.i"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E H:\Atom\Atom_UI\src\ui\res\ui_img_power_2_png.c > CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_power_2_png.c.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.s"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S H:\Atom\Atom_UI\src\ui\res\ui_img_power_2_png.c -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_power_2_png.c.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_settings_png.c
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.obj"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_settings_png.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_settings_png.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_settings_png.c
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.i"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E H:\Atom\Atom_UI\src\ui\res\ui_img_settings_png.c > CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_settings_png.c.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.s"
+	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S H:\Atom\Atom_UI\src\ui\res\ui_img_settings_png.c -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_settings_png.c.s
+
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_time_png.c
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_time_png.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_time_png.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_time_png.c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.i: cmake_force
@@ -449,7 +505,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_wifi_closed_png.c
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_wifi_closed_png.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_wifi_closed_png.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_wifi_closed_png.c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.i: cmake_force
@@ -463,7 +519,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.obj: H:/Atom/Atom_UI/src/ui/res/ui_img_wifi_png.c
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_wifi_png.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\res\ui_img_wifi_png.c.obj -c H:\Atom\Atom_UI\src\ui\res\ui_img_wifi_png.c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.i: cmake_force
@@ -477,7 +533,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/pm/pm.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/pm/pm.cpp.obj: H:/Atom/Atom_UI/src/ui/utils/pm/pm.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/pm/pm.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/pm/pm.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/pm/pm.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/pm/pm.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\utils\pm\pm.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\utils\pm\pm.cpp.obj -c H:\Atom\Atom_UI\src\ui\utils\pm\pm.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/pm/pm.cpp.i: cmake_force
@@ -491,7 +547,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/pm/pm.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/ui_utils.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/ui_utils.c.obj: H:/Atom/Atom_UI/src/ui/utils/ui_utils.c
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/ui_utils.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/ui_utils.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/ui_utils.c.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/ui_utils.c.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\utils\ui_utils.c.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\src\ui\utils\ui_utils.c.obj -c H:\Atom\Atom_UI\src\ui\utils\ui_utils.c
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/ui_utils.c.i: cmake_force
@@ -505,7 +561,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/utils/ui_utils.c.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.obj: H:/Atom/Atom_UI/temp/home/home.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\temp\home\home.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\temp\home\home.cpp.obj -c H:\Atom\Atom_UI\temp\home\home.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.i: cmake_force
@@ -519,7 +575,7 @@ CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.s: cmake_force
 CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.obj: H:/Atom/Atom_UI/temp/home/home_events.cpp
 CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.obj"
 	C:\Users\Han\.platformio\packages\toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5\bin\xtensa-esp32s3-elf-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.obj -MF CMakeFiles\Z_DUMMY_TARGET.dir\temp\home\home_events.cpp.obj.d -o CMakeFiles\Z_DUMMY_TARGET.dir\temp\home\home_events.cpp.obj -c H:\Atom\Atom_UI\temp\home\home_events.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.i: cmake_force
@@ -534,7 +590,6 @@ CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.s: cmake_force
 Z_DUMMY_TARGET_OBJECTS = \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/common/esp_sleep/esp_sleep.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/common/log/log.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.obj" \
@@ -547,17 +602,22 @@ Z_DUMMY_TARGET_OBJECTS = \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/home.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/view.cpp.obj" \
-"CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_battery_png.c.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_follows_png.c.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_link_png.c.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.obj" \
 "CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.obj" \
@@ -571,7 +631,6 @@ Z_DUMMY_TARGET_EXTERNAL_OBJECTS =
 
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/common/esp_sleep/esp_sleep.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/common/log/log.cpp.obj
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/common/lv_msg/msg.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/common/time/time.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/battery/battery.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/indev/indev.cpp.obj
@@ -584,17 +643,22 @@ Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/app.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_template/_template.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/_test/_test.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/error/error.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/app.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/home.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/home/view.cpp.obj
-Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/msg_page/msg_page.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/page.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/pages/startup/startup.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/rp/rp.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_app_png.c.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_atom_gif.c.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_battery_png.c.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_follows_png.c.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_link_png.c.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_loading.c.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_logo.c.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_menu_png.c.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_power_2_png.c.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_settings_png.c.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_time_png.c.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_closed_png.c.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/ui/res/ui_img_wifi_png.c.obj
@@ -604,7 +668,7 @@ Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/temp/home/home_events.cpp.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/build.make
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Linking CXX executable Z_DUMMY_TARGET"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=H:\Atom\Atom_UI\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Linking CXX executable Z_DUMMY_TARGET"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Z_DUMMY_TARGET.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

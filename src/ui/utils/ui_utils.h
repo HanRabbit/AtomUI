@@ -16,6 +16,7 @@ void lv_obj_add_anim(
         lv_anim_path_cb_t path_cb
 );
 
+void anim_fade_out(lv_obj_t * TargetObject, int delay);
 void anim_side_bar_spread(lv_obj_t * TargetObject, int delay);
 void anim_side_bar_shrink(lv_obj_t * TargetObject, int delay);
 void anim_down(lv_obj_t * TargetObject, int delay);
