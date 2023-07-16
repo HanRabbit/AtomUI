@@ -1,13 +1,20 @@
 #include "app.h"
 #include "common/log/log.h"
+#include "common/esp_sleep/esp_sleep.h"
+#include "ui/utils/pm/pm.h"
 
 String APP_NAMES[20];
 
 extern void create_side_bar_button(const void *img_src, lv_event_cb_t button_event);
 extern lv_obj_t *ui_side_bar_panel;
+extern PageManager homePageManager;
 
 void home_app_esp_sleep_cb(lv_event_t *e) {
-    esp_deep_sleep_start();
+    esp_sleep_start();
+}
+
+void home_app_serial_monitor(lv_event_t *e) {
+    homePageManager.push("PAGE/SERIAL_MONITOR", PM_SCR_ANIM_MOVE_TOP);
 }
 
 void HomeApp::app_init(const char *app_name_, const void *icon_src_, lv_event_cb_t app_event_) {

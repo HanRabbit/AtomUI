@@ -6,8 +6,13 @@
 #include "common/log/log.h"
 #include "common/time/time.h"
 #include "indev/io_map/io_map.h"
+#include "ui/utils/pm/pm.h"
+
+#include "ui/pages/pages.h"
 
 extern String APP_NAMES[20];
+
+PageManager homePageManager;
 
 lv_obj_t *ui_wifi_icon, *ui_wifi_mode;
 lv_obj_t *ui_root_panel, *ui_menu_panel;
@@ -54,7 +59,7 @@ void side_bar_in_out_timer(lv_timer_t *timer) {
 
 void home_time_update(lv_timer_t *timer) {
     lv_label_set_text(ui_hour_min_label, Time::get_time_str(false).c_str());
-    
+
     if (digitalRead(BATTERY_CH) == LOW) {
         lv_label_set_text(ui_battery_perc_label, "CHARGING");
     } else {
@@ -70,10 +75,14 @@ lv_obj_t *HomePage::page_create() {
 
     /* 注册HomeApp */
     HomeApp homeApp[10] {};
-    homeApp[0].app_init("APPS", &ui_img_app_png, nullptr);
+    homeApp[0].app_init("APPS", &ui_img_app_png, home_app_serial_monitor);
     homeApp[1].app_init("MENU", &ui_img_menu_png, nullptr);
     homeApp[2].app_init("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
     homeApp[3].app_init("SETTINGS", &ui_img_settings_png, nullptr);
+
+    homePageManager.add_page("PAGE/SERIAL_MONITOR",
+                         SerialMonitorPage::page_create,
+                         SerialMonitorPage::page_delete);
 
     /* 动画处理 */
     lv_timer_create(side_bar_in_out_timer, 1000, nullptr);

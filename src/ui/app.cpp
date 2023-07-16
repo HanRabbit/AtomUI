@@ -1,7 +1,6 @@
 #include "app.h"
-#include "pages/startup/startup.h"
-#include "pages/error/error.h"
-#include "pages/home/home.h"
+
+#include "pages/pages.h"
 
 PageManager pageManager;
 

@@ -1,12 +1,6 @@
 #include "home.h"
 #include "common/esp_sleep/esp_sleep.h"
-
-LV_IMG_DECLARE(ui_img_wifi_png);   // assets\WIFI.png
-LV_IMG_DECLARE(ui_img_battery_png);   // assets\BATTERY.png
-LV_IMG_DECLARE(ui_img_wifi_closed_png);
-//LV_IMG_DECLARE( ui_img_link_png);   // assets\LINK.png
-//LV_IMG_DECLARE( ui_img_time_png);   // assets\TIME.png
-//LV_IMG_DECLARE( ui_img_follows_png);   // assets\FOLLOWS.png
+#include "ui/res/rp/rp.h"
 
 lv_obj_t *scr;
 lv_obj_t *ui_statusBar;
@@ -219,8 +213,6 @@ lv_obj_t *HomePage::page_create() {
 //    lv_obj_set_style_text_font(ui_Label7, &lv_font_montserrat_12, 0);
 
     ui_events_handle();
-
-    esp_sleep_init();
 
     return scr;
 }

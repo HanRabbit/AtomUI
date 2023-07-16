@@ -290,5 +290,3 @@ void home_ui_init(lv_obj_t *scr) {
     create_info_panel(ui_menu_panel);
     create_side_bar_panel(ui_root_panel);
 }
-
-
