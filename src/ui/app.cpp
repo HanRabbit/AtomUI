@@ -20,6 +20,9 @@ void app_init() {
     pageManager.add_page("PAGE/HOME",
                          HomePage::page_create,
                          HomePage::page_delete);
+    pageManager.add_page("PAGE/SERIAL_MONITOR",
+                         SerialMonitorPage::page_create,
+                         SerialMonitorPage::page_delete);
 
     /* Start Push */
     pageManager.push("PAGE/STARTUP");

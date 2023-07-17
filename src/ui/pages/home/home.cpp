@@ -3,30 +3,22 @@
 #include "app.h"
 #include "ui/utils/ui_utils.h"
 #include "indev/wifi/wifi.h"
-#include "common/log/log.h"
 #include "common/time/time.h"
-#include "indev/io_map/io_map.h"
-#include "ui/utils/pm/pm.h"
+#include "ui/components/status_bar/status_bar.h"
 
-#include "ui/pages/pages.h"
+StatusBar statusBar;
 
 extern String APP_NAMES[20];
 
-PageManager homePageManager;
-
-lv_obj_t *ui_wifi_icon, *ui_wifi_mode;
 lv_obj_t *ui_root_panel, *ui_menu_panel;
 lv_obj_t *ui_side_bar_panel, *ui_info_label;
 lv_obj_t *ui_hour_min_label;
-lv_obj_t *ui_battery_perc_label;
 
 uint16_t focus_num = 0;
 uint16_t focus_num_last = 0;
 uint8_t  side_bar_out_time_cur = 0;
 
-void pull_info(const char *info) {
-    lv_label_set_text(ui_info_label, info);
-}
+lv_timer_t *side_bar_in_out_timer, *wifi_status_timer, *home_time_timer;
 
 void side_bar_button_event(lv_event_t *e) {
     lv_obj_t *target = lv_event_get_target(e);
@@ -35,13 +27,13 @@ void side_bar_button_event(lv_event_t *e) {
         if (focus_num == 0) {
             anim_side_bar_spread(ui_side_bar_panel, 0);
         }
-        pull_info(APP_NAMES[lv_obj_get_child_id(target)].c_str());
+        statusBar.set_title(APP_NAMES[lv_obj_get_child_id(target)]);
         focus_num++;
     }
 }
 
 /* 检测侧边栏操作超时 */
-void side_bar_in_out_timer(lv_timer_t *timer) {
+void side_bar_in_out_update(lv_timer_t *timer) {
     if (focus_num == focus_num_last && focus_num != 0) {
         if (side_bar_out_time_cur < HOME_SIDE_BAR_OUT_TIME) {
             side_bar_out_time_cur++;
@@ -49,7 +41,9 @@ void side_bar_in_out_timer(lv_timer_t *timer) {
             side_bar_out_time_cur = 0;
             focus_num = 0;
             focus_num_last = 0;
-            pull_info("ATOM");
+
+            statusBar.set_title("ATOM");
+
             anim_side_bar_shrink(ui_side_bar_panel, 0);
         }
     } else {
@@ -60,11 +54,15 @@ void side_bar_in_out_timer(lv_timer_t *timer) {
 void home_time_update(lv_timer_t *timer) {
     lv_label_set_text(ui_hour_min_label, Time::get_time_str(false).c_str());
 
-    if (digitalRead(BATTERY_CH) == LOW) {
-        lv_label_set_text(ui_battery_perc_label, "CHARGING");
-    } else {
-        lv_label_set_text(ui_battery_perc_label, "");
-    }
+//    if (digitalRead(BATTERY_CH) == LOW) {
+//        lv_label_set_text(ui_battery_perc_label, "CHARGING");
+//    } else {
+//        lv_label_set_text(ui_battery_perc_label, "");
+//    }
+}
+
+void status_bar_update(lv_timer_t *timer) {
+    statusBar.update();
 }
 
 lv_obj_t *HomePage::page_create() {
@@ -80,18 +78,14 @@ lv_obj_t *HomePage::page_create() {
     homeApp[2].app_init("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
     homeApp[3].app_init("SETTINGS", &ui_img_settings_png, nullptr);
 
-    homePageManager.add_page("PAGE/SERIAL_MONITOR",
-                         SerialMonitorPage::page_create,
-                         SerialMonitorPage::page_delete);
-
     /* 动画处理 */
-    lv_timer_create(side_bar_in_out_timer, 1000, nullptr);
+    side_bar_in_out_timer = lv_timer_create(side_bar_in_out_update, 1000, nullptr);
 
     /* WiFi 状态更新 */
-    lv_timer_create(wifi_status_update, 1000, nullptr);
+    statusBar.status_bar_timer = lv_timer_create(status_bar_update, STATUS_BAR_UPDATE_DURING, nullptr);
 
     /* 时间更新 */
-    lv_timer_create(home_time_update, 1000, nullptr);
+    home_time_timer = lv_timer_create(home_time_update, 1000, nullptr);
 
     return scr;
 }

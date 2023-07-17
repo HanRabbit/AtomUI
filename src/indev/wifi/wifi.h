@@ -24,7 +24,7 @@ typedef enum {
 
 void wifi_init();
 
-void wifi_status_update(lv_timer_t *timer);
+bool get_wifi_status();
 
 void wifi_set_time();
 

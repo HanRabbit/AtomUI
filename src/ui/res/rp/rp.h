@@ -4,6 +4,7 @@
 #include <lvgl.h>
 
 LV_IMG_DECLARE(ui_img_wifi_closed_png);
+LV_IMG_DECLARE(ui_img_wifi_png);
 LV_IMG_DECLARE(ui_img_battery_png);
 LV_IMG_DECLARE(ui_img_app_png);
 LV_IMG_DECLARE(ui_img_power_2_png);

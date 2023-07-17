@@ -1,10 +1,11 @@
 #include "view.h"
+#include "ui/components/status_bar/status_bar.h"
 
-extern lv_obj_t *ui_wifi_icon, *ui_wifi_mode;
+extern StatusBar statusBar;
+
 extern lv_obj_t *ui_root_panel, *ui_menu_panel;
 extern lv_obj_t *ui_side_bar_panel, *ui_info_label;
 extern lv_obj_t *ui_hour_min_label;
-extern lv_obj_t *ui_battery_perc_label;
 
 extern lv_group_t *ui_group;
 
@@ -15,61 +16,6 @@ void lv_set_theme() {
     lv_theme_t * theme = lv_theme_default_init(disp, lv_palette_main(LV_PALETTE_NONE), lv_palette_main(LV_PALETTE_BLUE),
                                                true, LV_FONT_DEFAULT);
     lv_disp_set_theme(disp, theme);
-}
-
-void create_status_bar(lv_obj_t *root) {
-    lv_obj_t *ui_status_bar = lv_obj_create(root);
-    lv_obj_set_width(ui_status_bar, 320);
-    lv_obj_set_height(ui_status_bar, 18);
-    lv_obj_set_x(ui_status_bar, 0);
-    lv_obj_set_y(ui_status_bar, -10);
-    lv_obj_set_align(ui_status_bar, LV_ALIGN_TOP_MID);
-    lv_obj_clear_flag(ui_status_bar, LV_OBJ_FLAG_SCROLLABLE);
-    lv_obj_set_style_radius(ui_status_bar, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui_status_bar, lv_color_hex(0x000), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui_status_bar, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui_status_bar, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    ui_wifi_mode = lv_label_create(ui_status_bar);
-    lv_obj_set_width(ui_wifi_mode, LV_SIZE_CONTENT);
-    lv_obj_set_height(ui_wifi_mode, LV_SIZE_CONTENT);
-    lv_obj_set_x(ui_wifi_mode, 20);
-    lv_obj_set_y(ui_wifi_mode, 0);
-    lv_obj_set_align(ui_wifi_mode, LV_ALIGN_LEFT_MID);
-    lv_label_set_text(ui_wifi_mode, "");
-    lv_obj_set_style_text_font(ui_wifi_mode, &lv_font_montserrat_12, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    ui_wifi_icon = lv_img_create(ui_status_bar);
-    lv_img_set_src(ui_wifi_icon, &ui_img_wifi_closed_png);
-    lv_obj_set_width(ui_wifi_icon, LV_SIZE_CONTENT);
-    lv_obj_set_height(ui_wifi_icon, LV_SIZE_CONTENT);
-    lv_obj_set_align(ui_wifi_icon, LV_ALIGN_LEFT_MID);
-    lv_obj_add_flag(ui_wifi_icon, LV_OBJ_FLAG_ADV_HITTEST);
-    lv_obj_clear_flag(ui_wifi_icon, LV_OBJ_FLAG_SCROLLABLE);
-
-    ui_info_label = lv_label_create(ui_status_bar);
-    lv_obj_set_width(ui_info_label, LV_SIZE_CONTENT);
-    lv_obj_set_height(ui_info_label, LV_SIZE_CONTENT);
-    lv_obj_set_align(ui_info_label, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_info_label, "ATOM");
-    lv_obj_set_style_text_font(ui_info_label, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
-
-    lv_obj_t *ui_battery_icon = lv_img_create(ui_status_bar);
-    lv_img_set_src(ui_battery_icon, &ui_img_battery_png);
-    lv_obj_set_width(ui_battery_icon, LV_SIZE_CONTENT);
-    lv_obj_set_height(ui_battery_icon, LV_SIZE_CONTENT);
-    lv_obj_set_align(ui_battery_icon, LV_ALIGN_RIGHT_MID);
-    lv_obj_add_flag(ui_battery_icon, LV_OBJ_FLAG_ADV_HITTEST);
-    lv_obj_clear_flag(ui_battery_icon, LV_OBJ_FLAG_SCROLLABLE);
-
-    ui_battery_perc_label = lv_label_create(ui_status_bar);
-    lv_obj_set_width(ui_battery_perc_label, LV_SIZE_CONTENT);
-    lv_obj_set_height(ui_battery_perc_label, LV_SIZE_CONTENT);
-    lv_obj_set_x(ui_battery_perc_label, -20);
-    lv_obj_set_y(ui_battery_perc_label, 0);
-    lv_obj_set_align(ui_battery_perc_label, LV_ALIGN_RIGHT_MID);
-    lv_label_set_text(ui_battery_perc_label, "");
-    lv_obj_set_style_text_font(ui_battery_perc_label, &lv_font_montserrat_12, LV_PART_MAIN | LV_STATE_DEFAULT);
 }
 
 void create_time_panel(lv_obj_t *root) {
@@ -285,7 +231,9 @@ void home_ui_init(lv_obj_t *scr) {
     lv_obj_clear_flag(scr, LV_OBJ_FLAG_SCROLLABLE);
 
     create_root_panel(scr);
-    create_status_bar(ui_menu_panel);
+
+    statusBar.create_status_bar(ui_menu_panel);
+
     create_time_panel(ui_menu_panel);
     create_info_panel(ui_menu_panel);
     create_side_bar_panel(ui_root_panel);

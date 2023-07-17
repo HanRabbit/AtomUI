@@ -42,7 +42,7 @@ void PageManager::add_page(const char *name, lv_obj_t *(*create_func)(), lv_obj_
  * @param scrAnim: 屏幕切换动画
  */
 void PageManager::push(const char *name, ScrAnim scrAnim) {
-    lv_scr_load_anim(pages[get_id(name)].p_load(), scrAnim.anim_type, scrAnim.time, scrAnim.delay, false);
+    lv_scr_load_anim(pages[get_id(name)].p_load(), scrAnim.anim_type, scrAnim.time, scrAnim.delay, true);
 }
 
 /**

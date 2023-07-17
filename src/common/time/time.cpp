@@ -1,7 +1,7 @@
 #include "time.h"
 
 String Time::get_time_str(bool show_sec) {
-    if (getLocalTime(&time_, 200)) {
+    if (getLocalTime(&time_, 50)) {
         time_str = (time_.tm_hour < 10 ? "0" : "") + String(time_.tm_hour) + ":" + (time_.tm_min < 10 ? "0" : "") + String(time_.tm_min);
 //        String time_year_str = String(time_.tm_year + 1900) + "-" + String(time_.tm_mon + 1) + "-" + String(time_.tm_mday);
         if (show_sec) {
