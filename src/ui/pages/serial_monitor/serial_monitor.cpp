@@ -3,13 +3,18 @@
 
 extern StatusBar statusBar;
 
+void update_status(lv_timer_t *timer) {
+    statusBar.status.title = "SERIAL MONITOR";
+    statusBar.update();
+}
+
 lv_obj_t *SerialMonitorPage::page_create() {
     lv_obj_t *page_startup_scr = lv_obj_create(nullptr);
     lv_obj_set_style_bg_color(page_startup_scr, lv_color_hex(0x000000), LV_PART_MAIN);
 
     statusBar.margin_y = 0;
     statusBar.create_status_bar(page_startup_scr);
-    statusBar.set_title("SERIAL MONITOR");
+    lv_timer_t *statusBar_timer = lv_timer_create(update_status, STATUS_BAR_UPDATE_DURING, nullptr);
 
     lv_obj_t *serial_textarea = lv_textarea_create(page_startup_scr);
     lv_obj_set_size(serial_textarea, 290, 180);

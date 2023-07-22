@@ -18,14 +18,6 @@ void home_app_esp_sleep_cb(lv_event_t *e) {
 }
 
 void home_app_serial_monitor(lv_event_t *e) {
-    lv_timer_pause(side_bar_in_out_timer);
-    lv_timer_pause(statusBar.status_bar_timer);
-    lv_timer_pause(home_time_timer);
-
-    lv_timer_del(side_bar_in_out_timer);
-    lv_timer_del(statusBar.status_bar_timer);
-    lv_timer_del(home_time_timer);
-
     pageManager.push("PAGE/SERIAL_MONITOR", PM_SCR_ANIM_MOVE_TOP);
 }
 

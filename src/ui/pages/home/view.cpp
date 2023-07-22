@@ -35,7 +35,7 @@ void create_time_panel(lv_obj_t *root) {
     lv_obj_set_y(ui_hour_min_label, -10);
     lv_obj_set_align(ui_hour_min_label, LV_ALIGN_CENTER);
     lv_obj_set_style_text_font(ui_hour_min_label, &lv_font_montserrat_40, 0);
-    lv_label_set_text(ui_hour_min_label, "--:--");
+    lv_label_set_text(ui_hour_min_label, "ATOM");
     lv_obj_set_style_text_letter_space(ui_hour_min_label, 4, 0);
 
     lv_obj_t *ui_time_bar = lv_bar_create(ui_time_panel);

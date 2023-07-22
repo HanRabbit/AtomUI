@@ -42,7 +42,11 @@ void PageManager::add_page(const char *name, lv_obj_t *(*create_func)(), lv_obj_
  * @param scrAnim: 屏幕切换动画
  */
 void PageManager::push(const char *name, ScrAnim scrAnim) {
+    if (current_page > 0) {
+        pages[current_page].p_del();
+    }
     lv_scr_load_anim(pages[get_id(name)].p_load(), scrAnim.anim_type, scrAnim.time, scrAnim.delay, true);
+    current_page = get_id(name);
 }
 
 /**
@@ -50,5 +54,9 @@ void PageManager::push(const char *name, ScrAnim scrAnim) {
  * @param name: 通过name查找Page
  */
 void PageManager::push(const char *name) {
+    if (current_page > 0) {
+        pages[current_page].p_del();
+    }
     lv_scr_load(pages[get_id(name)].p_load());
+    current_page = get_id(name);
 }

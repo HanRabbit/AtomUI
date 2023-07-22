@@ -15,10 +15,10 @@ lv_obj_t *Page::p_load() {
     return p_create();
 }
 
-//void Page::p_hide(lv_obj_t *scr) {
-//    pageType = ready_hiding;
-//    if (pageType == ready_hiding) {
-//        pageType = hiding;
-//        p_delete(scr);
-//    }
-//}
+void Page::p_del() {
+    pageType = ready_hiding;
+    if (pageType == ready_hiding) {
+        pageType = hiding;
+        p_delete();
+    }
+}

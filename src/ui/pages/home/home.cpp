@@ -91,5 +91,9 @@ lv_obj_t *HomePage::page_create() {
 }
 
 lv_obj_t *HomePage::page_delete() {
+    lv_timer_del(side_bar_in_out_timer);
+    lv_timer_del(statusBar.status_bar_timer);
+    lv_timer_del(home_time_timer);
+
     return nullptr;
 }

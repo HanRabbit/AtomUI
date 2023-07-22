@@ -18,7 +18,7 @@ public:
 
     void p_init(const char *name, uint16_t id, lv_obj_t *(*create_func)(), lv_obj_t *(*delete_func)());
     lv_obj_t *p_load();
-//    void p_hide(lv_obj_t *scr);
+    void p_del();
 };
 
 #endif //ATOM_UI_PAGE_H

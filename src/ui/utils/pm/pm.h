@@ -22,6 +22,7 @@ static ScrAnim PM_SCR_ANIM_MOVE_RIGHT = {LV_SCR_LOAD_ANIM_MOVE_RIGHT, 400, 0};
 class PageManager {
     Page pages[20];
     uint16_t max_id = 0;
+    uint16_t current_page = 0;
 
 public:
     uint16_t get_id(const char *name);
