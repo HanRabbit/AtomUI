@@ -1,7 +1,10 @@
 #include "status_bar.h"
+
+#include <utility>
 #include "common/log/log.h"
 #include "ui/res/rp/rp.h"
 #include "indev/wifi/wifi.h"
+#include "indev/io_map/io_map.h"
 
 void StatusBar::create_status_bar(lv_obj_t *root) {
     lv_obj_t *ui_status_bar = lv_obj_create(root);
@@ -58,9 +61,17 @@ void StatusBar::create_status_bar(lv_obj_t *root) {
     lv_obj_set_style_text_font(ui_battery_perc_label, &lv_font_montserrat_12, LV_PART_MAIN | LV_STATE_DEFAULT);
 }
 
-void StatusBar::set_title(String st) {
-    status.title = st;
+void StatusBar::set_title(String s_title) {
+    status.title = std::move(s_title);
     lv_label_set_text(ui_info_label, status.title.c_str());
+}
+
+void StatusBar::get_battery() {
+    if (digitalRead(BATTERY_CH) == LOW) {
+        status.battery = "CHARGING";
+    } else {
+        status.battery = analogRead(BATTERY_PIN);
+    }
 }
 
 void StatusBar::update() {
@@ -97,7 +108,9 @@ void StatusBar::update() {
             Log::error("WIFI", "Wifi icon is not illegal");
     }
 
+    get_battery();
+
     lv_label_set_text(ui_wifi_mode, wifi_mode.c_str());
-    lv_label_set_text(ui_battery_perc_label, String(status.battery).c_str());
+    lv_label_set_text(ui_battery_perc_label, status.battery.c_str());
     lv_label_set_text(ui_info_label, status.title.c_str());
 }

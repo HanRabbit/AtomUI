@@ -20,6 +20,8 @@ public:
     static void msg(const String& name, const String& msg);
 
     static void begin(unsigned long baud);
+
+    static String read();
 };
 
 #endif

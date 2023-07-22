@@ -13,7 +13,7 @@ class Status {
 public:
     wifi_mode_t wifi_mode = WIFI_MODE_NULL;     /* WiFi模式 */
     wifi_status_t wifi_status = DISCONNECTED;
-    uint8_t battery = 0;             /* 电池状态（百分比） */
+    String battery = "";             /* 电池状态（百分比） */
     String title = "";                /* 标题 */
 };
 
@@ -27,6 +27,7 @@ public:
     void create_status_bar(lv_obj_t *root);
     void update();
     void set_title(String st);
+    void get_battery();
 };
 
 #endif //ATOM_UI_STATUS_BAR_H

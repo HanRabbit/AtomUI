@@ -19,3 +19,7 @@ void Log::msg(const String &name, const String &msg) {
 void Log::begin(unsigned long baud) {
     LOG_.begin(baud);
 }
+
+String Log::read() {
+    return LOG_.readString();
+}

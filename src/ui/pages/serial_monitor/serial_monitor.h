@@ -2,6 +2,9 @@
 #define ATOM_UI_SERIAL_MONITOR_H
 
 #include <lvgl.h>
+#include "common/log/log.h"
+
+#define SERIAL_READ_FREQUENT 200
 
 class SerialMonitorPage {
 

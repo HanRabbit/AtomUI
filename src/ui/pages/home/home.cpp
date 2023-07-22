@@ -53,12 +53,6 @@ void side_bar_in_out_update(lv_timer_t *timer) {
 
 void home_time_update(lv_timer_t *timer) {
     lv_label_set_text(ui_hour_min_label, Time::get_time_str(false).c_str());
-
-//    if (digitalRead(BATTERY_CH) == LOW) {
-//        lv_label_set_text(ui_battery_perc_label, "CHARGING");
-//    } else {
-//        lv_label_set_text(ui_battery_perc_label, "");
-//    }
 }
 
 void status_bar_update(lv_timer_t *timer) {
