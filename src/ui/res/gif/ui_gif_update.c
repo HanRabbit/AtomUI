@@ -1331,7 +1331,7 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_REFRESH u
         0x09, 0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 0x00, 0x00, 0x3b
 };
 
-const lv_img_dsc_t refresh = {
+const lv_img_dsc_t ui_gif_update = {
         .header.cf = LV_IMG_CF_RAW_CHROMA_KEYED,
         .header.always_zero = 0,
         .header.reserved = 0,

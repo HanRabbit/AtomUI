@@ -9,6 +9,7 @@ static uint16_t apps_max_num = 0;
 void home_app_esp_sleep_cb(lv_event_t *e);
 void home_app_serial_monitor(lv_event_t *e);
 void home_app_translate(lv_event_t *e);
+void home_app_ota_update(lv_event_t *e);
 
 class HomeApp {
 public:

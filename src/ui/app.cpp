@@ -26,6 +26,9 @@ void app_init() {
     pageManager.add_page("PAGE/TRANSLATE",
                          TranslatePage::page_create,
                          TranslatePage::page_delete);
+    pageManager.add_page("PAGE/OTAPage",
+                         OTAPage::page_create,
+                         OTAPage::page_delete);
 
     /* Start Push */
     pageManager.push("PAGE/STARTUP");

@@ -6,5 +6,6 @@
 #include "home/home.h"
 #include "serial_monitor/serial_monitor.h"
 #include "translate/translate.h"
+#include "ota_page/ota_page.h"
 
 #endif //ATOM_UI_PAGES_H

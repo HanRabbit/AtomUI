@@ -3,6 +3,7 @@
 
 #include <lvgl.h>
 #include "indev/indev.h"
+#include "common/ota_update/ota_update.h"
 
 class OTAPage {
     static void ui_event(lv_event_t *e);
