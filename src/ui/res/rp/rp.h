@@ -14,5 +14,8 @@ LV_IMG_DECLARE(ui_img_atom_gif);
 LV_IMG_DECLARE(ui_img_link_png);
 LV_IMG_DECLARE(ui_img_time_png);
 LV_IMG_DECLARE(ui_img_follows_png);
+LV_IMG_DECLARE(ui_img_translate_png);
+LV_IMG_DECLARE(ui_img_search_png);
+LV_IMG_DECLARE(ui_gif_update);
 
 #endif //ATOM_UI_RP_H

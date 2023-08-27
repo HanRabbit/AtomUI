@@ -23,6 +23,9 @@ void app_init() {
     pageManager.add_page("PAGE/SERIAL_MONITOR",
                          SerialMonitorPage::page_create,
                          SerialMonitorPage::page_delete);
+    pageManager.add_page("PAGE/TRANSLATE",
+                         TranslatePage::page_create,
+                         TranslatePage::page_delete);
 
     /* Start Push */
     pageManager.push("PAGE/STARTUP");

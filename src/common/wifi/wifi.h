@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 #include <WiFi.h>
-#include <lvgl.h>
+#include "lvgl.h"
 #include "common/time/time.h"
 
 static const char *WIFI_SSID = "U-home";

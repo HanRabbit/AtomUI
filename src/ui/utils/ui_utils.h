@@ -16,6 +16,8 @@ void lv_obj_add_anim(
         lv_anim_path_cb_t path_cb
 );
 
+extern lv_group_t *ui_group;
+
 void anim_fade_out(lv_obj_t * TargetObject, int delay);
 void anim_side_bar_spread(lv_obj_t * TargetObject, int delay);
 void anim_side_bar_shrink(lv_obj_t * TargetObject, int delay);
@@ -24,6 +26,8 @@ void anim_zoom_fade_out(lv_obj_t * TargetObject, int delay);
 
 void anim_spread_in_out_Animation( lv_obj_t *TargetObject, int delay);
 void anim_move_up_down_Animation( lv_obj_t *TargetObject, int delay);
+void search_box_spread_Animation(lv_obj_t * TargetObject, int delay);
+void search_box_shrink_Animation(lv_obj_t * TargetObject, int delay);
 
 #define _UI_TEMPORARY_STRING_BUFFER_SIZE 32
 #define _UI_BAR_PROPERTY_VALUE 0

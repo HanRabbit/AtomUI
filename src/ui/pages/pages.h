@@ -5,5 +5,6 @@
 #include "error/error.h"
 #include "home/home.h"
 #include "serial_monitor/serial_monitor.h"
+#include "translate/translate.h"
 
 #endif //ATOM_UI_PAGES_H

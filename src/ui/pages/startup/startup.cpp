@@ -1,5 +1,7 @@
 #include "startup.h"
 #include "ui/res/rp/rp.h"
+#include "common/ota_update/ota_update.h"
+#include "common/log/log.h"
 
 static lv_obj_t *ui_scr;
 //static lv_obj_t *ui_label_atom;

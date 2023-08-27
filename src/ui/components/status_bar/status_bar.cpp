@@ -3,7 +3,7 @@
 #include <utility>
 #include "common/log/log.h"
 #include "ui/res/rp/rp.h"
-#include "indev/wifi/wifi.h"
+#include "common/wifi/wifi.h"
 #include "indev/io_map/io_map.h"
 
 void StatusBar::create_status_bar(lv_obj_t *root) {

@@ -27,7 +27,7 @@ bool sd_card_init() {
             Log::msg("FILES SYSTEM SIZE", String(SD_MMC.totalBytes()));
             Log::msg("FILES SYSTEM USED SIZE", String(SD_MMC.usedBytes()));
 
-            lv_fs_fatfs_init();
+//            lv_fs_fatfs_init();
             lv_fs_test();
             return true;
         }

@@ -1,6 +1,6 @@
 #include "indev/indev.h"
 #include "ui/app.h"
-#include "indev/wifi/wifi.h"
+#include "common/wifi/wifi.h"
 
 void setup() {
     lv_init();

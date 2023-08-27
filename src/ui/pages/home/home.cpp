@@ -2,7 +2,7 @@
 #include "view.h"
 #include "app.h"
 #include "ui/utils/ui_utils.h"
-#include "indev/wifi/wifi.h"
+#include "common/wifi/wifi.h"
 #include "common/time/time.h"
 #include "ui/components/status_bar/status_bar.h"
 
@@ -68,9 +68,10 @@ lv_obj_t *HomePage::page_create() {
     /* 注册HomeApp */
     HomeApp homeApp[10] {};
     homeApp[0].app_init("APPS", &ui_img_app_png, home_app_serial_monitor);
-    homeApp[1].app_init("MENU", &ui_img_menu_png, nullptr);
-    homeApp[2].app_init("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
-    homeApp[3].app_init("SETTINGS", &ui_img_settings_png, nullptr);
+    homeApp[1].app_init("TRANSLATE", &ui_img_translate_png, home_app_translate);
+    homeApp[2].app_init("MENU", &ui_img_menu_png, nullptr);
+    homeApp[3].app_init("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
+    homeApp[4].app_init("SETTINGS", &ui_img_settings_png, nullptr);
 
     /* 动画处理 */
     side_bar_in_out_timer = lv_timer_create(side_bar_in_out_update, 1000, nullptr);

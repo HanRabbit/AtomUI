@@ -21,6 +21,10 @@ void home_app_serial_monitor(lv_event_t *e) {
     pageManager.push("PAGE/SERIAL_MONITOR", PM_SCR_ANIM_MOVE_TOP);
 }
 
+void home_app_translate(lv_event_t *e) {
+    pageManager.push("PAGE/TRANSLATE", PM_SCR_ANIM_MOVE_TOP);
+}
+
 void HomeApp::app_init(const char *app_name_, const void *icon_src_, lv_event_cb_t app_event_) {
     icon_src = icon_src_;
     app_name = app_name_;
