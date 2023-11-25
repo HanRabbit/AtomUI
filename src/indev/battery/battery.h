@@ -6,7 +6,10 @@
 #include "indev/io_map/io_map.h"
 #include "common/log/log.h"
 
-void battery_init();
-uint16_t get_battery();
+class Battery {
+public:
+    static void init();
+    static uint16_t get();
+};
 
 #endif //ATOM_UI_BATTERY_H

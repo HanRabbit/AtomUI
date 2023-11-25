@@ -2,7 +2,6 @@
 #include "view.h"
 #include "app.h"
 #include "ui/utils/ui_utils.h"
-#include "common/wifi/wifi.h"
 #include "common/time/time.h"
 #include "ui/components/status_bar/status_bar.h"
 
@@ -66,13 +65,13 @@ lv_obj_t *HomePage::page_create() {
     home_ui_init(scr);
 
     /* 注册HomeApp */
-    HomeApp homeApp[10] {};
-    homeApp[0].app_init("APPS", &ui_img_app_png, nullptr);
-    homeApp[1].app_init("TRANSLATE", &ui_img_translate_png, home_app_translate);
-    homeApp[2].app_init("SERIAL MONITOR", &ui_img_serial_png, home_app_serial_monitor);
-    homeApp[3].app_init("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
-    homeApp[4].app_init("SETTINGS", &ui_img_settings_png, nullptr);
-    homeApp[5].app_init("OTA UPDATE", &ui_img_update_png, home_app_ota_update);
+    HomeAppManager homeAppManager{};
+    homeAppManager.add_app("APPS", &ui_img_app_png, nullptr);
+    homeAppManager.add_app("TRANSLATE", &ui_img_translate_png, home_app_translate);
+    homeAppManager.add_app("SERIAL MONITOR", &ui_img_serial_png, home_app_serial_monitor);
+    homeAppManager.add_app("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
+    homeAppManager.add_app("SETTINGS", &ui_img_settings_png, nullptr);
+    homeAppManager.add_app("OTA UPDATE", &ui_img_update_png, home_app_ota_update);
 
     /* 动画处理 */
     side_bar_in_out_timer = lv_timer_create(side_bar_in_out_update, 1000, nullptr);

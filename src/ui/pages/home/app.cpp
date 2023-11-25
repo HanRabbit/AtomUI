@@ -40,3 +40,7 @@ void HomeApp::app_init(const char *app_name_, const void *icon_src_, lv_event_cb
     create_side_bar_button(icon_src, app_event);
     lv_obj_update_snap(ui_side_bar_panel, LV_ANIM_ON);
 }
+
+void HomeAppManager::add_app(const char *app_name, const void *icon_src, lv_event_cb_t app_event) {
+    homeApps[apps_max_num].app_init(app_name, icon_src, app_event);
+}

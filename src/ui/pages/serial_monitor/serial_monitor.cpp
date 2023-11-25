@@ -20,6 +20,10 @@ void update_status(lv_timer_t *timer) {
     statusBar.update();
 }
 
+void back(lv_event_t *e) {
+    statusBar.back();
+}
+
 void update_serial(lv_timer_t *timer) {
     if (LOG_.available()) {
         serial_data_str += "#646464 [" + String(millis() / 1000) + " s]: #" + Log::read() + "\n";
@@ -34,6 +38,7 @@ lv_obj_t *SerialMonitorPage::page_create() {
 
     statusBar.margin_y = 0;
     statusBar.create_status_bar(page_startup_scr);
+    lv_obj_add_event_cb(statusBar.ui_back_button, back, LV_EVENT_PRESSED, nullptr);
 
     serial_text = lv_label_create(page_startup_scr);
     lv_obj_set_size(serial_text, 290, 180);
@@ -52,6 +57,8 @@ lv_obj_t *SerialMonitorPage::page_create() {
 
     lv_group_remove_all_objs(ui_group);
     lv_group_add_obj(ui_group, serial_text);
+    lv_group_add_obj(ui_group, statusBar.ui_back_button);
+
     lv_group_focus_obj(serial_text);
 
     lv_serial_monitor_set_theme();

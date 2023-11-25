@@ -19,6 +19,7 @@ LV_IMG_DECLARE(ui_img_translate_png);
 LV_IMG_DECLARE(ui_img_search_png);
 LV_IMG_DECLARE(ui_img_update_png);
 LV_IMG_DECLARE(ui_img_serial_png);
+LV_IMG_DECLARE(ui_img_back_png);
 
 /* GIF */
 LV_IMG_DECLARE(ui_gif_update);

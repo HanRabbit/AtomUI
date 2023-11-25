@@ -39,7 +39,7 @@ lv_obj_t *OTAPage::page_create() {
     lv_gif_set_src(ui_gif_update_obj, &ui_gif_update);
     lv_obj_set_width(ui_gif_update_obj, LV_SIZE_CONTENT);
     lv_obj_set_height(ui_gif_update_obj, LV_SIZE_CONTENT);
-    lv_obj_align(ui_gif_update_obj, LV_ALIGN_CENTER, 0, -10);
+    lv_obj_align(ui_gif_update_obj, LV_ALIGN_CENTER, 0, 0);
 
     tips_label = lv_label_create(scr);
     set_update_tips("Checking update");

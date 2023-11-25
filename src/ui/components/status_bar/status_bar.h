@@ -21,13 +21,14 @@ class StatusBar {
 public:
     Status status;
     int margin_y = -10;
-    lv_obj_t *ui_wifi_icon{}, *ui_wifi_mode{}, *ui_info_label{}, *ui_battery_perc_label{}, *ui_battery_icon{};
+    lv_obj_t *ui_back_button{}, *ui_back_icon{}, *ui_wifi_icon{}, *ui_wifi_mode{}, *ui_info_label{}, *ui_battery_perc_label{}, *ui_battery_icon{};
     lv_timer_t *status_bar_timer{};
 
     void create_status_bar(lv_obj_t *root);
     void update();
     void set_title(String st);
     void get_battery();
+    void back();
 };
 
 #endif //ATOM_UI_STATUS_BAR_H

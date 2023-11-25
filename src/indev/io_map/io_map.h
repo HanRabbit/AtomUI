@@ -7,16 +7,16 @@
 #define EC_B  3
 
 /* Battery */
-#define BATTERY_PIN 4
+#define BATTERY_PIN 5
 #define BATTERY_STDBY 36
 #define BATTERY_CH 37
 
 /* SD Card */
-#define SD_CLK 48
-#define SD_CMD 47
-#define SD_D0  41
-#define SD_D1  40
-#define SD_D2  39
-#define SD_D3  42
+#define SD_CLK 8
+#define SD_CMD 17
+#define SD_D0  7
+#define SD_D1  6
+#define SD_D2  16
+#define SD_D3  15
 
 #endif //ATOM_UI_IO_MAP_H

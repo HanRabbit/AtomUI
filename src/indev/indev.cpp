@@ -88,7 +88,7 @@ void lv_disp_init() {
 
     digitalWrite(TFT_BL, LOW);
 
-    lv_disp_draw_buf_init(&draw_buf, buf, NULL, SCREEN_WIDTH * 10 );
+    lv_disp_draw_buf_init(&draw_buf, buf, nullptr, SCREEN_WIDTH * 10 );
 
     /*Initialize the display*/
     static lv_disp_drv_t disp_drv;
@@ -107,9 +107,9 @@ void lv_port_drv_init() {
     lv_disp_init();
     lv_encoder_drv_init();
     
-    battery_init();
+    Battery::init();
 
     lv_group_init();
 
-    bl_set_gradual(BL_ON, 200);
+    bl_set_gradual(BL_ON, 2000);
 }
