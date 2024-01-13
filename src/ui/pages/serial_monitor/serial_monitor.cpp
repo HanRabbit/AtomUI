@@ -67,5 +67,6 @@ lv_obj_t *SerialMonitorPage::page_create() {
 }
 
 lv_obj_t *SerialMonitorPage::page_delete() {
+    lv_timer_del(statusBar.status_bar_timer);
     return nullptr;
 }

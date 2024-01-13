@@ -45,8 +45,11 @@ void PageManager::push(const char *name, ScrAnim scrAnim) {
     if (current_page > 0) {
         pages[current_page].p_del();
     }
-    lv_scr_load_anim(pages[get_id(name)].p_load(), scrAnim.anim_type, scrAnim.time, scrAnim.delay, true);
-    current_page = get_id(name);
+
+    if (current_page != get_id("PAGE/HOME") || home_page_app_started) {
+        lv_scr_load_anim(pages[get_id(name)].p_load(), scrAnim.anim_type, scrAnim.time, scrAnim.delay, true);
+        current_page = get_id(name);
+    }
 }
 
 /**
@@ -57,6 +60,10 @@ void PageManager::push(const char *name) {
     if (current_page > 0) {
         pages[current_page].p_del();
     }
-    lv_scr_load(pages[get_id(name)].p_load());
-    current_page = get_id(name);
+
+    if (current_page != get_id("PAGE/HOME") || home_page_app_started) {
+        lv_scr_load(pages[get_id(name)].p_load());
+        current_page = get_id(name);
+    }
 }
+

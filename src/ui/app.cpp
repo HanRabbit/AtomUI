@@ -1,5 +1,4 @@
 #include "app.h"
-
 #include "pages/pages.h"
 
 PageManager pageManager;
@@ -32,5 +31,5 @@ void app_init() {
 
     /* Start Push */
     pageManager.push("PAGE/STARTUP");
-    lv_timer_create(go_into_home, 6000, nullptr);
+    lv_timer_create(go_into_home, 6200, nullptr);
 }

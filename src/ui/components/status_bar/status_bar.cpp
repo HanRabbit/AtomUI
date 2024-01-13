@@ -10,7 +10,8 @@
 extern PageManager pageManager;
 
 void StatusBar::back() {
-    pageManager.push("PAGE/HOME", PM_SCR_ANIM_MOVE_BOTTOM);
+    pageManager.push("PAGE/HOME", PM_SCR_ANIM_MOVE_RIGHT);
+//    pageManager.home_page_app_started = false;
 }
 
 void StatusBar::create_status_bar(lv_obj_t *root) {

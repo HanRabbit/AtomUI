@@ -4,10 +4,14 @@
 #include "ui/utils/ui_utils.h"
 #include "common/time/time.h"
 #include "ui/components/status_bar/status_bar.h"
+#include "ui/utils/pm/pm.h"
 
 StatusBar statusBar;
 
+HomeAppManager homeAppManager{};
+
 extern String APP_NAMES[20];
+extern PageManager pageManager;
 
 lv_obj_t *ui_root_panel, *ui_menu_panel;
 lv_obj_t *ui_side_bar_panel, *ui_info_label;
@@ -58,21 +62,7 @@ void status_bar_update(lv_timer_t *timer) {
     statusBar.update();
 }
 
-lv_obj_t *HomePage::page_create() {
-    lv_obj_t *scr = lv_obj_create(nullptr);
-
-    /* 创建UI组件 */
-    home_ui_init(scr);
-
-    /* 注册HomeApp */
-    HomeAppManager homeAppManager{};
-    homeAppManager.add_app("APPS", &ui_img_app_png, nullptr);
-    homeAppManager.add_app("TRANSLATE", &ui_img_translate_png, home_app_translate);
-    homeAppManager.add_app("SERIAL MONITOR", &ui_img_serial_png, home_app_serial_monitor);
-    homeAppManager.add_app("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
-    homeAppManager.add_app("SETTINGS", &ui_img_settings_png, nullptr);
-    homeAppManager.add_app("OTA UPDATE", &ui_img_update_png, home_app_ota_update);
-
+void home_page_timers_event(lv_event_t *e) {
     /* 动画处理 */
     side_bar_in_out_timer = lv_timer_create(side_bar_in_out_update, 1000, nullptr);
 
@@ -82,13 +72,37 @@ lv_obj_t *HomePage::page_create() {
     /* 时间更新 */
     home_time_timer = lv_timer_create(home_time_update, 1000, nullptr);
 
+    lv_timer_ready(side_bar_in_out_timer);
+    lv_timer_ready(statusBar.status_bar_timer);
+    lv_timer_ready(home_time_timer);
+}
+
+lv_obj_t *HomePage::page_create() {
+    lv_obj_t *scr = lv_obj_create(nullptr);
+    lv_obj_add_event_cb(scr, home_page_timers_event, LV_EVENT_SCREEN_LOADED, nullptr);
+
+    /* 创建UI组件 */
+    home_ui_init(scr);
+
+    /* 注册HomeApp */
+    homeAppManager.add_app("APPS", &ui_img_app_png, nullptr);
+    homeAppManager.add_app("TRANSLATE", &ui_img_translate_png, home_app_translate);
+    homeAppManager.add_app("SERIAL MONITOR", &ui_img_serial_png, home_app_serial_monitor);
+    homeAppManager.add_app("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
+    homeAppManager.add_app("SETTINGS", &ui_img_settings_png, nullptr);
+    homeAppManager.add_app("OTA UPDATE", &ui_img_update_png, home_app_ota_update);
+
+    pageManager.home_page_app_started = !pageManager.home_page_app_started;
+
+
+
     return scr;
 }
 
 lv_obj_t *HomePage::page_delete() {
-    lv_timer_del(side_bar_in_out_timer);
-    lv_timer_del(statusBar.status_bar_timer);
-    lv_timer_del(home_time_timer);
+    lv_timer_pause(side_bar_in_out_timer);
+    lv_timer_pause(statusBar.status_bar_timer);
+    lv_timer_pause(home_time_timer);
 
     return nullptr;
 }
