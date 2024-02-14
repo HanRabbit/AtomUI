@@ -8,17 +8,13 @@ void Page::p_init(const char *name, uint16_t id, lv_obj_t *(*create_func)(), lv_
 }
 
 lv_obj_t *Page::p_load() {
-    pageType = ready_showing;
-    if (pageType == ready_showing) {
-        pageType = showing;
-    }
+//    pageType = ready_showing;
+    pageType = showing;
     return p_create();
 }
 
 void Page::p_del() {
-    pageType = ready_hiding;
-    if (pageType == ready_hiding) {
-        pageType = hiding;
-        p_delete();
-    }
+//    pageType = ready_hiding;
+    pageType = hiding;
+    p_delete();
 }

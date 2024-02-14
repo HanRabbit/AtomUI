@@ -1,3 +1,8 @@
+/**
+ * @file indev.cpp
+ * @brief LVGL驱动初始化
+ */
+
 #include <TFT_eSPI.h>
 #include "indev.h"
 #include "common/log/log.h"
@@ -22,6 +27,9 @@ lv_group_t *ui_group;
 
 /* 旋转编码器 */
 ESP32Encoder enc;
+
+/* 电池对象 */
+Battery battery;
 
 int enc_diff = 0;
 int enc_diff_last = 0;
@@ -83,17 +91,14 @@ void lv_encoder_drv_init() {
 void lv_disp_init() {
     digitalWrite(TFT_BL, LOW);
 
-    tft.begin();          /* TFT init */
-    tft.setRotation(DISP_DIR ); /* Landscape orientation, flipped */
-
-    digitalWrite(TFT_BL, LOW);
+    tft.begin();
+    tft.setRotation(DISP_DIR );
 
     lv_disp_draw_buf_init(&draw_buf, buf, nullptr, SCREEN_WIDTH * 10 );
 
-    /*Initialize the display*/
     static lv_disp_drv_t disp_drv;
     lv_disp_drv_init( &disp_drv );
-    /*Change the following line to your display resolution*/
+
     disp_drv.hor_res = SCREEN_WIDTH;
     disp_drv.ver_res = SCREEN_HEIGHT;
     disp_drv.flush_cb = disp_flush;
@@ -102,14 +107,13 @@ void lv_disp_init() {
 }
 
 void lv_port_drv_init() {
-    Log::begin(115200);
+    bl_set_gradual(BL_ON, 1000);    /* 设置背光渐变动画 */
+    Log::begin(115200);   /* Log 串口初始化 */
 
-    lv_disp_init();
-    lv_encoder_drv_init();
+    lv_disp_init();             /*初始化显示屏*/
+    lv_encoder_drv_init();      /*初始化旋转编码器*/
     
-    Battery::init();
+    battery.init();             /*初始化电池*/
 
-    lv_group_init();
-
-    bl_set_gradual(BL_ON, 2000);
+    lv_group_init();            /*初始化UI操作组*/
 }

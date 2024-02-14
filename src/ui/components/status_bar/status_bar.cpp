@@ -1,18 +1,16 @@
 #include "status_bar.h"
-
 #include "common/log/log.h"
 #include "ui/res/rp/rp.h"
 #include "common/wifi/wifi.h"
 #include "indev/io_map/io_map.h"
 #include "indev/battery/battery.h"
-#include "ui/utils/pm/pm.h"
+#include "ui/utils/page_manager/page_manager.h"
 
 extern PageManager pageManager;
 
-void StatusBar::back() {
-    pageManager.push("PAGE/HOME", PM_SCR_ANIM_MOVE_RIGHT);
-//    pageManager.home_page_app_started = false;
-}
+extern Battery battery;
+
+StatusBar statusBar;
 
 void StatusBar::create_status_bar(lv_obj_t *root) {
     lv_obj_t *ui_status_bar = lv_obj_create(root);
@@ -38,6 +36,9 @@ void StatusBar::create_status_bar(lv_obj_t *root) {
     lv_obj_set_align(ui_back_button, LV_ALIGN_LEFT_MID);
     lv_obj_add_flag(ui_back_button, LV_OBJ_FLAG_ADV_HITTEST);
     lv_obj_clear_flag(ui_back_button, LV_OBJ_FLAG_SCROLLABLE);
+    lv_obj_add_event_cb(ui_back_button, [](lv_event_t *e) {
+        pageManager.push("PAGE/HOME", PM_SCR_ANIM_MOVE_RIGHT);
+    }, LV_EVENT_RELEASED, nullptr);
 
     ui_back_icon = lv_img_create(ui_back_button);
     lv_img_set_src(ui_back_icon, &ui_img_back_png);
@@ -99,7 +100,7 @@ void StatusBar::get_battery() {
     if (digitalRead(BATTERY_CH) == LOW) {
         status.battery = "CHARGING";
     } else {
-        status.battery = Battery::get();
+        status.battery = battery.get_perc();
     }
 }
 

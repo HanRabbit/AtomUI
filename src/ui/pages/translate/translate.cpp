@@ -76,24 +76,12 @@ void create_search_box(lv_obj_t *root) {
     lv_group_remove_all_objs(ui_group);
     lv_group_add_obj(ui_group, search_bar);
     lv_group_add_obj(ui_group, search_button);
+    lv_group_add_obj(ui_group, statusBar.ui_back_button);
 }
 
 void scr_load_event(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_SCREEN_LOADED) {
-//        search_box_spread_Animation(search_panel, 0);
-//        Log::msg("OTA UPDATING");
-//        t_httpUpdate_return ret = OTA_update();
-//        switch (ret) {
-//            case HTTP_UPDATE_OK:
-//                Log::msg("ok");
-//                break;
-//            case HTTP_UPDATE_FAILED:
-//                Log::msg("failed");
-//                break;
-//            case HTTP_UPDATE_NO_UPDATES:
-//                Log::msg("no updates");
-//                break;
-//        }
+
     }
 }
 
@@ -114,5 +102,8 @@ lv_obj_t *TranslatePage::page_create() {
 }
 
 lv_obj_t *TranslatePage::page_delete() {
+    lv_timer_del(statusBar.status_bar_timer);
+    free((int *) malloc(sizeof (int)));
+    lv_obj_remove_event_cb(search_bar, nullptr);
     return nullptr;
 }

@@ -1,5 +1,6 @@
-#include "pm.h"
+#include "page_manager.h"
 
+extern lv_indev_t *indev;
 
 /**
  * @brief 通过Page name查找获取Page id
@@ -42,14 +43,17 @@ void PageManager::add_page(const char *name, lv_obj_t *(*create_func)(), lv_obj_
  * @param scrAnim: 屏幕切换动画
  */
 void PageManager::push(const char *name, ScrAnim scrAnim) {
-    if (current_page > 0) {
+//    if (current_page > 0) {
         pages[current_page].p_del();
-    }
+//    }
 
-    if (current_page != get_id("PAGE/HOME") || home_page_app_started) {
+//    if (strcmp(name, "PAGE/HOME") && !lv_indev_get_key(indev, LV_INDEV_STATE_PRESSED)) {
         lv_scr_load_anim(pages[get_id(name)].p_load(), scrAnim.anim_type, scrAnim.time, scrAnim.delay, true);
         current_page = get_id(name);
-    }
+        return;
+//    }
+//    lv_scr_load_anim(pages[get_id(name)].p_load(), scrAnim.anim_type, scrAnim.time, scrAnim.delay, true);
+//    current_page = get_id(name);
 }
 
 /**
@@ -57,13 +61,14 @@ void PageManager::push(const char *name, ScrAnim scrAnim) {
  * @param name: 通过name查找Page
  */
 void PageManager::push(const char *name) {
-    if (current_page > 0) {
-        pages[current_page].p_del();
-    }
+//    if (current_page > 0) {
+//        pages[current_page].p_del();
+//    }
 
-    if (current_page != get_id("PAGE/HOME") || home_page_app_started) {
+//    if (current_page == get_id("PAGE/HOME") && lv_indev_get_key(indev, LV_INDEV_STATE_PRESSED)) {
         lv_scr_load(pages[get_id(name)].p_load());
         current_page = get_id(name);
-    }
+        return;
+//    }
 }
 

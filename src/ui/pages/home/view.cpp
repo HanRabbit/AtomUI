@@ -120,7 +120,7 @@ void create_side_bar_button(const void *img_src, lv_event_cb_t button_event) {
     lv_obj_set_style_outline_width(ui_side_bar_btn, 0, LV_PART_MAIN | LV_STATE_FOCUSED);
     lv_obj_set_style_pad_column(ui_side_bar_btn, HOME_SIDE_BAR_BUTTON_COLUMN, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    lv_obj_add_event_cb(ui_side_bar_btn, button_event, LV_EVENT_CLICKED, nullptr);
+    lv_obj_add_event_cb(ui_side_bar_btn, button_event, LV_EVENT_RELEASED, nullptr);
     lv_obj_add_event_cb(ui_side_bar_btn, side_bar_button_event, LV_EVENT_ALL, nullptr);
 
     lv_obj_t *ui_side_bar_btn_img = lv_img_create(ui_side_bar_btn);
@@ -232,6 +232,7 @@ void home_ui_init(lv_obj_t *scr) {
 
     create_root_panel(scr);
 
+    statusBar.margin_y = -10;
     statusBar.create_status_bar(ui_menu_panel);
 
     create_time_panel(ui_menu_panel);

@@ -1,43 +1,46 @@
-#include "sd.h"
+#include <SD.h>
+#include <SD_MMC.h>
+#include <driver/sdmmc_host.h>
+#include "indev/io_map/io_map.h"
+#include "common/log/log.h"
 
-void lv_fs_test() {
-    lv_fs_file_t file;
-    lv_fs_res_t res;
-
-    res = lv_fs_open(&file, "H:/test.txt", LV_FS_MODE_RD);
-    if (res != LV_FS_RES_OK) {
-        Log::error(ERROR_CODE_FILE_SYSTEM_INIT_FAILED);
-    } else {
-        Log::msg("Open OK");
-        uint32_t read_num;
-        uint8_t buf[20];
-        res = lv_fs_read(&file, buf, 20, &read_num);
-        LOG_.printf("READ: %s", buf);
-        lv_fs_close(&file);
-    }
-}
+sdmmc_slot_config_t slot_config;
 
 bool sd_card_init() {
-    pinMode(SD_D0, PULLUP);
-    pinMode(SD_D1, PULLUP);
-    pinMode(SD_D2, PULLUP);
-    pinMode(SD_D3, PULLUP);
+    slot_config.clk = (gpio_num_t) SD_CLK;
+    slot_config.cmd = (gpio_num_t) SD_CMD;
+    slot_config.d0 =  (gpio_num_t) SD_DATA0;
+    slot_config.d1 =  (gpio_num_t) SD_DATA1;
+    slot_config.d2 =  (gpio_num_t) SD_DATA2;
+    slot_config.d3 =  (gpio_num_t) SD_DATA3;
+    slot_config.cd =  GPIO_NUM_NC;
 
-    SD_MMC.setPins(SD_CLK, SD_CMD, SD_D0, SD_D1, SD_D2, SD_D3);
-    for (uint8_t retry_num = 0; retry_num < SD_CARD_RETRY_NUM; retry_num ++) {
-        /* 初始化SD_MMC */
-        if (SD_MMC.begin("/H", false, true, 10000)) {
-//            f_mount(&fat_fs, "/sdcard", 1);
-            Log::msg("SD SIZE", String(SD_MMC.cardSize() / (1024 * 1024)));
-            Log::msg("FILES SYSTEM SIZE", String(SD_MMC.totalBytes()));
-            Log::msg("FILES SYSTEM USED SIZE", String(SD_MMC.usedBytes()));
+    digitalWrite(SD_CLK, PULLUP);
+    digitalWrite(SD_CMD, PULLUP);
+    digitalWrite(SD_DATA0, PULLUP);
+    digitalWrite(SD_DATA1, PULLUP);
+    digitalWrite(SD_DATA2, PULLUP);
+    digitalWrite(SD_DATA3, PULLUP);
 
-//            lv_fs_fatfs_init();
-            lv_fs_test();
-            return true;
-        }
+    SD_MMC.setPins(SD_CLK, SD_CMD, SD_DATA0, SD_DATA1, SD_DATA2, SD_DATA3);
+
+    if (!SD_MMC.begin("/sdcard", true, true, 400000)) {
+        Log::error("SD Card Mount Failed");
+        return false;
     }
-    /* 抛出异常 */
-    Log::error(ERROR_CODE_SD_MOUNT_FAILED);
-    return false;
+
+
+    File file = SD_MMC.open("/sdcard/test.txt");
+
+    if (file) {
+        Log::msg("File Opened Successfully:");
+        while (file.available()) {
+            Log::msg(String(file.read()));
+        }
+        file.close();
+    } else {
+        Log::error("Error Opening File");
+    }
+
+    return true;
 }

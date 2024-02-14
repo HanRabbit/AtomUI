@@ -11,6 +11,4 @@ void esp_sleep_start() {
 
 //    gpio_sleep_set_pull_mode(GPIO_NUM_2, GPIO_PULLUP_PULLDOWN);
 //    esp_sleep_enable_ext0_wakeup(GPIO_NUM_2, HIGH);
-
-    esp_deep_sleep_start();
 }

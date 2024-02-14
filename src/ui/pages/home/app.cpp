@@ -1,7 +1,7 @@
 #include "app.h"
 #include "common/log/log.h"
 #include "common/esp_sleep/esp_sleep.h"
-#include "ui/utils/pm/pm.h"
+#include "ui/utils/page_manager/page_manager.h"
 #include "ui/components/status_bar/status_bar.h"
 
 String APP_NAMES[20];

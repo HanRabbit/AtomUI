@@ -1,5 +1,5 @@
-#ifndef ATOM_UI_PM_H
-#define ATOM_UI_PM_H
+#ifndef ATOM_UI_PAGE_MANAGER_H
+#define ATOM_UI_PAGE_MANAGER_H
 
 #include <lvgl.h>
 #include "ui/pages/page.h"
@@ -25,7 +25,6 @@ class PageManager {
     uint16_t current_page = 0;
 
 public:
-    bool home_page_app_started = false;
     uint16_t get_id(const char *name);
     void pm_register(Page page);
     void add_page(const char *name, lv_obj_t *(*create_func)(), lv_obj_t *(*delete_func)());
@@ -33,4 +32,4 @@ public:
     void push(const char *name);
 };
 
-#endif //ATOM_UI_PM_H
+#endif //ATOM_UI_PAGE_MANAGER_H

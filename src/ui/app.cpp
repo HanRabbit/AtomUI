@@ -2,6 +2,7 @@
 #include "pages/pages.h"
 
 PageManager pageManager;
+MsgManager msgManager;
 
 void go_into_home(lv_timer_t *timer) {
     pageManager.push("PAGE/HOME");

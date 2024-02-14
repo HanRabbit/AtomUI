@@ -28,7 +28,6 @@ public:
     void update();
     void set_title(String st);
     void get_battery();
-    void back();
 };
 
 #endif //ATOM_UI_STATUS_BAR_H

@@ -517,4 +517,3 @@ void _ui_checked_set_text_value( lv_obj_t *trg, lv_obj_t *src, char *txt_on, cha
     if (lv_obj_has_state(src,LV_STATE_CHECKED)) lv_label_set_text(trg,txt_on);
     else lv_label_set_text(trg,txt_off);
 }
-

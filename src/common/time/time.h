@@ -7,6 +7,9 @@
 static struct tm time_;
 static String time_str;
 
+/* 时间获取超时时间 */
+#define TIME_OUT 100
+
 class Time {
 public:
     static String get_time_str(bool show_sec);

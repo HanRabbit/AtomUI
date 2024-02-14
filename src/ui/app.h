@@ -6,7 +6,8 @@
 //#endif
 
 #include <lvgl.h>
-#include "utils/pm/pm.h"
+#include "ui/utils/page_manager/page_manager.h"
+#include "ui/utils/msg_manager/msg_manager.h"
 #include "indev/self_check/self_check.h"
 
 void app_init();

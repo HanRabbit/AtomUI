@@ -10,7 +10,21 @@ void Battery::init() {
  * @brief 获取电池电量
  * @return adc_origin: 原始ADC数据
  */
-uint16_t Battery::get() {
-    uint16_t adc_origin = adc1_get_raw(ADC1_CHANNEL_4);
+uint16_t Battery::get_origin() {
+    if (sampling_cur >= sampling_during || sampling_cur == 0) {
+        adc_origin = adc1_get_raw(ADC1_CHANNEL_4);
+        sampling_cur = 0;
+    }
+
+    sampling_cur ++;
     return adc_origin;
+}
+
+/**
+ * @brief 获取电池电量百分比
+ * @return 电池电量百分比
+ */
+String Battery::get_perc() {
+    perc_battery = String((ORIGIN_MAX - get_origin()) / ORIGIN_MAX) + "%";
+    return perc_battery;
 }

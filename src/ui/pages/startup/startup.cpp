@@ -1,13 +1,15 @@
 #include "startup.h"
 #include "ui/res/rp/rp.h"
-#include "common/ota_update/ota_update.h"
-#include "common/log/log.h"
+#include "ui/utils/msg_manager/msg_manager.h"
+#include "indev/io_map/io_map.h"
 
 static lv_obj_t *ui_scr;
 //static lv_obj_t *ui_label_atom;
 static lv_obj_t *ui_gif_atom;
 static lv_obj_t *ui_mask_panel;
 static lv_obj_t *ui_bar;
+
+extern MsgManager msgManager;
 
 static void start_up_bar_cb(lv_timer_t *timer) {
     lv_bar_set_value(ui_bar, 100, LV_ANIM_ON);
@@ -33,6 +35,8 @@ lv_obj_t *StartupPage::page_create() {
     lv_obj_set_width(ui_gif_atom, LV_SIZE_CONTENT);
     lv_obj_set_height(ui_gif_atom, LV_SIZE_CONTENT);
     lv_obj_set_align(ui_gif_atom, LV_ALIGN_CENTER);
+
+    digitalWrite(LED_PIN, LOW);
 
 //    ui_label_atom = lv_label_create(ui_scr);
 //    lv_obj_set_width( ui_label_atom, LV_SIZE_CONTENT);
@@ -66,6 +70,9 @@ lv_obj_t *StartupPage::page_create() {
     lv_obj_set_align(ui_bar, LV_ALIGN_CENTER);
 
     lv_obj_add_event_cb(ui_scr, ui_event, LV_EVENT_ALL, nullptr);
+
+    uint32_t msg = 66688;
+    msgManager.send_msg("PROJECT_NAME", String(msg));
 
     return ui_scr;
 }
