@@ -5,7 +5,7 @@
  */
 t_httpUpdate_return OTA_update() {
     WiFiClient OTAClient;
-    httpUpdate.rebootOnUpdate(true);
+    httpUpdate.rebootOnUpdate(false);
     t_httpUpdate_return hur = httpUpdate.updateSpiffs(OTAClient, OTA_UPDATE_URL);
     return hur;
 }

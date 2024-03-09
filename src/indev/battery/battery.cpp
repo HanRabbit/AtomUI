@@ -26,5 +26,5 @@ uint16_t Battery::get_origin() {
  */
 String Battery::get_perc() {
     perc_battery = String((ORIGIN_MAX - get_origin()) / ORIGIN_MAX) + "%";
-    return perc_battery;
+    return "";
 }

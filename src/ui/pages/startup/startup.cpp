@@ -71,9 +71,6 @@ lv_obj_t *StartupPage::page_create() {
 
     lv_obj_add_event_cb(ui_scr, ui_event, LV_EVENT_ALL, nullptr);
 
-    uint32_t msg = 66688;
-    msgManager.send_msg("PROJECT_NAME", String(msg));
-
     return ui_scr;
 }
 

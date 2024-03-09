@@ -2,6 +2,7 @@
 #include "ui/app.h"
 #include "common/wifi/wifi.h"
 #include "indev/self_check/self_check.h"
+#include "common/time/time.h"
 
 void setup() {
     lv_init();
@@ -11,6 +12,8 @@ void setup() {
     app_init();
 
     wifi_init();
+
+    time_init();
 
     sys_indev_check();
 }

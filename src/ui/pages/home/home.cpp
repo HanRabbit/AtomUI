@@ -99,12 +99,6 @@ lv_obj_t *HomePage::page_create() {
     homeAppManager.add_app("SETTINGS", &ui_img_settings_png, nullptr);
     homeAppManager.add_app("OTA UPDATE", &ui_img_update_png, home_app_ota_update);
 
-    // String msg = "ATOM POCKET";
-    // msgManager.send_msg("PROJECT_NAME", &msg);
-
-    String msg_content = msgManager.get_msg("PROJECT_NAME");
-    Log::msg(String(msg_content.toInt()));
-
     return scr;
 }
 

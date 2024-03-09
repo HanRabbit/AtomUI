@@ -18,7 +18,7 @@ void home_app_esp_sleep_cb(lv_event_t *e) {
 }
 
 void home_app_serial_monitor(lv_event_t *e) {
-    pageManager.push("PAGE/SERIAL_MONITOR", PM_SCR_ANIM_MOVE_LEFT);
+    pageManager.push("PAGE/SERIAL_MONITOR", PM_SCR_ANIM_MOVE_TOP);
 }
 
 void home_app_translate(lv_event_t *e) {

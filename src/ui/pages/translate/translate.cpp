@@ -50,6 +50,7 @@ void create_search_box(lv_obj_t *root) {
     lv_obj_set_width(search_bar, 220);
     lv_obj_set_height(search_bar, LV_SIZE_CONTENT);
     lv_textarea_set_placeholder_text(search_bar, "Search");
+    lv_textarea_add_text(search_bar, "HELLO WORLD");
     lv_textarea_set_one_line(search_bar, true);
     lv_obj_add_event_cb(search_bar, search_bar_event, LV_EVENT_ALL, nullptr);
     lv_obj_set_style_outline_opa(search_bar, 0, LV_PART_MAIN);
@@ -72,6 +73,24 @@ void create_search_box(lv_obj_t *root) {
     lv_obj_set_align(search_img, LV_ALIGN_CENTER);
     lv_obj_add_flag(search_img, LV_OBJ_FLAG_ADV_HITTEST);
     lv_obj_clear_flag(search_img, LV_OBJ_FLAG_SCROLLABLE);
+
+//    lv_obj_t *translate_panel = lv_obj_create(root);
+//    lv_obj_set_size(translate_panel, 296, 134);
+//    lv_obj_align(translate_panel, LV_ALIGN_CENTER, 0, 40);
+//
+//    lv_obj_t *info_text_translate_panel = lv_label_create(translate_panel);
+//    lv_obj_align(info_text_translate_panel, LV_ALIGN_TOP_MID, 0, 0);
+//    lv_label_set_text(info_text_translate_panel, "English -> Chinese");
+//
+//    lv_obj_t *info_fg = lv_obj_create(translate_panel);
+//    lv_obj_set_size(info_fg, 270, 1);
+//    lv_obj_align(info_fg, LV_ALIGN_TOP_MID, 0, 28);
+//    lv_obj_set_style_bg_color(info_fg, lv_color_hex(545454), LV_PART_MAIN);
+//
+
+    lv_obj_t *translate_panel_img = lv_img_create(root);
+    lv_obj_align(translate_panel_img, LV_ALIGN_CENTER, 0, 40);
+    lv_img_set_src(translate_panel_img, &translate_img);
 
     lv_group_remove_all_objs(ui_group);
     lv_group_add_obj(ui_group, search_bar);

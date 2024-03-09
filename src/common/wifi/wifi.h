@@ -9,7 +9,9 @@
 static const char *WIFI_SSID = "U-home";
 static const char *WIFI_PASSWORD = "MyHome_16$5334783";
 
-static const char *ntp_server = "pool.ntp.org";
+static const char *ntp_server1 = "ntp.aliyun.com";
+static const char *ntp_server2 = "time1.cloud.tencent.com";
+static const char *ntp_server3 = "ntp.tuna.tsinghua.edu.cn";
 static const long gmt_offset_sec = 8 * 3600;
 static const uint8_t day_light_offset_sec = 0;
 

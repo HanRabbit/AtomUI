@@ -12,7 +12,7 @@ void wifi_init() {
  * @brief 联网校准时间
  */
 void wifi_set_time() {
-    configTime(gmt_offset_sec, day_light_offset_sec, ntp_server);
+    configTime(gmt_offset_sec, day_light_offset_sec, ntp_server1, ntp_server2, ntp_server3);
 }
 
 /**

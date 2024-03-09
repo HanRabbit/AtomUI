@@ -37,7 +37,7 @@ void StatusBar::create_status_bar(lv_obj_t *root) {
     lv_obj_add_flag(ui_back_button, LV_OBJ_FLAG_ADV_HITTEST);
     lv_obj_clear_flag(ui_back_button, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_add_event_cb(ui_back_button, [](lv_event_t *e) {
-        pageManager.push("PAGE/HOME", PM_SCR_ANIM_MOVE_RIGHT);
+        pageManager.push("PAGE/HOME", PM_SCR_ANIM_MOVE_BOTTOM);
     }, LV_EVENT_RELEASED, nullptr);
 
     ui_back_icon = lv_img_create(ui_back_button);

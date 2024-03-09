@@ -32,3 +32,17 @@ uint16_t Time::get_hour() {
     getLocalTime(&time_, TIME_OUT);
     return time_.tm_hour;
 }
+
+void time_init() {
+    // ie setTime(20, 34, 8, 1, 4, 2021) = 8:34:20 1/4/2021
+    struct tm t = {0};
+    t.tm_year = 2023 - 1900;
+    t.tm_mon = 5 - 1;
+    t.tm_mday = 2;
+    t.tm_hour = 12;
+    t.tm_min = 44;
+    t.tm_sec = 0;
+    time_t timeSinceEpoch = mktime(&t);
+    struct timeval now = {.tv_sec = timeSinceEpoch};
+    settimeofday(&now, NULL);
+}
