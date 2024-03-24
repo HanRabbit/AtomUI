@@ -4,6 +4,7 @@
 #include <Arduino.h>
 #include <HTTPUpdate.h>
 #include "common/log/log.h"
+#include "common/wifi/wifi.h"
 
 #define OTA_UPDATE_URL "http://bin.bemfa.com/b/3BcMGYwYzRmM2UwNTBmNDZkNDlkNTBlODRhZjhkNTE1N2I=AtomUI.bin"
 

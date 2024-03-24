@@ -98,7 +98,7 @@ void create_search_box(lv_obj_t *root) {
     lv_group_add_obj(ui_group, statusBar.ui_back_button);
 }
 
-void scr_load_event(lv_event_t *e) {
+void scr_load_event1(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_SCREEN_LOADED) {
 
     }
@@ -107,7 +107,7 @@ void scr_load_event(lv_event_t *e) {
 lv_obj_t *TranslatePage::page_create() {
     lv_obj_t *page_translate_scr = lv_obj_create(nullptr);
     lv_obj_set_style_bg_color(page_translate_scr, lv_color_hex(0x000000), LV_PART_MAIN);
-    lv_obj_add_event_cb(page_translate_scr, scr_load_event, LV_EVENT_ALL, nullptr);
+    lv_obj_add_event_cb(page_translate_scr, scr_load_event1, LV_EVENT_ALL, nullptr);
 
     statusBar.margin_y = 0;     /* 状态栏上方间距为0 */
     statusBar.create_status_bar(page_translate_scr);    /* 创建状态栏实例 */

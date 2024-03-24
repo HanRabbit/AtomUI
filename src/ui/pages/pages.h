@@ -7,5 +7,6 @@
 #include "serial_monitor/serial_monitor.h"
 #include "translate/translate.h"
 #include "ota_page/ota_page.h"
+#include "wifi_link/wifi_link.h"
 
 #endif //ATOM_UI_PAGES_H

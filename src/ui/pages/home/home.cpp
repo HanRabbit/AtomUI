@@ -92,10 +92,10 @@ lv_obj_t *HomePage::page_create() {
     home_ui_init(scr);
 
     /* 注册HomeApp */
-    homeAppManager.add_app("APPS", &ui_img_app_png, nullptr);
     homeAppManager.add_app("TRANSLATE", &ui_img_translate_png, home_app_translate);
     homeAppManager.add_app("SERIAL MONITOR", &ui_img_serial_png, home_app_serial_monitor);
     homeAppManager.add_app("POWER", &ui_img_power_2_png, home_app_esp_sleep_cb);
+    homeAppManager.add_app("WIFI CONFIG", &ui_img_wifi_config_png, home_app_wifi_config);
     homeAppManager.add_app("SETTINGS", &ui_img_settings_png, nullptr);
     homeAppManager.add_app("OTA UPDATE", &ui_img_update_png, home_app_ota_update);
 
@@ -104,7 +104,7 @@ lv_obj_t *HomePage::page_create() {
 
 lv_obj_t *HomePage::page_delete() {
     lv_timer_del(side_bar_in_out_timer);
-//    lv_timer_del(statusBar.status_bar_timer);
+    lv_timer_del(statusBar.status_bar_timer);
     lv_timer_del(home_time_timer);
 
     free((int *) malloc(sizeof (int)));

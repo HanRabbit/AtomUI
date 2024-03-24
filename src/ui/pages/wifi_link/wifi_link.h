@@ -1,10 +1,10 @@
 #ifndef ATOM_UI_WIFI_LINK_H
-#define ATOM_UI__TEMPLATE_H
+#define ATOM_UI_WIFI_LINK_H
 
 #include <lvgl.h>
+#include <WString.h>
 
-class TemplatePage {
-
+class WiFiLinkPage {
 public:
     static lv_obj_t *page_delete();
 

@@ -12,8 +12,11 @@ void go_into_home(lv_timer_t *timer) {
 
 void app_init() {
     pageManager.add_page("PAGE/STARTUP",
-             StartupPage::page_create,
-             StartupPage::page_delete);
+                        StartupPage::page_create,
+                        StartupPage::page_delete);
+    pageManager.add_page("PAGE/WIFI_LINK",
+                         WiFiLinkPage::page_create,
+                         WiFiLinkPage::page_delete);
     pageManager.add_page("PAGE/ERROR",
                          ErrorPage::page_create,
                          ErrorPage::page_delete);
@@ -29,6 +32,7 @@ void app_init() {
     pageManager.add_page("PAGE/OTAPage",
                          OTAPage::page_create,
                          OTAPage::page_delete);
+
 
     /* Start Push */
     pageManager.push("PAGE/STARTUP");

@@ -21,6 +21,8 @@ LV_IMG_DECLARE(ui_img_update_png);
 LV_IMG_DECLARE(ui_img_serial_png);
 LV_IMG_DECLARE(ui_img_back_png);
 LV_IMG_DECLARE(translate_img);
+LV_IMG_DECLARE(wifi_b_img_png);
+LV_IMG_DECLARE(ui_img_wifi_config_png);
 
 /* GIF */
 LV_IMG_DECLARE(ui_gif_update);

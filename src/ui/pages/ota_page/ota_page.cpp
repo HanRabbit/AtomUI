@@ -24,10 +24,18 @@ void update_timer_cb(lv_timer_t *timer) {
     lv_timer_del(timer);
 }
 
+void update_ota_status(int cur, int total) {
+    set_update_tips(("CALLBACK:  HTTP update process at " + String(cur) +" of " + String(total) + " bytes...").c_str());
+    Log::msg("TOA Update", "CALLBACK:  HTTP update process at " + String(cur) +" of " + String(total) + " bytes...");
+    lv_timer_handler();
+}
+
 void OTAPage::ui_event(lv_event_t *e) {
     lv_event_code_t e_code = lv_event_get_code(e);
 
     lv_timer_create(update_timer_cb, 1000, nullptr);
+
+    httpUpdate.onProgress(update_ota_status);
 }
 
 lv_obj_t *OTAPage::page_create() {
