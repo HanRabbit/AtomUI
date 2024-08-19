@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Atom_UI" targetName="PlatformIO" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="esp32-s3-devkitc-1" ENABLED="true" CONFIG_NAME="esp32-s3-devkitc-1" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9f2f7cc2-2391-463e-8e0e-058cf318d2b8" name="Changes" comment="committed">
+      <changelist_data name="HanRabbit" email="tianzihan5357@163.com" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="212" />
+        <option value="92" />
+        <option value="1486" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="名称" />
+        <option value="值" />
+        <option value="描述" />
+      </list>
+    </option>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="esp32-s3-devkitc-1" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HanRabbit/AtomUI&quot;,
+    &quot;accountId&quot;: &quot;76130575-a20b-4e21-b12f-5e21fed39508&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.platformio/packages/framework-arduinoespressif32/cores/esp32/WString.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_host.h" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32-s3-devkitc-1/lvgl/lv_conf.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/common/wifi/wifi.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/indev/battery/battery.cpp" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/ui/app.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/components/status_bar/status_bar.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/pages/home/app.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/pages/home/app.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/pages/home/home.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/pages/home/view.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/pages/page.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/pages/startup/startup.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/utils/msg_manager/msg_manager.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/utils/msg_manager/msg_manager.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ui/utils/msg_manager/msg_pool.h" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-esp32-s3-devkitc-1-Z_DUMMY_TARGET" />
+  </component>
+  <component name="PlatformioLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="Atom_UI" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="Atom_UI" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="3.2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2MHQi7UO45dLtJB0tDAxCAmkJwR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;PlatformIO.Platformio Upload.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/han/Projects/Embedded/Atom/Software/Atom_UI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Projects\Atom\Software\Atom_UI\.pio\libdeps\esp32-s3-devkitc-1\lvgl" />
+      <recent name="H:\Projects\Atom\Software\Atom_UI\src\ui\res\img" />
+      <recent name="H:\Projects\Atom\Software\Atom_UI\src\ui\pages" />
+      <recent name="H:\Projects\Atom\Software\Atom_UI\src\ui\res" />
+      <recent name="H:\Atom\Software\Atom_UI\src\ui\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Projects\Atom\Software\Atom_UI\src\ui\res\img" />
+      <recent name="H:\Projects\Atom\Software\Atom_UI\src\common" />
+      <recent name="H:\Atom\Atom_UI\src\ui\res" />
+      <recent name="H:\Atom\Atom_UI\temp" />
+      <recent name="H:\Atom\Atom UI\src\ui\res" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+    <configuration name="Platformio Upload" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Atom_UI" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f2f7cc2-2391-463e-8e0e-058cf318d2b8" name="Changes" comment="" />
+      <created>1677422152998</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677422152998</updated>
+      <workItem from="1677422153906" duration="836000" />
+      <workItem from="1677423003087" duration="2418000" />
+      <workItem from="1677425640511" duration="1158000" />
+      <workItem from="1677509830355" duration="3001000" />
+      <workItem from="1677510771885" duration="3531000" />
+      <workItem from="1677510749727" duration="651000" />
+      <workItem from="1680324569859" duration="898000" />
+      <workItem from="1680342874566" duration="1788000" />
+      <workItem from="1680402120716" duration="1323000" />
+      <workItem from="1681511869228" duration="53000" />
+      <workItem from="1682737549363" duration="41000" />
+      <workItem from="1682753294449" duration="20000" />
+      <workItem from="1682753592994" duration="10000" />
+      <workItem from="1682836159864" duration="529000" />
+      <workItem from="1682836794442" duration="12665000" />
+      <workItem from="1682858299638" duration="7375000" />
+      <workItem from="1682902287253" duration="10326000" />
+      <workItem from="1682984037584" duration="119000" />
+      <workItem from="1682986009327" duration="16217000" />
+      <workItem from="1683004147153" duration="818000" />
+      <workItem from="1683004983100" duration="3409000" />
+      <workItem from="1683038119087" duration="1973000" />
+      <workItem from="1683210017451" duration="1612000" />
+      <workItem from="1683295279978" duration="697000" />
+      <workItem from="1683297948690" duration="1009000" />
+      <workItem from="1683382460133" duration="618000" />
+      <workItem from="1683468558509" duration="73000" />
+      <workItem from="1683468645841" duration="24000" />
+      <workItem from="1683468689169" duration="514000" />
+      <workItem from="1683555434216" duration="2570000" />
+      <workItem from="1683641820959" duration="4253000" />
+      <workItem from="1683728240815" duration="2536000" />
+      <workItem from="1683814059958" duration="4216000" />
+      <workItem from="1683900449905" duration="433000" />
+      <workItem from="1683901314315" duration="2469000" />
+      <workItem from="1683947687798" duration="8203000" />
+      <workItem from="1683963268418" duration="3864000" />
+      <workItem from="1683980122023" duration="5133000" />
+      <workItem from="1684023303919" duration="7588000" />
+      <workItem from="1684033917567" duration="7145000" />
+      <workItem from="1684419458362" duration="1679000" />
+      <workItem from="1684421329546" duration="420000" />
+      <workItem from="1684421766080" duration="778000" />
+      <workItem from="1684508639720" duration="844000" />
+      <workItem from="1684764971061" duration="4000" />
+      <workItem from="1684766219191" duration="1478000" />
+      <workItem from="1684851201776" duration="528000" />
+      <workItem from="1684990395570" duration="32000" />
+      <workItem from="1685055107544" duration="54000" />
+      <workItem from="1685067870493" duration="3087000" />
+      <workItem from="1685093472245" duration="107000" />
+      <workItem from="1685093589181" duration="196000" />
+      <workItem from="1685096327246" duration="2475000" />
+      <workItem from="1685171101325" duration="21839000" />
+      <workItem from="1685197528939" duration="3455000" />
+      <workItem from="1685230198697" duration="157000" />
+      <workItem from="1685230372236" duration="2542000" />
+      <workItem from="1685245432146" duration="4000" />
+      <workItem from="1685246747836" duration="619000" />
+      <workItem from="1685250692227" duration="735000" />
+      <workItem from="1685715075272" duration="4771000" />
+      <workItem from="1685801402720" duration="587000" />
+      <workItem from="1685802266885" duration="2023000" />
+      <workItem from="1685889260596" duration="58000" />
+      <workItem from="1685889331870" duration="3458000" />
+      <workItem from="1685932966226" duration="85000" />
+      <workItem from="1685933066877" duration="116000" />
+      <workItem from="1685933196224" duration="483000" />
+      <workItem from="1685933698399" duration="4083000" />
+      <workItem from="1685973861284" duration="1080000" />
+      <workItem from="1686011120495" duration="33000" />
+      <workItem from="1686011747766" duration="9852000" />
+      <workItem from="1686042023389" duration="5766000" />
+      <workItem from="1686105565621" duration="1428000" />
+      <workItem from="1687350831646" duration="2973000" />
+      <workItem from="1687360982831" duration="1568000" />
+      <workItem from="1687405037265" duration="1448000" />
+      <workItem from="1689466788588" duration="274000" />
+      <workItem from="1689472105018" duration="4336000" />
+      <workItem from="1689480471746" duration="270000" />
+      <workItem from="1689499798557" duration="12580000" />
+      <workItem from="1689603812890" duration="3785000" />
+      <workItem from="1689689780694" duration="340000" />
+      <workItem from="1689691396172" duration="736000" />
+      <workItem from="1689777829276" duration="2000" />
+      <workItem from="1689992714403" duration="8109000" />
+      <workItem from="1690714102736" duration="788000" />
+      <workItem from="1691653917803" duration="6831000" />
+      <workItem from="1691667985364" duration="3000" />
+      <workItem from="1691899983755" duration="356000" />
+      <workItem from="1693026538404" duration="3699000" />
+      <workItem from="1693033394799" duration="114000" />
+      <workItem from="1693033519486" duration="744000" />
+      <workItem from="1693034279941" duration="10121000" />
+      <workItem from="1693096007103" duration="17362000" />
+      <workItem from="1693232803732" duration="3000" />
+      <workItem from="1693754604806" duration="263000" />
+      <workItem from="1694259392275" duration="4088000" />
+      <workItem from="1694302046862" duration="5563000" />
+      <workItem from="1695905361688" duration="1947000" />
+      <workItem from="1697255880531" duration="311000" />
+      <workItem from="1699020879707" duration="198000" />
+      <workItem from="1699021510296" duration="59000" />
+      <workItem from="1700874322642" duration="7298000" />
+      <workItem from="1700914841355" duration="4472000" />
+      <workItem from="1700957440709" duration="4000" />
+      <workItem from="1705115667500" duration="199000" />
+      <workItem from="1705116394925" duration="98000" />
+      <workItem from="1705116557592" duration="80000" />
+      <workItem from="1705116668821" duration="28000" />
+      <workItem from="1705116772204" duration="84000" />
+      <workItem from="1705116866856" duration="38000" />
+      <workItem from="1705116936769" duration="161000" />
+      <workItem from="1705117325177" duration="297000" />
+      <workItem from="1705117655571" duration="28000" />
+      <workItem from="1705117699409" duration="206000" />
+      <workItem from="1705118032699" duration="947000" />
+      <workItem from="1705118993483" duration="26000" />
+      <workItem from="1705119032287" duration="66000" />
+      <workItem from="1705119109107" duration="6043000" />
+      <workItem from="1705138020811" duration="6561000" />
+      <workItem from="1705204038377" duration="116000" />
+      <workItem from="1705204169559" duration="36000" />
+      <workItem from="1705204217336" duration="151000" />
+      <workItem from="1705204381594" duration="62000" />
+      <workItem from="1705204459714" duration="40000" />
+      <workItem from="1705204515529" duration="5221000" />
+      <workItem from="1706842166824" duration="3000" />
+      <workItem from="1706864837251" duration="4791000" />
+      <workItem from="1707020939158" duration="97000" />
+      <workItem from="1707021551460" duration="5142000" />
+      <workItem from="1707297422999" duration="1107000" />
+      <workItem from="1707300573523" duration="4197000" />
+      <workItem from="1707314268008" duration="2208000" />
+      <workItem from="1707316551032" duration="16000" />
+      <workItem from="1707357725587" duration="869000" />
+      <workItem from="1707358915528" duration="180000" />
+      <workItem from="1707376928103" duration="1627000" />
+      <workItem from="1707443690462" duration="754000" />
+      <workItem from="1707444461772" duration="13000" />
+      <workItem from="1707444487245" duration="5267000" />
+      <workItem from="1707467599683" duration="1910000" />
+      <workItem from="1707806674225" duration="1062000" />
+      <workItem from="1707808556801" duration="54000" />
+      <workItem from="1707808628627" duration="96000" />
+      <workItem from="1707808742090" duration="711000" />
+      <workItem from="1707809474061" duration="97000" />
+      <workItem from="1707809586266" duration="151000" />
+      <workItem from="1707809752332" duration="7731000" />
+      <workItem from="1707837209748" duration="133000" />
+      <workItem from="1707837415032" duration="599000" />
+      <workItem from="1707887854481" duration="341000" />
+      <workItem from="1707903382545" duration="3404000" />
+      <workItem from="1709388386825" duration="3338000" />
+      <workItem from="1723203999080" duration="299000" />
+      <workItem from="1723204326542" duration="36000" />
+      <workItem from="1723204379500" duration="9000" />
+      <workItem from="1723211509377" duration="3856000" />
+      <workItem from="1723246095532" duration="339000" />
+      <workItem from="1723260737140" duration="348000" />
+      <workItem from="1723546993962" duration="1033000" />
+      <workItem from="1724052108199" duration="1049000" />
+      <workItem from="1724053338104" duration="2000" />
+    </task>
+    <task id="LOCAL-00001" summary="committed">
+      <created>1683003198738</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683003198738</updated>
+    </task>
+    <task id="LOCAL-00002" summary="committed">
+      <created>1683003355964</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683003355964</updated>
+    </task>
+    <task id="LOCAL-00003" summary="committed">
+      <created>1683005194700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683005194700</updated>
+    </task>
+    <task id="LOCAL-00004" summary="committed">
+      <created>1683006652391</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683006652391</updated>
+    </task>
+    <task id="LOCAL-00005" summary="committed">
+      <created>1683006705798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683006705798</updated>
+    </task>
+    <task id="LOCAL-00006" summary="committed">
+      <created>1683006933816</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683006933816</updated>
+    </task>
+    <task id="LOCAL-00007" summary="committed">
+      <created>1683298533906</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683298533906</updated>
+    </task>
+    <task id="LOCAL-00008" summary="committed">
+      <created>1683298859758</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683298859758</updated>
+    </task>
+    <task id="LOCAL-00009" summary="committed">
+      <created>1683298942151</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683298942151</updated>
+    </task>
+    <task id="LOCAL-00010" summary="committed">
+      <created>1683555650048</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683555650048</updated>
+    </task>
+    <task id="LOCAL-00011" summary="committed">
+      <created>1683815555435</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683815555435</updated>
+    </task>
+    <task id="LOCAL-00012" summary="committed">
+      <created>1683948837649</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683948837649</updated>
+    </task>
+    <task id="LOCAL-00013" summary="committed">
+      <created>1684030670347</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684030670347</updated>
+    </task>
+    <task id="LOCAL-00014" summary="committed">
+      <created>1684042341895</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684042341895</updated>
+    </task>
+    <task id="LOCAL-00015" summary="committed">
+      <created>1684421264119</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684421264119</updated>
+    </task>
+    <task id="LOCAL-00016" summary="committed">
+      <created>1685055128626</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685055128626</updated>
+    </task>
+    <task id="LOCAL-00017" summary="committed">
+      <created>1685096392079</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685096392079</updated>
+    </task>
+    <task id="LOCAL-00018" summary="committed">
+      <created>1685180006286</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685180006286</updated>
+    </task>
+    <task id="LOCAL-00019" summary="committed">
+      <created>1685180071262</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1685180071262</updated>
+    </task>
+    <task id="LOCAL-00020" summary="committed">
+      <created>1685180111459</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685180111459</updated>
+    </task>
+    <task id="LOCAL-00021" summary="committed">
+      <created>1685180215284</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1685180215284</updated>
+    </task>
+    <task id="LOCAL-00022" summary="committed">
+      <created>1685180279422</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685180279422</updated>
+    </task>
+    <task id="LOCAL-00023" summary="committed">
+      <created>1685180297263</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1685180297263</updated>
+    </task>
+    <task id="LOCAL-00024" summary="committed">
+      <created>1685197470311</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1685197470311</updated>
+    </task>
+    <task id="LOCAL-00025" summary="committed">
+      <created>1685197559170</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1685197559170</updated>
+    </task>
+    <task id="LOCAL-00026" summary="committed">
+      <created>1685891938689</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1685891938689</updated>
+    </task>
+    <task id="LOCAL-00027" summary="committed">
+      <created>1685892367313</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1685892367313</updated>
+    </task>
+    <task id="LOCAL-00028" summary="committed">
+      <created>1686105589834</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686105589834</updated>
+    </task>
+    <task id="LOCAL-00029" summary="committed">
+      <created>1686121885325</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1686121885325</updated>
+    </task>
+    <task id="LOCAL-00030" summary="committed">
+      <created>1689477538579</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1689477538579</updated>
+    </task>
+    <task id="LOCAL-00031" summary="committed">
+      <created>1689607175687</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1689607175687</updated>
+    </task>
+    <task id="LOCAL-00032" summary="committed">
+      <option name="closed" value="true" />
+      <created>1689995205512</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1689995205512</updated>
+    </task>
+    <task id="LOCAL-00033" summary="committed">
+      <option name="closed" value="true" />
+      <created>1690001540604</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1690001540604</updated>
+    </task>
+    <task id="LOCAL-00034" summary="committed">
+      <option name="closed" value="true" />
+      <created>1693105900676</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1693105900676</updated>
+    </task>
+    <task id="LOCAL-00035" summary="committed">
+      <option name="closed" value="true" />
+      <created>1693126261421</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1693126261421</updated>
+    </task>
+    <task id="LOCAL-00036" summary="committed">
+      <option name="closed" value="true" />
+      <created>1700915552072</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1700915552072</updated>
+    </task>
+    <task id="LOCAL-00037" summary="committed">
+      <option name="closed" value="true" />
+      <created>1705119596704</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1705119596704</updated>
+    </task>
+    <task id="LOCAL-00038" summary="committed">
+      <option name="closed" value="true" />
+      <created>1707888161442</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1707888161443</updated>
+    </task>
+    <task id="LOCAL-00039" summary="committed">
+      <option name="closed" value="true" />
+      <created>1724052877260</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1724052877260</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="AtomUI/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="committed" />
+    <option name="LAST_COMMIT_MESSAGE" value="committed" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
