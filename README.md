@@ -1,7 +1,7 @@
 # Atom UI： 基于LVGL的轻量化UI框架
 
 ## UI 架构
-基于 **LVGL** 8.3.4
+基于 **LVGL** 8.3.9
 
 ## 适配
 适配 [**Atom** _Pro_]() | [**Atom** _Pocket_]()
