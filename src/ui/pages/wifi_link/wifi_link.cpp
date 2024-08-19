@@ -29,5 +29,6 @@ lv_obj_t *WiFiLinkPage::page_create() {
 }
 
 lv_obj_t *WiFiLinkPage::page_delete() {
+    lv_timer_del(statusBar.status_bar_timer);
     return nullptr;
 }

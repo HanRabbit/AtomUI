@@ -14,7 +14,32 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f2f7cc2-2391-463e-8e0e-058cf318d2b8" name="Changes" comment="committed" />
+    <list default="true" id="9f2f7cc2-2391-463e-8e0e-058cf318d2b8" name="Changes" comment="committed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/.sconsign311.dblite" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/.sconsign311.dblite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/firmware.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/firmware.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/firmware.elf" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/firmware.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/firmware.map" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/firmware.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/liblvgl.a" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/liblvgl.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_event.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_event.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_indev_scroll.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_indev_scroll.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_obj.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_obj.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_obj_pos.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_obj_pos.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_obj_style.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_obj_style.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_refr.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/core/lv_refr.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/draw/sw/lv_draw_sw_blend.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/draw/sw/lv_draw_sw_blend.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/draw/sw/lv_draw_sw_letter.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/draw/sw/lv_draw_sw_letter.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/draw/sw/lv_draw_sw_line.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/draw/sw/lv_draw_sw_line.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/extra/themes/default/lv_theme_default.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/extra/themes/default/lv_theme_default.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/extra/widgets/colorwheel/lv_colorwheel.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/extra/widgets/colorwheel/lv_colorwheel.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/misc/lv_mem.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/misc/lv_mem.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/misc/lv_tlsf.c.d" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/misc/lv_tlsf.c.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/misc/lv_tlsf.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/lib580/lvgl/misc/lv_tlsf.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/src/ui/pages/wifi_link/wifi_link.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/build/esp32-s3-devkitc-1/src/ui/pages/wifi_link/wifi_link.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pio/libdeps/esp32-s3-devkitc-1/lvgl/lv_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/.pio/libdeps/esp32-s3-devkitc-1/lvgl/lv_conf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/pages/wifi_link/wifi_link.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/wifi_link/wifi_link.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,37 +166,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;PlatformIO.Platformio Upload.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/han/Projects/Embedded/Atom/Software/Atom_UI&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "PlatformIO.Platformio Upload.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/han/Projects/Embedded/Atom/Software/Atom_UI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.配色方案字体",
+    "settings.editor.splitter.proportion": "0.22708757",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\Projects\Atom\Software\Atom_UI\.pio\libdeps\esp32-s3-devkitc-1\lvgl" />
@@ -425,7 +451,7 @@
       <workItem from="1723260737140" duration="348000" />
       <workItem from="1723546993962" duration="1033000" />
       <workItem from="1724052108199" duration="1049000" />
-      <workItem from="1724053338104" duration="1056000" />
+      <workItem from="1724053338104" duration="2326000" />
     </task>
     <task id="LOCAL-00001" summary="committed">
       <created>1683003198738</created>
@@ -724,7 +750,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724053804846</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="committed">
+      <option name="closed" value="true" />
+      <created>1724054415753</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1724054415753</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

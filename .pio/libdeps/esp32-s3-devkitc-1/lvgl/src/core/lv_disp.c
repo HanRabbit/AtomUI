@@ -273,12 +273,14 @@ void lv_scr_load_anim(lv_obj_t * new_scr, lv_scr_load_anim_t anim_type, uint32_t
     lv_anim_set_ready_cb(&a_new, scr_anim_ready);
     lv_anim_set_time(&a_new, time);
     lv_anim_set_delay(&a_new, delay);
+    lv_anim_set_path_cb(&a_new, lv_anim_path_ease_out);
 
     lv_anim_t a_old;
     lv_anim_init(&a_old);
     lv_anim_set_var(&a_old, d->act_scr);
     lv_anim_set_time(&a_old, time);
     lv_anim_set_delay(&a_old, delay);
+    lv_anim_set_path_cb(&a_old, lv_anim_path_ease_out);
 
     switch(anim_type) {
         case LV_SCR_LOAD_ANIM_NONE:
