@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-Generates lv_conf_internal.h from lv_conf_template.h to provide default values
+Generates lv_conf_internal.h from lv_conf.h to provide default values
 '''
 
 import os
@@ -9,7 +9,7 @@ import sys
 import re
 
 SCRIPT_DIR = os.path.dirname(__file__)
-LV_CONF_TEMPLATE = os.path.join(SCRIPT_DIR, "..", "lv_conf_template.h")
+LV_CONF_TEMPLATE = os.path.join(SCRIPT_DIR, "..", "lv_conf.h")
 LV_CONF_INTERNAL = os.path.join(SCRIPT_DIR, "..", "src", "lv_conf_internal.h")
 
 if sys.version_info < (3,6,0):
@@ -92,7 +92,7 @@ fout.write(
 #endif
 
 /*----------------------------------
- * Start parsing lv_conf_template.h
+ * Start parsing lv_conf.h
  -----------------------------------*/
 '''
 )
@@ -165,7 +165,7 @@ fout.write(
 '''
 
 /*----------------------------------
- * End of parsing lv_conf_template.h
+ * End of parsing lv_conf.h
  -----------------------------------*/
 
 #ifndef __ASSEMBLY__

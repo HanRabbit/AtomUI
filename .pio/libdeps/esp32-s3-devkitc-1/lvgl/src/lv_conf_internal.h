@@ -70,7 +70,7 @@
 #endif
 
 /*----------------------------------
- * Start parsing lv_conf_template.h
+ * Start parsing lv_conf.h
  -----------------------------------*/
 
 /*If you need to include anything here, do it inside the `__ASSEMBLY__` guard */
@@ -3188,7 +3188,7 @@
 
 
 /*----------------------------------
- * End of parsing lv_conf_template.h
+ * End of parsing lv_conf.h
  -----------------------------------*/
 
 #ifndef __ASSEMBLY__

@@ -53,7 +53,7 @@ lv_display_t * lv_tft_espi_create(uint32_t hor_res, uint32_t ver_res, void * buf
 
     dsc->tft = new TFT_eSPI(hor_res, ver_res);
     dsc->tft->begin();          /* TFT init */
-    dsc->tft->setRotation(3);   /* Landscape orientation, flipped */
+    dsc->tft->setRotation(1);   /* Landscape orientation, flipped */
     lv_display_set_driver_data(disp, (void *)dsc);
     lv_display_set_flush_cb(disp, flush_cb);
     lv_display_set_buffers(disp, (void *)buf, NULL, buf_size_bytes, LV_DISPLAY_RENDER_MODE_PARTIAL);
