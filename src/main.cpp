@@ -9,6 +9,8 @@ void setup() {
 
     /* 外围器件初始化 */
     drivers.init();
+
+    lv_tick_set_cb(reinterpret_cast<lv_tick_get_cb_t> (millis));
 }
 
 void loop() {
