@@ -1,4 +1,4 @@
-#include "USB_Log.h"
+#include "Log.h"
 
 void log_print(lv_log_level_t level, const char *buf) {
     LV_UNUSED(level);

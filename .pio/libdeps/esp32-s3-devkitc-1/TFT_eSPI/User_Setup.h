@@ -130,7 +130,8 @@
 // sketch. e.g. with digitalWrite(TFT_BL, LOW);
 
 // #define TFT_BL   32            // LED back-light control pin
-#define TFT_BACKLIGHT_ON HIGH  // Level to turn ON back-light (HIGH or LOW)
+/* TFT 背光由 Drivers/Display/TFT_backlight 控制，因此这里拉低电平 */
+#define TFT_BACKLIGHT_ON LOW  // Level to turn ON back-light (HIGH or LOW)
 
 
 

@@ -12,12 +12,12 @@
 #define BATTERY_CH    37
 
 /* SD Card */
-#define SD_DATA0 7
-#define SD_DATA1 6
-#define SD_DATA2 16
-#define SD_DATA3 15
-#define SD_CMD   17
-#define SD_CLK   8
+#define SD_DATA0 GPIO_NUM_7
+#define SD_DATA1 GPIO_NUM_6
+#define SD_DATA2 GPIO_NUM_16
+#define SD_DATA3 GPIO_NUM_15
+#define SD_CMD   GPIO_NUM_17
+#define SD_CLK   GPIO_NUM_8
 
 /* LED */
 #define LED_PIN 4

@@ -1,5 +1,5 @@
-#ifndef USB_LOG_H
-#define USB_LOG_H
+#ifndef LOG_H
+#define LOG_H
 
 #include <Arduino.h>
 #include <lvgl.h>
@@ -12,4 +12,4 @@ public:
   void init();
 };
 
-#endif //USB_LOG_H
+#endif //LOG_H
