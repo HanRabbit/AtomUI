@@ -593,17 +593,8 @@
  .pio/libdeps/esp32-s3-devkitc-1/TFT_eSPI/Extensions/Button.h \
  .pio/libdeps/esp32-s3-devkitc-1/TFT_eSPI/Extensions/Sprite.h \
  src/Common/Log/Log.h src/Drivers/SD_Card/SD_Card.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src/SD_MMC.h \
  /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD/src/SD.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD/src/sd_defines.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_host.h \
  /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_types.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/fatfs/vfs/esp_vfs_fat.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_types.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdspi_host.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/fatfs/src/ff.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/fatfs/src/ffconf.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/wear_levelling/include/wear_levelling.h \
- .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/misc/lv_log.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/sdmmc/include/sdmmc_cmd.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src/sd_defines.h \
  src/Drivers/IO_Map/IO_map.h

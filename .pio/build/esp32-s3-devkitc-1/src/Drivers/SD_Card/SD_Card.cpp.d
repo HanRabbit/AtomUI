@@ -180,11 +180,6 @@
  /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/esp_hw_support/include/soc/esp32/spiram.h \
  /Users/han/.platformio/packages/framework-arduinoespressif32/cores/esp32/io_pin_remap.h \
  /Users/han/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD/src/SD.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src/SPI.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD/src/sd_defines.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/lvgl.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/lv_init.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/lv_conf_internal.h \
@@ -563,32 +558,8 @@
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/core/../stdlib/builtin/../../misc/lv_ll.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/core/../tick/lv_tick.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/core/../layouts/lv_layout.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_host.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src/SD_MMC.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
  /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_types.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/fatfs/vfs/esp_vfs_fat.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_types.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdspi_host.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/spi_master.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/spi_common.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/include/soc/lldesc.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/esp_rom/include/esp32s3/rom/lldesc.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/include/soc/spi_periph.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/periph_defs.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/soc_pins.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/usb_pins.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/gpio_pins.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/spi_pins.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/sdio_slave_pins.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/sdmmc_pins.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/touch_sensor_pins.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/spi_reg.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/spi_struct.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/spi_mem_struct.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/soc/esp32s3/include/soc/spi_mem_reg.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/hal/include/hal/spi_types.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/fatfs/src/ff.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/fatfs/src/ffconf.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/wear_levelling/include/wear_levelling.h \
- .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/misc/lv_log.h \
- /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/sdmmc/include/sdmmc_cmd.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src/sd_defines.h \
  src/Drivers/IO_Map/IO_map.h

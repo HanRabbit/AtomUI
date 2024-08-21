@@ -10,7 +10,6 @@ uint16_t duration = 2000;
  */
 void BL_anim_callback(void *obj, int32_t brightness) {
     analogWrite(TFT_BL, brightness);
-    lv_log(std::to_string(brightness).c_str());
 }
 
 int32_t TFT_BackLight::get_BL_brightness() {

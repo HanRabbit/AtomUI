@@ -2,20 +2,24 @@
 #define SD_CARD_H
 
 #include <Arduino.h>
-#include <FS.h>
-#include <SD.h>
 #include <lvgl.h>
-#include <driver/sdmmc_host.h>
-#include <esp_err.h>
-#include <esp_vfs_fat.h>
-#include <misc/lv_log.h>
-#include <sdmmc_cmd.h>
+#include <SD_MMC.h>
 
 #include "Drivers/IO_Map/IO_map.h"
 
+typedef enum {
+    SD_CARD_OK,
+    SD_CARD_NOT_PRESENT,
+    SD_CARD_ERROR
+} sd_card_status_t;
+
 class SD_Card {
 public:
-  void init();
+    lv_timer_t *sd_status_timer;
+    sd_card_status_t sd_card_status;
+
+    void init();
+    void update_status();
 };
 
 #endif //SD_CARD_H

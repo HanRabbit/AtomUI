@@ -130,4 +130,48 @@
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../others/observer/../../core/../indev/../misc/lv_area.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../others/observer/../../core/../indev/../misc/lv_timer.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../others/observer/../../core/../indev/../misc/lv_event.h \
- .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../others/observer/../../core/lv_group.h
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../others/observer/../../core/lv_group.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/lv_global.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../lv_conf_internal.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../misc/lv_types.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/lv_draw.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/lv_draw_sw.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/../lv_draw.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/../../misc/lv_area.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/../../misc/lv_color.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/../../display/lv_display.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/../../osal/lv_os.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/../../draw/lv_draw_vector.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/../../draw/lv_draw.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/../../draw/../misc/lv_array.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/blend/lv_draw_sw_blend.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/blend/../lv_draw_sw_mask.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/blend/../../../misc/lv_area.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/blend/../../../misc/lv_color.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/blend/../../../misc/lv_math.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/blend/../../../misc/lv_color.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/blend/../../../misc/lv_area.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../draw/sw/blend/../../../misc/lv_style.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../misc/lv_anim.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../misc/lv_area.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../misc/lv_color_op.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../misc/lv_ll.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../misc/lv_log.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../misc/lv_style.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../misc/lv_timer.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../others/sysmon/lv_sysmon.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../stdlib/builtin/lv_tlsf.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../stdlib/builtin/../../lv_conf_internal.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../stdlib/builtin/../../osal/lv_os.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../stdlib/builtin/../../misc/lv_ll.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../tick/lv_tick.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../core/../layouts/lv_layout.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../misc/lv_async.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../stdlib/lv_string.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../widgets/label/lv_label.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../widgets/label/../../lv_conf_internal.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../widgets/label/../../core/lv_obj.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../widgets/label/../../font/lv_font.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../widgets/label/../../font/lv_symbol_def.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../widgets/label/../../misc/lv_text.h \
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/others/sysmon/../../widgets/label/../../draw/lv_draw.h
