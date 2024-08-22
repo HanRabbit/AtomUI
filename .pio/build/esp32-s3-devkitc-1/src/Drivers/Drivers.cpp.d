@@ -597,4 +597,5 @@
  /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
  /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_types.h \
  /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src/sd_defines.h \
- src/Drivers/IO_Map/IO_map.h
+ src/Drivers/IO_Map/IO_map.h src/Common/Common.h \
+ src/Common/TimerManager/TimerManager.h

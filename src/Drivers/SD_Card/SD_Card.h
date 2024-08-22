@@ -6,6 +6,10 @@
 #include <SD_MMC.h>
 
 #include "Drivers/IO_Map/IO_map.h"
+#include "Common/Common.h"
+
+/* SD 卡状态刷新频率 (ms) */
+#define SD_CARD_STATUS_UPDATE_RATE 5000
 
 typedef enum {
     SD_CARD_OK,
@@ -15,7 +19,7 @@ typedef enum {
 
 class SD_Card {
 public:
-    lv_timer_t *sd_status_timer;
+    const char *timer_name = "FS_TIMER";
     sd_card_status_t sd_card_status;
 
     void init();

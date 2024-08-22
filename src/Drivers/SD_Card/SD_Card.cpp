@@ -1,5 +1,7 @@
 #include "SD_Card.h"
 
+extern TimerManager timer_manager;
+
 void *sd_open_cb(lv_fs_drv_t *drv, const char *path, lv_fs_mode_t mode);
 lv_fs_res_t sd_close_cb(lv_fs_drv_t *drv, void *file_p);
 lv_fs_res_t sd_read_cb(lv_fs_drv_t *drv, void *file_p, void *buf, uint32_t btr, uint32_t *br);
@@ -69,14 +71,7 @@ void SD_Card::init() {
     SD_MMC.setPins(SD_CLK, SD_CMD, SD_DATA0, SD_DATA1, SD_DATA2, SD_DATA3);
 
     /* 使用 4 bit MMC 模式挂载 SD 卡 */
-    if (SD_MMC.begin("/sdcard", false, true)) sd_card_status = SD_CARD_OK;
-    else sd_card_status = SD_CARD_ERROR;
-
-    /* SD 卡不存在 */
-    if (SD_MMC.cardType() == CARD_NONE) sd_card_status = SD_CARD_NOT_PRESENT;
-
-    /* 使用 4 bit MMC 模式挂载 SD 卡 */
-//    ::update_status();
+    update_status();
 
     /* 处理 SD 卡状态 */
     switch (sd_card_status) {
@@ -111,13 +106,15 @@ void SD_Card::init() {
 
     /* 如果 lv_fs_fatfs.c 报错，将 DIR 更改为 FF_DIR */
 
+    /* 测试文件读写 */
     testLvglFileIO();
 
     /* 设置定时器刷新状态 */
-    sd_status_timer = lv_timer_create([](lv_timer_t * timer) {
-        auto *pSdCard = static_cast<SD_Card *>(timer->user_data);
-        pSdCard->update_status();
-    }, 5000, this);
+    timer_manager.t_register([] (lv_timer_t *timer) {
+        /* 通过 lambda 表达式捕获 this 指针，在 lambda 内部调用非静态成员函数 update_status */
+        auto *pSD_card = static_cast<SD_Card *> (timer->user_data);
+        pSD_card->update_status();
+    }, SD_CARD_STATUS_UPDATE_RATE, timer_name, this, false);
 
     /* 取消挂载 */
 //    SD_MMC.end();
@@ -140,7 +137,7 @@ void SD_Card::update_status() {
             LV_LOG_USER("SD Card isn't present");
             break;
         case SD_CARD_OK:
-            LV_LOG_USER("SD Card mount successfully");
+//            LV_LOG_USER("SD Card mount successfully");
             break;
     }
 }
