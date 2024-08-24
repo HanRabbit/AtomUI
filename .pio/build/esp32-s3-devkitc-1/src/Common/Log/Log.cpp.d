@@ -557,4 +557,12 @@
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/core/../stdlib/builtin/../../osal/lv_os.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/core/../stdlib/builtin/../../misc/lv_ll.h \
  .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/core/../tick/lv_tick.h \
- .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/core/../layouts/lv_layout.h
+ .pio/libdeps/esp32-s3-devkitc-1/lvgl/src/core/../layouts/lv_layout.h \
+ src/Common/FileManager/FileManager.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src/SD_MMC.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/driver/include/driver/sdmmc_types.h \
+ /Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src/sd_defines.h \
+ .pio/libdeps/esp32-s3-devkitc-1/ArduinoJson/src/ArduinoJson.h \
+ .pio/libdeps/esp32-s3-devkitc-1/ArduinoJson/src/ArduinoJson.hpp \
+ .pio/libdeps/esp32-s3-devkitc-1/ArduinoJson/src/ArduinoJson/Configuration.hpp

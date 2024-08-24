@@ -1,5 +1,7 @@
 #include "TimerManager.h"
 
+TimerManager Timer_Manager;
+
 void TimerManager::init() const {
     /* 链表初始化 */
     t_head->t_next = nullptr;
@@ -62,7 +64,7 @@ void TimerManager::t_delete(const char *t_name) {
     lv_timer_delete(t->timer);
 
     /* 将其上一指针指向其下一指针后释放该指针内存，实现删除 */
-    t_seek(t_p->id - 1)->t_next = t_seek(t_p->id + 1);
+    t_seek(t_p->id - 1)->t_next = t_p->t_next;
 
     /* 释放内存 */
     delete &t;

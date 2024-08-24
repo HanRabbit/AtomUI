@@ -35,4 +35,6 @@ public:
     void t_delete(const char *t_name);
 };
 
+extern TimerManager Timer_Manager;
+
 #endif // ATOM_UI_LV9_TIMER_MANAGER_H

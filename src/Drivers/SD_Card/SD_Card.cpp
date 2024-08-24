@@ -1,6 +1,5 @@
 #include "SD_Card.h"
-
-extern TimerManager timer_manager;
+#include "Common/Log/Log.h"
 
 void *sd_open_cb(lv_fs_drv_t *drv, const char *path, lv_fs_mode_t mode);
 lv_fs_res_t sd_close_cb(lv_fs_drv_t *drv, void *file_p);
@@ -13,55 +12,6 @@ void *sd_dir_open_cb(lv_fs_drv_t *drv, const char *path);
 lv_fs_res_t sd_dir_read_cb(lv_fs_drv_t *drv, void *rddir_p, char *fn, uint32_t fn_len);
 lv_fs_res_t sd_dir_close_cb(lv_fs_drv_t *drv, void *rddir_p);
 
-void testLvglFileIO() {
-    const char *filePath = "H:/han.txt";  // LVGL文件系统中的文件路径
-
-    // 1. 创建并打开文件进行写入
-    lv_fs_file_t file;
-    lv_fs_res_t res = lv_fs_open(&file, filePath, LV_FS_MODE_WR);
-    if (res != LV_FS_RES_OK) {
-        LV_LOG_USER("Failed to open file for writing: %d", res);
-        return;
-    }
-
-    // 2. 写入数据
-    const char *testData = "Hello, LVGL and SD_MMC!";
-    uint32_t bytesWritten;
-    res = lv_fs_write(&file, testData, strlen(testData), &bytesWritten);
-    if (res != LV_FS_RES_OK || bytesWritten != strlen(testData)) {
-        LV_LOG_USER("Failed to write all data to file: %d", res);
-    } else {
-        LV_LOG_USER("Wrote %u bytes to file: %s", bytesWritten, testData);
-    }
-    lv_fs_close(&file);  // 关闭文件
-
-    // 3. 重新打开文件进行读取
-    res = lv_fs_open(&file, filePath, LV_FS_MODE_RD);
-    if (res != LV_FS_RES_OK) {
-        LV_LOG_USER("Failed to open file for reading: %d", res);
-        return;
-    }
-
-    // 4. 读取数据
-    char readBuffer[64];
-    uint32_t bytesRead;
-    res = lv_fs_read(&file, readBuffer, sizeof(readBuffer) - 1, &bytesRead);
-    if (res == LV_FS_RES_OK && bytesRead > 0) {
-        readBuffer[bytesRead] = '\0';  // 添加字符串结束符
-        LV_LOG_USER("Read %u bytes from file: %s", bytesRead, readBuffer);
-
-        // 5. 验证数据
-        if (strcmp(testData, readBuffer) == 0) {
-            LV_LOG_USER("LVGL File read/write test passed!");
-        } else {
-            LV_LOG_USER("LVGL File read/write test failed!");
-        }
-    } else {
-        LV_LOG_USER("Failed to read data from file: %d", res);
-    }
-    lv_fs_close(&file);  // 关闭文件
-}
-
 /* SD 卡初始化 */
 void SD_Card::init() {
     lv_fs_drv_t fs_drv;
@@ -72,19 +22,6 @@ void SD_Card::init() {
 
     /* 使用 4 bit MMC 模式挂载 SD 卡 */
     update_status();
-
-    /* 处理 SD 卡状态 */
-    switch (sd_card_status) {
-        case SD_CARD_ERROR:
-            LV_LOG_ERROR("SD Card mount failed");
-            break;
-        case SD_CARD_NOT_PRESENT:
-            LV_LOG_ERROR("SD Card isn't present");
-            break;
-        case SD_CARD_OK:
-            LV_LOG_USER("SD Card mount successfully");
-            break;
-    }
 
     /* 使用在 lv_conf.h 中的盘符 */
     fs_drv.letter = LV_FS_FATFS_LETTER;
@@ -106,15 +43,12 @@ void SD_Card::init() {
 
     /* 如果 lv_fs_fatfs.c 报错，将 DIR 更改为 FF_DIR */
 
-    /* 测试文件读写 */
-    testLvglFileIO();
-
     /* 设置定时器刷新状态 */
-    timer_manager.t_register([] (lv_timer_t *timer) {
+    Timer_Manager.t_register([] (lv_timer_t *timer) {
         /* 通过 lambda 表达式捕获 this 指针，在 lambda 内部调用非静态成员函数 update_status */
         auto *pSD_card = static_cast<SD_Card *> (timer->user_data);
         pSD_card->update_status();
-    }, SD_CARD_STATUS_UPDATE_RATE, timer_name, this, false);
+    }, SD_CARD_STATUS_UPDATE_RATE, timer_name, this, true);
 
     /* 取消挂载 */
 //    SD_MMC.end();
@@ -131,24 +65,28 @@ void SD_Card::update_status() {
     /* 处理 SD 卡状态 */
     switch (sd_card_status) {
         case SD_CARD_ERROR:
-            LV_LOG_USER("SD Card mount failed");
+            USB_log.out("SD Card mount failed");
+            USB_log.LOG_USE_FS = false;
             break;
         case SD_CARD_NOT_PRESENT:
-            LV_LOG_USER("SD Card isn't present");
+            USB_log.out("SD Card isn't present");
+            USB_log.LOG_USE_FS = false;
             break;
         case SD_CARD_OK:
+            USB_log.LOG_USE_FS = true;
 //            LV_LOG_USER("SD Card mount successfully");
             break;
     }
 }
 
-void *sd_open_cb(lv_fs_drv_t * drv, const char * path, lv_fs_mode_t mode) {
+void *sd_open_cb(lv_fs_drv_t *drv, const char *path, lv_fs_mode_t mode) {
     File *file = new File();
 
     if (mode == LV_FS_MODE_WR) {
-        *file = SD_MMC.open(path, FILE_WRITE);
+        /* 当目录不存在时创建目录 */
+        *file = SD_MMC.open(path, FILE_WRITE, true);
     } else if (mode == LV_FS_MODE_RD) {
-        *file = SD_MMC.open(path, FILE_READ);
+        *file = SD_MMC.open(path, FILE_READ, true);
     } else {
         /* 释放内存 */
         delete file;
@@ -157,7 +95,7 @@ void *sd_open_cb(lv_fs_drv_t * drv, const char * path, lv_fs_mode_t mode) {
 
     if (!*file) {
         /* 文件无法打开 */
-        LV_LOG_ERROR("File: %s cannot open", path);
+//        LV_LOG_ERROR("File: %s cannot open", path);
 
         delete file;
         return nullptr;
@@ -166,7 +104,7 @@ void *sd_open_cb(lv_fs_drv_t * drv, const char * path, lv_fs_mode_t mode) {
     return (void *)file;
 }
 
-lv_fs_res_t sd_close_cb(lv_fs_drv_t * drv, void * file_p) {
+lv_fs_res_t sd_close_cb(lv_fs_drv_t *drv, void *file_p) {
     File *file = (File *) file_p;
     file->close();
 
@@ -208,7 +146,7 @@ lv_fs_res_t sd_tell_cb(lv_fs_drv_t *drv, void *file_p, uint32_t *pos_p) {
 
 void * sd_dir_open_cb(lv_fs_drv_t *drv, const char *path) {
     File *dir = new File();
-    *dir = SD_MMC.open(path);
+    *dir = SD_MMC.open(path, FILE_READ, true);
 
     if (!*dir || !dir->isDirectory()) {
         /* 目录打开失败或非目录时释放内存 */
