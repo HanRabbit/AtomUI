@@ -67,7 +67,7 @@ void TimerManager::t_delete(const char *t_name) {
     t_seek(t_p->id - 1)->t_next = t_p->t_next;
 
     /* 释放内存 */
-    delete &t;
+    free(t_p);
 
     t_p = t_head;
 

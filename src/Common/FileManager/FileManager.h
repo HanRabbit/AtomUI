@@ -20,7 +20,7 @@ typedef const char *file_str_t;
  *     |   |  | img
  *     |   |  | gif
  *     |
- *     | Log
+ *     | Log                                    日志文件
  *     |   | atom.log
  * 
  * */

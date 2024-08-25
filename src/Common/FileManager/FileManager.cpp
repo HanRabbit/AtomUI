@@ -129,7 +129,5 @@ JsonDocument FileManager::cfg_read(file_str_t cfg_path) {
     /* 将 JSON 反序列化 */
     deserializeJson(json, json_str);
 
-    USBSerial.println(json_str);
-
     return json;
 }
