@@ -44,11 +44,11 @@ void SD_Card::init() {
     /* 如果 lv_fs_fatfs.c 报错，将 DIR 更改为 FF_DIR */
 
     /* 设置定时器刷新状态 */
-    Timer_Manager.t_register([] (lv_timer_t *timer) {
-        /* 通过 lambda 表达式捕获 this 指针，在 lambda 内部调用非静态成员函数 update_status */
-        auto *pSD_card = static_cast<SD_Card *> (timer->user_data);
-        pSD_card->update_status();
-    }, SD_CARD_STATUS_UPDATE_RATE, timer_name, this, true);
+//    Timer_Manager.t_register([] (lv_timer_t *timer) {
+//        /* 通过 lambda 表达式捕获 this 指针，在 lambda 内部调用非静态成员函数 update_status */
+//        auto *pSD_card = static_cast<SD_Card *> (timer->user_data);
+//        pSD_card->update_status();
+//    }, SD_CARD_STATUS_UPDATE_RATE, timer_name, this, true);
 
     /* 取消挂载 */
 //    SD_MMC.end();

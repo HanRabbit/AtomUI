@@ -8,7 +8,7 @@ String FileManager::f_read(file_str_t f_path) {
         lv_fs_file_t file;
         lv_fs_res_t res;
         uint32_t bytes;
-        String buffer;
+        char buffer[256];
 
         /* 打开文件，准备读取 */
         res = lv_fs_open(&file, f_path, LV_FS_MODE_RD);
@@ -38,7 +38,7 @@ String FileManager::f_read(file_str_t f_path) {
         USB_log.out("Read bytes from file");
 
         lv_fs_close(&file);
-        return buffer.c_str();
+        return buffer;
     } else {
         return "";
     }
