@@ -14,7 +14,7 @@ struct TimerGroup{
 } typedef timer_group_t;
 
 /* 定时器管理器 */
-class TimerManager {
+class Timer_Manager {
 public:
     /* 定时器数组 */
     timer_group_t *t_p = (timer_group_t *) malloc(sizeof(timer_group_t));
@@ -22,7 +22,8 @@ public:
     timer_group_t *t_tail = t_p;
 
     /* 当前定时器数量 */
-    uint8_t cur_timer_num = 0;
+    uint8_t timer_num = 0;
+    uint8_t time_cur_id = 0;
 
     void init() const;
 
@@ -33,8 +34,10 @@ public:
     timer_group_t *t_seek(uint8_t t_id);
 
     void t_delete(const char *t_name);
+
+    void t_set_pause(const char *name, bool is_pause);
 };
 
-extern TimerManager Timer_Manager;
+extern Timer_Manager TimerManager;
 
 #endif // ATOM_UI_LV9_TIMER_MANAGER_H

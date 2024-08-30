@@ -15,7 +15,7 @@ endif( LV_CONF_PATH )
 # Option to build shared libraries (as opposed to static), default: OFF
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 
-# Set sources used for LVGL components
+# Set sources used for LVGL Components
 file(GLOB_RECURSE SOURCES ${LVGL_ROOT_DIR}/src/*.c ${LVGL_ROOT_DIR}/src/*.S)
 file(GLOB_RECURSE EXAMPLE_SOURCES ${LVGL_ROOT_DIR}/examples/*.c)
 file(GLOB_RECURSE DEMO_SOURCES ${LVGL_ROOT_DIR}/demos/*.c)

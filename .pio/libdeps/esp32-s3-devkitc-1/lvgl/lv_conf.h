@@ -389,19 +389,19 @@
  *https://fonts.google.com/specimen/Montserrat*/
 #define LV_FONT_MONTSERRAT_8  0
 #define LV_FONT_MONTSERRAT_10 0
-#define LV_FONT_MONTSERRAT_12 0
+#define LV_FONT_MONTSERRAT_12 1
 #define LV_FONT_MONTSERRAT_14 1
 #define LV_FONT_MONTSERRAT_16 0
 #define LV_FONT_MONTSERRAT_18 0
-#define LV_FONT_MONTSERRAT_20 0
+#define LV_FONT_MONTSERRAT_20 1
 #define LV_FONT_MONTSERRAT_22 0
-#define LV_FONT_MONTSERRAT_24 0
+#define LV_FONT_MONTSERRAT_24 1
 #define LV_FONT_MONTSERRAT_26 0
 #define LV_FONT_MONTSERRAT_28 0
-#define LV_FONT_MONTSERRAT_30 0
+#define LV_FONT_MONTSERRAT_30 1
 #define LV_FONT_MONTSERRAT_32 0
 #define LV_FONT_MONTSERRAT_34 0
-#define LV_FONT_MONTSERRAT_36 0
+#define LV_FONT_MONTSERRAT_36 1
 #define LV_FONT_MONTSERRAT_38 0
 #define LV_FONT_MONTSERRAT_40 0
 #define LV_FONT_MONTSERRAT_42 0
@@ -658,7 +658,7 @@
 #endif
 
 /*LODEPNG decoder library*/
-#define LV_USE_LODEPNG 0
+#define LV_USE_LODEPNG 1
 
 /*PNG decoder(libpng) library*/
 #define LV_USE_LIBPNG 0
@@ -675,7 +675,7 @@
 #define LV_USE_LIBJPEG_TURBO 0
 
 /*GIF decoder library*/
-#define LV_USE_GIF 0
+#define LV_USE_GIF 1
 #if LV_USE_GIF
 /*GIF decoder accelerate*/
 #define LV_GIF_CACHE_DECODE_DATA 0
@@ -746,7 +746,7 @@
 #define LV_USE_SNAPSHOT 0
 
 /*1: Enable system monitor component*/
-#define LV_USE_SYSMON   1
+#define LV_USE_SYSMON   0
 #if LV_USE_SYSMON
     /*Get the idle percentage. E.g. uint32_t my_get_idle(void);*/
     #define LV_SYSMON_GET_IDLE lv_timer_get_idle

@@ -792,7 +792,7 @@ JRESULT jd_mcu_load(
                 }
             } while(++z < 64);      /* Next AC element */
 
-            if(JD_FORMAT != 2 || !cmp) {    /* C components may not be processed if in grayscale output */
+            if(JD_FORMAT != 2 || !cmp) {    /* C Components may not be processed if in grayscale output */
                 if(z == 1 || (JD_USE_SCALE &&
                               jd->scale ==
                               3)) {    /* If no AC element or scale ratio is 1/8, IDCT can be omitted and the block is filled with DC value */
@@ -986,7 +986,7 @@ JRESULT jd_prepare(
 
                 jd->width = LDB_WORD(&seg[3]);      /* Image width in unit of pixel */
                 jd->height = LDB_WORD(&seg[1]);     /* Image height in unit of pixel */
-                jd->ncomp = seg[5];                 /* Number of color components */
+                jd->ncomp = seg[5];                 /* Number of color Components */
                 if(jd->ncomp != 3 && jd->ncomp != 1) return JDR_FMT3;   /* Err: Supports only Grayscale and Y/Cb/Cr */
 
                 /* Check each image component */
@@ -1035,9 +1035,9 @@ JRESULT jd_prepare(
                 if(jd->infunc(jd, seg, len) != len) return JDR_INP;     /* Load segment data */
 
                 if(!jd->width || !jd->height) return JDR_FMT1;  /* Err: Invalid image size */
-                if(seg[0] != jd->ncomp) return JDR_FMT3;        /* Err: Wrong color components */
+                if(seg[0] != jd->ncomp) return JDR_FMT3;        /* Err: Wrong color Components */
 
-                /* Check if all tables corresponding to each components have been loaded */
+                /* Check if all tables corresponding to each Components have been loaded */
                 for(i = 0; i < jd->ncomp; i++) {
                     b = seg[2 + 2 * i]; /* Get huffman table ID */
                     if(b != 0x00 && b != 0x11) return JDR_FMT3;     /* Err: Different table number for DC/AC element */

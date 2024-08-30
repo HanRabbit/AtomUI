@@ -8,7 +8,7 @@
 
 enum time_info {t_year, t_month, t_day, t_hour, t_min, t_sec};
 
-class Time {
+class Time_ {
 public:
   /* 系统时间结构体 */
   struct tm time_;
@@ -22,5 +22,7 @@ public:
   /* 获取指定时间对象 */
   uint8_t get_time_info(time_info info);
 };
+
+extern Time_ Time;
 
 #endif //TIME_H

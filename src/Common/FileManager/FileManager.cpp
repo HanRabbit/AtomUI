@@ -1,9 +1,9 @@
 #include "FileManager.h"
 #include "Common/Log/Log.h"
 
-FileManager File_Manager;
+File_Manager FileManager;
 
-String FileManager::f_read(file_str_t f_path) {
+String File_Manager::f_read(file_str_t f_path) {
     if (lv_fs_is_ready(LV_FS_FATFS_LETTER)) {
         lv_fs_file_t file;
         lv_fs_res_t res;
@@ -44,7 +44,7 @@ String FileManager::f_read(file_str_t f_path) {
     }
 }
 
-bool FileManager::f_write(file_str_t f_path, file_str_t data, bool is_append) {
+bool File_Manager::f_write(file_str_t f_path, file_str_t data, bool is_append) {
     if (lv_fs_is_ready(LV_FS_FATFS_LETTER)) {
         lv_fs_file_t file;
         lv_fs_res_t res;
@@ -102,7 +102,7 @@ bool FileManager::f_write(file_str_t f_path, file_str_t data, bool is_append) {
  * @brief 日志文件输出
  * @param log_data 日志内容
  */
-void FileManager::log(file_str_t log_data) {
+void File_Manager::log(file_str_t log_data) {
     f_write(FILE_LOG_PATH, log_data, true);
 }
 
@@ -112,7 +112,7 @@ void FileManager::log(file_str_t log_data) {
  * @param cfg_path .cfg 配置文件路径
  * @return
  */
-bool FileManager::cfg_write(const ArduinoJson::JsonDocument& json, file_str_t cfg_path) {
+bool File_Manager::cfg_write(const ArduinoJson::JsonDocument& json, file_str_t cfg_path) {
     char buf[measureJson(json) + 1];
     /* 将 JSON 序列化 */
     serializeJson(json, buf, measureJson(json) + 1);
@@ -122,7 +122,7 @@ bool FileManager::cfg_write(const ArduinoJson::JsonDocument& json, file_str_t cf
     else return false;
 }
 
-JsonDocument FileManager::cfg_read(file_str_t cfg_path) {
+JsonDocument File_Manager::cfg_read(file_str_t cfg_path) {
     JsonDocument json;
     String json_str = f_read(FILE_CONFIG_WIFI_PATH);
 

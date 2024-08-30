@@ -623,12 +623,14 @@ void lv_screen_load_anim(lv_obj_t * new_scr, lv_screen_load_anim_t anim_type, ui
     lv_anim_set_completed_cb(&a_new, scr_anim_completed);
     lv_anim_set_duration(&a_new, time);
     lv_anim_set_delay(&a_new, delay);
+    lv_anim_set_path_cb(&a_new, lv_anim_path_ease_out);
 
     lv_anim_t a_old;
     lv_anim_init(&a_old);
     lv_anim_set_var(&a_old, act_scr);
     lv_anim_set_duration(&a_old, time);
     lv_anim_set_delay(&a_old, delay);
+    lv_anim_set_path_cb(&a_old, lv_anim_path_ease_out);
 
     switch(anim_type) {
         case LV_SCR_LOAD_ANIM_NONE:

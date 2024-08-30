@@ -163,7 +163,7 @@ typedef struct
 astro_utc_t;
 
 /**
- * @brief A 3D Cartesian vector whose components are expressed in Astronomical Units (AU).
+ * @brief A 3D Cartesian vector whose Components are expressed in Astronomical Units (AU).
  */
 typedef struct
 {

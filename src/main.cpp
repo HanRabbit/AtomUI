@@ -1,9 +1,11 @@
 #include <Arduino.h>
-#include "Drivers/Drivers.h"
 #include "Common/Common.h"
+#include "Drivers/Drivers.h"
+#include "UI/Apps/Apps.h"
 
 Drivers drivers;
 Common common;
+Apps apps;
 
 void setup() {
     /* LVGL 初始化 */
@@ -16,6 +18,11 @@ void setup() {
 
     /* Common 抽象层初始化 */
     common.init();
+
+    /* 应用初始化 */
+    apps.init();
+
+    apps.play_start_anim();
 }
 
 void loop() {

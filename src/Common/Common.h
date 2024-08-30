@@ -4,6 +4,7 @@
 #include "Common/Log/Log.h"
 #include "Common/TimerManager/TimerManager.h"
 #include "Common/FileManager/FileManager.h"
+#include "Common/WiFi/WiFi.h"
 
 class Common {
 public:

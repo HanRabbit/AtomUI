@@ -31,7 +31,7 @@ typedef struct _my_theme_t my_theme_t;
 #define LIGHT_COLOR_CARD       lv_color_white()
 #define LIGHT_COLOR_TEXT       lv_palette_darken(LV_PALETTE_GREY, 4)
 #define LIGHT_COLOR_GREY       lv_palette_lighten(LV_PALETTE_GREY, 2)
-#define DARK_COLOR_SCR         lv_color_hex(0x15171A)
+#define DARK_COLOR_SCR         lv_color_hex(0x000000)
 #define DARK_COLOR_CARD        lv_color_hex(0x282b30)
 #define DARK_COLOR_TEXT        lv_palette_lighten(LV_PALETTE_GREY, 5)
 #define DARK_COLOR_GREY        lv_color_hex(0x2f3237)

@@ -649,6 +649,7 @@ static void lv_bar_set_value_with_anim(lv_obj_t * obj, int32_t new_value, int32_
         lv_anim_set_values(&a, LV_BAR_ANIM_STATE_START, LV_BAR_ANIM_STATE_END);
         lv_anim_set_completed_cb(&a, lv_bar_anim_completed);
         lv_anim_set_duration(&a, lv_obj_get_style_anim_duration(obj, LV_PART_MAIN));
+        lv_anim_set_path_cb(&a, lv_anim_path_ease_out);
         lv_anim_start(&a);
     }
 }

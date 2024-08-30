@@ -14,11 +14,11 @@ void log_print(lv_log_level_t level, const char *buf) {
 
     if (USB_log.LOG_USE_FS) {
         /* 使用 FS 输出日志 */
-        File_Manager.log(buf);
+        FileManager.log(buf);
     }
 }
 
-void USB_Log::out(const char *buf) {
+void USB_Log::out(const char *buf) const {
     if (LOG_USE_USER_SERIAL) {
         USBSerial.println(buf);
     }

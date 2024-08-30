@@ -527,7 +527,7 @@ static bool get_jpeg_direction(uint8_t * data, uint32_t data_size, uint32_t * or
                     for(int i = 0; i < num_entries; i++) {
                         unsigned short tag = TRANS_16_VALUE(is_big_endian, ifd);
                         if(tag == 0x0112) {
-                            /* ifd entry: 12bytes = 2bytes(tag number) + 2bytes(kind of data) + 4bytes(number of components) + 4bytes(data)
+                            /* ifd entry: 12bytes = 2bytes(tag number) + 2bytes(kind of data) + 4bytes(number of Components) + 4bytes(data)
                             * orientation kind(0x03) of data is unsigned short */
                             int dirc = TRANS_16_VALUE(is_big_endian, ifd + 2 + 2 + 4);
                             switch(dirc) {

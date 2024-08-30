@@ -6,6 +6,11 @@
 #include <SD_MMC.h>
 #include <ArduinoJson.h>
 
+#define FILE_ROOT_PATH "H:/Atom"     /* 文件系统根目录 */
+
+#define FILE_LOG_PATH "H:/Atom/Log/atom.log"         /* 日志文件路径 */
+#define FILE_CONFIG_WIFI_PATH "H:/Atom/Config/Wi-Fi.cfg"
+
 typedef const char *file_str_t;
 
 /*
@@ -25,13 +30,8 @@ typedef const char *file_str_t;
  * 
  * */
 
-class FileManager {
+class File_Manager {
 public:
-    file_str_t FILE_ROOT_PATH = "H:/Atom";     /* 文件系统根目录 */
-
-    file_str_t FILE_LOG_PATH = "H:/Atom/Log/atom.log";         /* 日志文件路径 */
-    file_str_t FILE_CONFIG_WIFI_PATH = "H:/Atom/Config/Wi-Fi.cfg";
-
     /* 基础文件操作 */
     String f_read(file_str_t f_path);
     bool f_write(file_str_t f_path, file_str_t data, bool is_append);
@@ -44,6 +44,6 @@ public:
     JsonDocument cfg_read(file_str_t cfg_path);
 };
 
-extern FileManager File_Manager;
+extern File_Manager FileManager;
 
 #endif // ATOM_UI_LV9_FILE_MANAGER_H

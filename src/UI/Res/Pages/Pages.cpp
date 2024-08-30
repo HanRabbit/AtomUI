@@ -18,8 +18,9 @@ void Page::p_init(const char *name, uint16_t id, lv_obj_t *(*m_create)(), lv_obj
  * @brief 显示页面
  * @return 页面根
  */
-lv_obj_t *Page::p_load() const {
-    return p_create();
+lv_obj_t *Page::p_load() {
+    p_screen = p_create();
+    return p_screen;
 }
 
 /**

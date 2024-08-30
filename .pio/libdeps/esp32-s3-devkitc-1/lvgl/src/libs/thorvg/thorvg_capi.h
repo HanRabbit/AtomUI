@@ -163,7 +163,7 @@ typedef enum {
     TVG_BLEND_METHOD_DIFFERENCE,        ///< Subtracts the bottom layer from the top layer or the other way around, to always get a non-negative value. (S - D) if (S > D), otherwise (D - S)
     TVG_BLEND_METHOD_EXCLUSION,         ///< The result is twice the product of the top and bottom layers, subtracted from their sum. s + d - (2 * s * d)
     TVG_BLEND_METHOD_SRCOVER,           ///< Replace the bottom layer with the top layer.
-    TVG_BLEND_METHOD_DARKEN,            ///< Creates a pixel that retains the smallest components of the top and bottom layer pixels. min(S, D)
+    TVG_BLEND_METHOD_DARKEN,            ///< Creates a pixel that retains the smallest Components of the top and bottom layer pixels. min(S, D)
     TVG_BLEND_METHOD_LIGHTEN,           ///< Only has the opposite action of Darken Only. max(S, D)
     TVG_BLEND_METHOD_COLORDODGE,        ///< Divides the bottom layer by the inverted top layer. D / (255 - S)
     TVG_BLEND_METHOD_COLORBURN,         ///< Divides the inverted bottom layer by the top layer, and then inverts the result. 255 - (255 - D) / S

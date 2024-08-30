@@ -201,7 +201,7 @@ enum class BlendMethod : uint8_t
     Difference,        ///< Subtracts the bottom layer from the top layer or the other way around, to always get a non-negative value. (S - D) if (S > D), otherwise (D - S)
     Exclusion,         ///< The result is twice the product of the top and bottom layers, subtracted from their sum. s + d - (2 * s * d)
     SrcOver,           ///< Replace the bottom layer with the top layer.
-    Darken,            ///< Creates a pixel that retains the smallest components of the top and bottom layer pixels. min(S, D)
+    Darken,            ///< Creates a pixel that retains the smallest Components of the top and bottom layer pixels. min(S, D)
     Lighten,           ///< Only has the opposite action of Darken Only. max(S, D)
     ColorDodge,        ///< Divides the bottom layer by the inverted top layer. D / (255 - S)
     ColorBurn,         ///< Divides the inverted bottom layer by the top layer, and then inverts the result. 255 - (255 - D) / S

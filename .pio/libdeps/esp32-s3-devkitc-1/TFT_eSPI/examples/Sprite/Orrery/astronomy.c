@@ -229,7 +229,7 @@ static double NormalizeLongitude(double lon)
  * @brief Calculates the length of the given vector.
  *
  * Calculates the non-negative length of the given vector.
- * The length is expressed in the same units as the vector's components,
+ * The length is expressed in the same units as the vector's Components,
  * usually astronomical units (AU).
  *
  * @param vector The vector whose length is to be calculated.
@@ -1861,7 +1861,7 @@ static void CalcMoon(
  *
  * Given a time of observation, calculates the Moon's position as a vector.
  * The vector gives the location of the Moon's center relative to the Earth's center
- * with x-, y-, and z-components measured in astronomical units.
+ * with x-, y-, and z-Components measured in astronomical units.
  *
  * This algorithm is based on Nautical Almanac Office's *Improved Lunar Ephemeris* of 1954,
  * which in turn derives from E. W. Brown's lunar theories from the early twentieth century.
@@ -6812,9 +6812,9 @@ astro_rotation_t Astronomy_Rotation_EQD_EQJ(astro_time_t time)
  *
  * @return
  *      A rotation matrix that converts EQD to HOR at `time` and for `observer`.
- *      The components of the horizontal vector are:
+ *      The Components of the horizontal vector are:
  *      x = north, y = west, z = zenith (straight up from the observer).
- *      These components are chosen so that the "right-hand rule" works for the vector
+ *      These Components are chosen so that the "right-hand rule" works for the vector
  *      and so that north represents the direction where azimuth = 0.
  */
 astro_rotation_t Astronomy_Rotation_EQD_HOR(astro_time_t time, astro_observer_t observer)
@@ -6925,9 +6925,9 @@ astro_rotation_t Astronomy_Rotation_HOR_EQJ(astro_time_t time, astro_observer_t 
  *
  * @return
  *      A rotation matrix that converts EQJ to HOR at `time` and for `observer`.
- *      The components of the horizontal vector are:
+ *      The Components of the horizontal vector are:
  *      x = north, y = west, z = zenith (straight up from the observer).
- *      These components are chosen so that the "right-hand rule" works for the vector
+ *      These Components are chosen so that the "right-hand rule" works for the vector
  *      and so that north represents the direction where azimuth = 0.
  */
 astro_rotation_t Astronomy_Rotation_EQJ_HOR(astro_time_t time, astro_observer_t observer)
@@ -7001,9 +7001,9 @@ astro_rotation_t Astronomy_Rotation_ECL_EQD(astro_time_t time)
  *
  * @return
  *      A rotation matrix that converts ECL to HOR at `time` and for `observer`.
- *      The components of the horizontal vector are:
+ *      The Components of the horizontal vector are:
  *      x = north, y = west, z = zenith (straight up from the observer).
- *      These components are chosen so that the "right-hand rule" works for the vector
+ *      These Components are chosen so that the "right-hand rule" works for the vector
  *      and so that north represents the direction where azimuth = 0.
  */
 astro_rotation_t Astronomy_Rotation_ECL_HOR(astro_time_t time, astro_observer_t observer)

@@ -21,7 +21,7 @@ public:
     void init();
 
     /* 仅使用 USB 串口调试 */
-    void out(const char *buf);
+    void out(const char *buf) const;
 };
 
 extern USB_Log USB_log;

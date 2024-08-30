@@ -54,7 +54,7 @@ struct JDEC {
     uint8_t scale;              /* Output scaling ratio */
     uint8_t msx, msy;           /* MCU size in unit of block (width, height) */
     uint8_t qtid[3];            /* Quantization table ID of each component, Y, Cb, Cr */
-    uint8_t ncomp;              /* Number of color components 1:grayscale, 3:color */
+    uint8_t ncomp;              /* Number of color Components 1:grayscale, 3:color */
     int16_t dcv[3];             /* Previous DC element of each component */
     uint16_t nrst;              /* Restart interval */
     uint16_t rst;              /* Restart count*/

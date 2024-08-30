@@ -1,11 +1,13 @@
 #include "Time.h"
 
+Time_ Time;
+
 /* 联网将校准时间 */
 
 /**
  * @brief Time 类初始化
  */
-void Time::init() {
+void Time_::init() {
     /* tm 结构体定义 设置初始时间为 2023年5月2日 12:44:00 */
     time_.tm_year = 2023 - 1900;
     time_.tm_mon = 5 - 1;
@@ -26,7 +28,7 @@ void Time::init() {
  * @param has_sec 输出秒数
  * @return 时间字符串
  */
-String Time::get_time_str(bool has_sec) {
+String Time_::get_time_str(bool has_sec) {
     String time_str;
 
     if (getLocalTime(&time_, GET_TIME_OUT)) {
@@ -48,7 +50,7 @@ String Time::get_time_str(bool has_sec) {
  * @param info 时间类型
  * @return 指定时间类型值
  */
-uint8_t Time::get_time_info(time_info info){
+uint8_t Time_::get_time_info(time_info info){
     getLocalTime(&time_, GET_TIME_OUT);
     switch (info) {
         case t_year:
