@@ -130,10 +130,9 @@
 // sketch. e.g. with digitalWrite(TFT_BL, LOW);
 
 // #define TFT_BL   32            // LED back-light control pin
+
 /* TFT 背光由 Drivers/Display/TFT_backlight 控制，因此这里拉低电平 */
 #define TFT_BACKLIGHT_ON LOW  // Level to turn ON back-light (HIGH or LOW)
-
-
 
 // We must use hardware SPI, a minimum of 3 GPIO pins is needed.
 // Typical setup for ESP8266 NodeMCU ESP-12 is :

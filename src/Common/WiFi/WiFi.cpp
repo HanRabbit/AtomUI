@@ -15,3 +15,9 @@ void WiFi_OP::init() {
 }
 
 
+bool WiFi_OP::is_connected() {
+    if (WiFi.isConnected())
+        return true;
+    else
+        return false;
+}

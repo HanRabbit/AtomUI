@@ -7,12 +7,16 @@
 
 #include "Common/FileManager/FileManager.h"
 
+
 class WiFi_OP {
 public:
     const char *SSID, *PASSWORD;
 
     /* WiFi 初始化 */
     void init();
+
+    /* Wi-Fi 状态更新 */
+    bool is_connected();
 };
 
 extern WiFi_OP WiFi_Op;

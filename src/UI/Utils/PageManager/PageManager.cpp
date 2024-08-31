@@ -108,7 +108,8 @@ void Page_Manager::p_push_black_fade(const char *name) {
         lv_screen_load_anim(page->p_load(), LV_SCR_LOAD_ANIM_NONE, 0, 700, true);
 
         lv_timer_create([] (lv_timer_t *timer) {
-            Page *page_inside = (Page *) timer->user_data;
+//            Page *page_inside = (Page *) timer->user_data;
+            Page *page_inside = (Page *) lv_timer_get_user_data(timer);
             TFT_BackLight.set_BL_brightness(BL_DEFAULT);
             lv_timer_delete(timer);
         }, 800, page);

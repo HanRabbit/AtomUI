@@ -1,4 +1,5 @@
 #include "StatusBar.h"
+#include "Common/WiFi/WiFi.h"
 
 Status_Bar StatusBar;
 
@@ -92,4 +93,20 @@ void Status_Bar::create(lv_obj_t *root) {
     lv_obj_set_align(battery_perc_label, LV_ALIGN_RIGHT_MID);
     lv_label_set_text(battery_perc_label, "");
     lv_obj_set_style_text_font(battery_perc_label, &lv_font_montserrat_12, LV_PART_MAIN);
+
+    lv_timer_create([] (lv_timer_t *timer) {
+        StatusBar.update();
+    }, STATUS_BAR_DURATION_UPDATE, &StatusBar);
+}
+
+void Status_Bar::update() {
+    /* 更新 Wi-Fi 状态 */
+    if (WiFi_Op.is_connected()) {
+        lv_image_set_src(wifi_icon, COMP_WIFI_OPEN_IMG_PATH);
+    } else {
+        lv_image_set_src(wifi_icon, COMP_WIFI_CLOSE_IMG_PATH);
+    }
+
+    /* 更新电池状态 */
+
 }
