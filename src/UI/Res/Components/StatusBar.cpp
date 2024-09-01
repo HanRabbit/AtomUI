@@ -99,13 +99,15 @@ void Status_Bar::create(lv_obj_t *root) {
     }, STATUS_BAR_DURATION_UPDATE, &StatusBar);
 }
 
-void Status_Bar::update() {
+void Status_Bar::update() const {
     /* 更新 Wi-Fi 状态 */
     if (WiFi_Op.is_connected()) {
         lv_image_set_src(wifi_icon, COMP_WIFI_OPEN_IMG_PATH);
     } else {
         lv_image_set_src(wifi_icon, COMP_WIFI_CLOSE_IMG_PATH);
     }
+
+//    LV_LOG_USER("WiFi Status: %s", WiFi_Op.is_connected());
 
     /* 更新电池状态 */
 

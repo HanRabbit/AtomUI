@@ -11,6 +11,7 @@ void WiFi_OP::init() {
     SSID = wifi_config_json["wifi-name"];
     PASSWORD = wifi_config_json["wifi-password"];
 
+    /* Wi-Fi 开始连接 */
     WiFi.begin(SSID, PASSWORD);
 }
 
