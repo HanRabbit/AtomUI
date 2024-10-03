@@ -8,6 +8,7 @@ lv_obj_t *LaunchPage::create() {
     /* 主屏幕创建 */
     lv_obj_t *root;
     root = lv_obj_create(nullptr);
+    lv_obj_set_style_bg_color(root, lv_color_black(), LV_PART_MAIN);
 
     /* Atom Logo */
     lv_obj_t *atom_img = lv_image_create(root);

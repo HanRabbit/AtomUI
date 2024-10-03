@@ -1,5 +1,6 @@
 #include "StatusBar.h"
 #include "Common/WiFi/WiFi.h"
+#include "Common/TimerManager/TimerManager.h"
 
 Status_Bar StatusBar;
 
@@ -94,17 +95,23 @@ void Status_Bar::create(lv_obj_t *root) {
     lv_label_set_text(battery_perc_label, "");
     lv_obj_set_style_text_font(battery_perc_label, &lv_font_montserrat_12, LV_PART_MAIN);
 
-    lv_timer_create([] (lv_timer_t *timer) {
+    TimerManager.t_register([] (lv_timer_t *timer) {
         StatusBar.update();
-    }, STATUS_BAR_DURATION_UPDATE, &StatusBar);
+    }, STATUS_BAR_DURATION_UPDATE, "TIMER_STATUS_BAR_UPDATE", &StatusBar, true);
+
+    // lv_timer_create([] (lv_timer_t *timer) {
+    //     StatusBar.update();
+    // }, STATUS_BAR_DURATION_UPDATE, &StatusBar);
 }
 
-void Status_Bar::update() const {
+void Status_Bar::update() {
     /* 更新 Wi-Fi 状态 */
     if (WiFi_Op.is_connected()) {
         lv_image_set_src(wifi_icon, COMP_WIFI_OPEN_IMG_PATH);
+        LV_LOG_USER("WiFi Connected");
     } else {
         lv_image_set_src(wifi_icon, COMP_WIFI_CLOSE_IMG_PATH);
+        LV_LOG_USER("WiFi Disconnected");
     }
 
 //    LV_LOG_USER("WiFi Status: %s", WiFi_Op.is_connected());

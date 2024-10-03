@@ -6,6 +6,11 @@
 /* 校准超时时间 (ms) */
 #define GET_TIME_OUT 50
 
+/* 时间校准常量 */
+#define NTP_SERVER "pool.ntp.org"
+#define GMT_OFFSET_SEC 28800
+#define DAYLIGHT_OFFSET_SEC 0
+
 enum time_info {t_year, t_month, t_day, t_hour, t_min, t_sec};
 
 class Time_ {

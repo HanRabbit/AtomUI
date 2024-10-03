@@ -17,6 +17,8 @@ public:
 
     /* Wi-Fi 状态更新 */
     bool is_connected();
+
+    void wifi_write_config(const char *ssid, const char *password);
 };
 
 extern WiFi_OP WiFi_Op;

@@ -13,7 +13,7 @@ public:
 
     void create(lv_obj_t *root);
 
-    void update() const;
+    void update();
 };
 
 extern Status_Bar StatusBar;
