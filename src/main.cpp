@@ -22,7 +22,7 @@ void setup() {
     /* 应用初始化 */
     apps.init();
 
-    apps.play_start_anim();
+    apps.launch();
 }
 
 void loop() {

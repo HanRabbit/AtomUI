@@ -15,7 +15,7 @@ class Apps {
 public:
     void init();
 
-    void play_start_anim();
+    void launch();
 };
 
 #endif // ATOM_UI_LV9_APPS_H
