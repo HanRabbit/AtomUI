@@ -1,6 +1,4 @@
 #include "HomePage.h"
-#include "Common/MessageManager/Publisher.h"
-#include "Common/MessageManager/Subscriber.h"
 #include "view.h"
 
 lv_obj_t *ui_root_panel, *ui_menu_panel;

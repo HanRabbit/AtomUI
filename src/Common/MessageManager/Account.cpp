@@ -1,7 +1,8 @@
-#include "Publisher.h"
+#include "Account.h"
 #include "MessagePool.h"
 
 Publisher publisher;
+Subscriber subscriber;
 
 void Publisher::publish(const String &id, const String &content) {
     MessagePool.pub_msg_buf[id.c_str()] = content.c_str();
@@ -12,4 +13,8 @@ void Publisher::publish(const String &id, const String &content) {
             sub_cb(content);
         }
     }
+}
+
+void Subscriber::subcribe(const String &id, function<void(String)> sub_cb) {
+    MessagePool.sub_msg_buf[id.c_str()].push_back(sub_cb);
 }
