@@ -12,8 +12,6 @@ public:
     lv_obj_t *back_button, *back_icon, *wifi_mode, *wifi_icon, *info_label, *battery_icon, *battery_perc_label, *battery_inside;
 
     void create(lv_obj_t *root);
-
-    void update();
 };
 
 extern Status_Bar StatusBar;

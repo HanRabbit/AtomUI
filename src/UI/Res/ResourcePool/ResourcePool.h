@@ -19,6 +19,7 @@
 #define HOME_TIME_IMG_PATH "H:/Atom/Res/UI/img/home/time.png"
 #define HOME_APPS_IMG_PATH "H:/Atom/Res/UI/img/home/apps.png"
 #define HOME_FOLLOWERS_IMG_PATH "H:/Atom/Res/UI/img/home/followers.png"
+#define HOME_TIME_BAR_IMG_PATH "H:/Atom/Res/UI/img/home/time_bar.png"
 
 /* GIF 资源存储路径 */
 #define ATOM_LOGO_GIF_PATH "H:/Atom/Res/UI/gif/atom.gif"

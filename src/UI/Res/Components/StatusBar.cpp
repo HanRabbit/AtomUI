@@ -1,8 +1,25 @@
 #include "StatusBar.h"
-#include "Common/WiFi/WiFi.h"
+
 #include "Common/TimerManager/TimerManager.h"
+#include "Common/MessageManager/Account.h"
 
 Status_Bar StatusBar;
+
+void status_bar_update_wifi(String status) {
+    /* 更新 Wi-Fi 状态 */
+    if (status == MSG_CONTENT_WIFI_CONNECTED) {
+        lv_image_set_src(StatusBar.wifi_icon, COMP_WIFI_OPEN_IMG_PATH);
+    } else {
+        lv_image_set_src(StatusBar.wifi_icon, COMP_WIFI_CLOSE_IMG_PATH);
+    }
+}
+
+void status_bar_update_battery(String percent) {
+    /* 更新电池电量 */
+    int w = percent.toFloat() * 18.0;
+    lv_obj_set_width(StatusBar.battery_inside, w);
+}
+
 
 void Status_Bar::create(lv_obj_t *root) {
     lv_obj_t *ui_status_bar = lv_obj_create(root);
@@ -75,16 +92,17 @@ void Status_Bar::create(lv_obj_t *root) {
     lv_obj_set_style_bg_color(battery_icon, lv_color_hex(0x000000), LV_PART_MAIN);
     lv_obj_set_style_border_width(battery_icon, 1, LV_PART_MAIN);
     lv_obj_set_style_border_color(battery_icon, lv_color_hex(0xFFFFFF), LV_PART_MAIN);
-    lv_obj_set_style_radius(battery_icon, 4, LV_PART_MAIN);
+    lv_obj_set_style_radius(battery_icon, 2, LV_PART_MAIN);
 
     battery_inside = lv_obj_create(battery_icon);
     lv_obj_set_width(battery_inside, 18);
     lv_obj_set_height(battery_inside, 8);
-    lv_obj_set_align(battery_inside, LV_ALIGN_CENTER);
+    lv_obj_set_x(battery_inside, -13);
+    lv_obj_set_align(battery_inside, LV_ALIGN_LEFT_MID);
     lv_obj_add_flag(battery_inside, LV_OBJ_FLAG_ADV_HITTEST);
     lv_obj_clear_flag(battery_inside, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_set_style_bg_color(battery_inside, lv_color_hex(0xFFFFFF), LV_PART_MAIN);
-    lv_obj_set_style_radius(battery_inside, 4, LV_PART_MAIN);
+    lv_obj_set_style_radius(battery_inside, 2, LV_PART_MAIN);
 
     battery_perc_label = lv_label_create(ui_status_bar);
     lv_obj_set_width(battery_perc_label, LV_SIZE_CONTENT);
@@ -95,22 +113,7 @@ void Status_Bar::create(lv_obj_t *root) {
     lv_label_set_text(battery_perc_label, "");
     lv_obj_set_style_text_font(battery_perc_label, &lv_font_montserrat_12, LV_PART_MAIN);
 
-    /* 注册状态栏刷新定时器 */
-    TimerManager.t_register([] (lv_timer_t *timer) {
-        StatusBar.update();
-    }, STATUS_BAR_DURATION_UPDATE, "TIMER_STATUS_BAR_UPDATE", &StatusBar, true);
-}
-
-void Status_Bar::update() {
-    /* 更新 Wi-Fi 状态 */
-    if (WiFi_Op.is_connected()) {
-        lv_image_set_src(wifi_icon, COMP_WIFI_OPEN_IMG_PATH);
-    } else {
-        lv_image_set_src(wifi_icon, COMP_WIFI_CLOSE_IMG_PATH);
-    }
-
-//    LV_LOG_USER("WiFi Status: %s", WiFi_Op.is_connected());
-
-    /* 更新电池状态 */
-
+    /* 订阅消息回调函数，刷新状态栏 */
+    subscriber.subcribe(MSG_ID_WIFI_STATUS, status_bar_update_wifi);
+    subscriber.subcribe(MSG_ID_BATTERY_PERCENT, status_bar_update_battery);
 }

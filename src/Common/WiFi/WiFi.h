@@ -5,10 +5,10 @@
 #include <ArduinoJson.h>
 #include <WiFi.h>
 
-#include "Common/FileManager/FileManager.h"
-
-
 class WiFi_OP {
+private:
+    const uint16_t WIFI_STATUS_UPDATE_DURATION = 1000;
+
 public:
     const char *SSID, *PASSWORD;
 
@@ -16,7 +16,7 @@ public:
     void init();
 
     /* Wi-Fi 状态更新 */
-    bool is_connected();
+    const char *status_update();
 
     void wifi_write_config(const char *ssid, const char *password);
 };

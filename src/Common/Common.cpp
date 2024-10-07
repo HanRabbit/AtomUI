@@ -6,4 +6,6 @@ void Common::init() {
 
     /* WiFi 初始化 */
     WiFi_Op.init();
+
+    Time.init();
 }

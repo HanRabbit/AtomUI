@@ -9,5 +9,5 @@ lv_disp_t *disp;
 void Display::init() {
     disp = lv_tft_espi_create(TFT_HOR_RES, TFT_VER_RES, draw_buf, sizeof(draw_buf));
 
-    TFT_BackLight.set_BL_delay_brightness(BL_DEFAULT, 200);
+    TFT_BackLight.set_BL_delay_brightness(BL_DEFAULT, 800);
 }

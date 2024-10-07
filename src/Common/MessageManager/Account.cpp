@@ -1,5 +1,4 @@
 #include "Account.h"
-#include "MessagePool.h"
 
 Publisher publisher;
 Subscriber subscriber;

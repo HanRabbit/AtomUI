@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include <unordered_map>
+#include "MessagePool.h"
 
 using namespace std;
 

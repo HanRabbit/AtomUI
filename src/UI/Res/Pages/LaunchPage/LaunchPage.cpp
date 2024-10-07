@@ -1,6 +1,7 @@
 #include "LaunchPage.h"
 #include "UI/Res/ResourcePool/ResourcePool.h"
 #include "UI/Utils/PageManager/PageManager.h"
+#include "Common/TimerManager/TimerManager.h"
 
 lv_obj_t *progress_bar;
 
@@ -22,15 +23,15 @@ lv_obj_t *LaunchPage::create() {
     lv_bar_set_range(progress_bar, 0, 101);
     lv_obj_set_style_anim_duration(progress_bar, 2000, LV_PART_MAIN);
 
-    lv_timer_create([] (lv_timer_t *timer) {
+    TimerManager.t_register([] (lv_timer_t *timer) {
         lv_bar_set_value(progress_bar, 100, LV_ANIM_ON);
         lv_timer_delete(timer);
-    }, 400, nullptr);
+    }, 800, "LAUNCH/PROGRESS_BAR", nullptr, true);
 
-    lv_timer_create([] (lv_timer_t *timer) {
+    TimerManager.t_register([] (lv_timer_t *timer) {
         PageManager.p_push_black_fade("SYSTEM/HOME");
         lv_timer_delete(timer);
-    }, 3400, nullptr);
+    }, 3400, "LAUNCH/HOME", nullptr, true);
 
     return root;
 }

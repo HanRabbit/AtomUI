@@ -3,7 +3,7 @@
 lv_anim_t BL_anim;
 
 /* 背光动画过渡时间 ( ms ) */
-uint16_t duration = 200;
+const uint16_t duration = 200;
 
 TFT_BackLight_ TFT_BackLight;
 
@@ -26,7 +26,6 @@ int32_t TFT_BackLight_::get_BL_brightness() {
 void TFT_BackLight_::set_BL_brightness(int32_t brightness) {
     lv_anim_init(&BL_anim);
     lv_anim_set_var(&BL_anim, nullptr);
-//    lv_anim_set_path_cb(&BL_anim, lv_anim_path_ease_in);
     lv_anim_set_exec_cb(&BL_anim, BL_anim_callback);
     lv_anim_set_values(&BL_anim, get_BL_brightness(), brightness);
     lv_anim_set_duration(&BL_anim, duration);
@@ -41,7 +40,6 @@ void TFT_BackLight_::set_BL_brightness(int32_t brightness) {
 void TFT_BackLight_::set_BL_delay_brightness(int32_t brightness, uint16_t delay) {
     lv_anim_init(&BL_anim);
     lv_anim_set_var(&BL_anim, nullptr);
-//    lv_anim_set_path_cb(&BL_anim, lv_anim_path_ease_in);
     lv_anim_set_exec_cb(&BL_anim, BL_anim_callback);
     lv_anim_set_values(&BL_anim, get_BL_brightness(), brightness);
     lv_anim_set_duration(&BL_anim, duration);
