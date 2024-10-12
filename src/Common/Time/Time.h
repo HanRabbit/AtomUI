@@ -11,7 +11,7 @@
 #define GMT_OFFSET_SEC 28800
 #define DAYLIGHT_OFFSET_SEC 0
 
-enum time_info {t_year, t_month, t_day, t_hour, t_min, t_sec};
+enum time_info {t_year, t_month, t_day, t_hour, t_min, t_sec, t_wday};
 
 class Time_ {
 public:
@@ -26,6 +26,12 @@ public:
 
     /* 获取当前时间秒数 */
     String get_time_str_sec();
+
+    /* 获取当前星期字符串 */
+    String get_time_week();
+
+    /* 获取当前日期字符串 */
+    String get_time_date();
 
     /* 获取指定时间对象 */
     uint8_t get_time_info(time_info info);

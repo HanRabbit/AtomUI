@@ -22,9 +22,16 @@
 /* 系统启动时长消息 */
 #define MSG_ID_SYSTEM_START_DURATION    "SYSTEM/START_DURATION"
 
+/* 系统 APP 数量消息 */
+#define MSG_ID_SYSTEM_APP_NUM           "SYSTEM/APP_NUM"
+
 /* 系统时间消息 */
 #define MSG_ID_TIME_HM                  "TIME/HM"
 #define MSG_ID_TIME_SEC                 "TIME/SEC"
+#define MSG_ID_TIME_WDAY                "TIME/WDAY"
+#define MSG_ID_TIME_DAY                 "TIME/DAY"
+
+
 
 using namespace std;
 

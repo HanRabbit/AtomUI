@@ -1,4 +1,4 @@
-#ifndef ATOM_UI_LV9_APPS_H
+#ifndef ATOM_UI_LV9_HOMEAPPS_H
 #define ATOM_UI_LV9_APPS_H
 
 #include <Arduino.h>
@@ -11,11 +11,11 @@
 #include "UI/Res/Pages/LoadingPage/LoadingPage.h"
 #include "UI/Res/Pages/HomePage/HomePage.h"
 
-class Apps {
+class HomeApps {
 public:
     void init();
 
     void launch();
 };
 
-#endif // ATOM_UI_LV9_APPS_H
+#endif // ATOM_UI_LV9_HOMEAPPS_H

@@ -13,11 +13,10 @@ void publish_time_msg() {
     /* 注册定时器发送消息 */
     TimerManager.t_register([] (lv_timer_t *timer) {
         publisher.publish(MSG_ID_TIME_HM, Time.get_time_str(false).c_str());
-    }, 1000, MSG_ID_TIME_HM, nullptr, false);
-
-    TimerManager.t_register([] (lv_timer_t *timer) {
         publisher.publish(MSG_ID_TIME_SEC, Time.get_time_str_sec().c_str());
-    }, 1000, MSG_ID_TIME_SEC, nullptr, false);
+        publisher.publish(MSG_ID_TIME_WDAY, Time.get_time_week().c_str());
+        publisher.publish(MSG_ID_TIME_DAY, Time.get_time_date().c_str());
+    }, 1000, "TIMER/TIME_MSG_UPDATE", nullptr, false);
 }
 
 /**
@@ -30,6 +29,7 @@ void Time_::init() {
     /* 设置系统时间 */
     settimeofday(&now, nullptr);
 
+    /* 注册发布时间消息定时器 */
     publish_time_msg();
 }
 
@@ -77,6 +77,8 @@ uint8_t Time_::get_time_info(time_info info){
             return time_.tm_min;
         case t_sec:
             return time_.tm_sec;
+        case t_wday:
+            return time_.tm_wday;
         default:
             return -1;
     }
@@ -107,4 +109,29 @@ String Time_::get_time_str_sec() {
         /* 获取时间超时 */
         return "";
     }
+}
+
+/**
+ * @brief 获取当前时间星期字符串
+ * @return 星期字符串
+ */
+String Time_::get_time_week() {
+    switch (get_time_info(t_wday)) {
+        case 0: return "Sun.";
+        case 1: return "Mon.";
+        case 2: return "Tue.";
+        case 3: return "Wed.";
+        case 4: return "Thur.";
+        case 5: return "Fri.";
+        case 6: return "Sat.";
+        default: return "";
+    }
+}
+
+/**
+ * @brief 获取当前时间日期字符串
+ * @return 日期字符串
+ */
+String Time_::get_time_date() {
+    return String(get_time_info(t_year) + 1900) + "-" + String(get_time_info(t_month) + 1) + "-" + String(get_time_info(t_day));
 }

@@ -2,9 +2,9 @@
 #define IO_MAP_H
 
 /* Encoder */
-#define EC_BT 2
-#define EC_A  18
-#define EC_B  3
+#define ENC_BT 2
+#define ENC_A  18
+#define ENC_B  3
 
 /* Battery */
 #define BATTERY_PIN   5

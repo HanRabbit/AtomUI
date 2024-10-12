@@ -1,6 +1,7 @@
 #include "LoadingPage.h"
 #include "UI/Res/ResourcePool/ResourcePool.h"
 #include "UI/Themes/Themes.h"
+#include "Common/TimerManager/TimerManager.h"
 
 lv_obj_t *loading_label;
 
@@ -18,14 +19,14 @@ lv_obj_t *LoadingPage::create() {
     lv_obj_align(loading_label, LV_ALIGN_BOTTOM_MID, 0, 20);
     lv_obj_set_style_text_font(loading_label, &lv_font_montserrat_20, LV_PART_MAIN);
 
-    lv_timer_create([] (lv_timer_t *timer) {
+    /* 标签动画添加 */
+    TimerManager.t_register([] (lv_timer_t *timer) {
         lv_anim_t *loading_anim = nullptr;
         lv_obj_add_anim(loading_label, loading_anim, [] (void *obj, int32_t y) {
             lv_obj_set_pos((lv_obj_t *) obj, 0, y);
         }, 20, -10, 400, nullptr, lv_anim_path_ease_out);
         lv_timer_delete(timer);
-    }, 800, nullptr);
-
+    }, 800, "LOADING_ANIM", nullptr, true);
 
     return root;
 }

@@ -5,7 +5,7 @@
 
 Drivers drivers;
 Common common;
-Apps apps;
+HomeApps apps;
 
 void setup() {
     /* LVGL 初始化 */

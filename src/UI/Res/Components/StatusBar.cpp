@@ -16,10 +16,9 @@ void status_bar_update_wifi(String status) {
 
 void status_bar_update_battery(String percent) {
     /* 更新电池电量 */
-    int w = percent.toFloat() * 18.0;
+    int w = percent.toFloat() * 16.0;
     lv_obj_set_width(StatusBar.battery_inside, w);
 }
-
 
 void Status_Bar::create(lv_obj_t *root) {
     lv_obj_t *ui_status_bar = lv_obj_create(root);

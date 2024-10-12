@@ -1,6 +1,6 @@
 #include "Apps.h"
 
-void Apps::init() {
+void HomeApps::init() {
     PageManager.init();
 
     /* App 注册入口 */
@@ -9,6 +9,6 @@ void Apps::init() {
     PageManager.p_register("SYSTEM/HOME", HomePage::create, HomePage::del);
 }
 
-void Apps::launch() {
+void HomeApps::launch() {
     PageManager.p_push("SYSTEM/LAUNCH");
 }
