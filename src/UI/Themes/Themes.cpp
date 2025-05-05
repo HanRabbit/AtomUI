@@ -34,3 +34,10 @@ void lv_obj_add_anim(
     a->duration = time;
     lv_anim_start(a);
 }
+
+void lv_set_no_out_line_theme() {
+    lv_disp_t * disp = lv_disp_get_default();
+    lv_theme_t * theme = lv_theme_default_init(disp, lv_color_hex(0x000000), lv_palette_main(LV_PALETTE_BLUE),
+                                               true, LV_FONT_DEFAULT);
+    lv_disp_set_theme(disp, theme);
+}

@@ -12,6 +12,7 @@
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/src",
                 "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src",
+                "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/ESP32Encoder/src",
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/lvgl",
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/lvgl/src",
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/ArduinoJson/src",
@@ -255,6 +256,7 @@
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/src",
                     "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src",
+                    "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/ESP32Encoder/src",
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/lvgl",
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/lvgl/src",
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/ArduinoJson/src",
@@ -493,7 +495,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=60116",
+                "PLATFORMIO=60118",
                 "ARDUINO_ESP32S3_DEV",
                 "ARDUINO_USB_MODE=1",
                 "ARDUINO_RUNNING_CORE=1",

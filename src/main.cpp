@@ -5,7 +5,7 @@
 
 Drivers drivers;
 Common common;
-HomeApps apps;
+Apps apps;
 
 void setup() {
     /* LVGL 初始化 */
@@ -26,5 +26,5 @@ void setup() {
 }
 
 void loop() {
-    lv_task_handler(); /* let the GUI do its work */
+    lv_task_handler();      /* let the GUI do its work */
 }

@@ -4,6 +4,7 @@
 #include "Common/Log/Log.h"
 #include "Drivers/SD_Card/SD_Card.h"
 #include "Drivers/Battery/Battery.h"
+#include "Drivers/Encoder/Encoder.h"
 #include "Drivers/System/System.h"
 
 Display display;
@@ -17,4 +18,5 @@ void Drivers::init() {
     display.init();
     sd_card.init();
     battery.init();
+    encoder.encoder_drv_init();
 }

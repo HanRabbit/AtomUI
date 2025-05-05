@@ -50,7 +50,7 @@
     #define LV_MEM_SIZE (128 * 1024U)          /*[bytes]*/
 
     /*Size of the memory expand for `lv_malloc()` in bytes*/
-    #define LV_MEM_POOL_EXPAND_SIZE 0
+    #define LV_MEM_POOL_EXPAND_SIZE 2 * 1024U
 
     /*Set an address for the memory pool instead of allocating it as a normal array. Can be in external SRAM too.*/
     #define LV_MEM_ADR 0     /*0: unused*/
@@ -105,14 +105,14 @@
  * and can't be drawn in chunks. */
 
 /*The target buffer size for simple layer chunks.*/
-#define LV_DRAW_LAYER_SIMPLE_BUF_SIZE    (24 * 1024)   /*[bytes]*/
+#define LV_DRAW_LAYER_SIMPLE_BUF_SIZE    (512 * 1024)   /*[bytes]*/
 
 #define LV_USE_DRAW_SW 1
 #if LV_USE_DRAW_SW == 1
     /* Set the number of draw unit.
      * > 1 requires an operating system enabled in `LV_USE_OS`
      * > 1 means multiply threads will render the screen in parallel */
-    #define LV_DRAW_SW_DRAW_UNIT_CNT    1
+    #define LV_DRAW_SW_DRAW_UNIT_CNT    8
 
     /* Use Arm-2D to accelerate the sw render */
     #define LV_USE_DRAW_ARM2D_SYNC      0
@@ -128,13 +128,13 @@
         /*Allow buffering some shadow calculation.
         *LV_DRAW_SW_SHADOW_CACHE_SIZE is the max. shadow size to buffer, where shadow size is `shadow_width + radius`
         *Caching has LV_DRAW_SW_SHADOW_CACHE_SIZE^2 RAM cost*/
-        #define LV_DRAW_SW_SHADOW_CACHE_SIZE 0
+        #define LV_DRAW_SW_SHADOW_CACHE_SIZE 64
 
         /* Set number of maximally cached circle data.
         * The circumference of 1/4 circle are saved for anti-aliasing
         * radius * 4 bytes are used per circle (the most often used radiuses are saved)
         * 0: to disable caching */
-        #define LV_DRAW_SW_CIRCLE_CACHE_SIZE 4
+        #define LV_DRAW_SW_CIRCLE_CACHE_SIZE 64
     #endif
 
     #define  LV_USE_DRAW_SW_ASM     LV_DRAW_SW_ASM_NONE
@@ -642,7 +642,7 @@
 #define LV_USE_FS_FATFS 1
 #if LV_USE_FS_FATFS
     #define LV_FS_FATFS_LETTER 'H'     /*Set an upper cased letter on which the drive will accessible (e.g. 'A')*/
-    #define LV_FS_FATFS_CACHE_SIZE 64    /*>0 to cache this number of bytes in lv_fs_read()*/
+    #define LV_FS_FATFS_CACHE_SIZE 1024    /*>0 to cache this number of bytes in lv_fs_read()*/
 #endif
 
 /*API for memory-mapped file access. */
@@ -678,7 +678,7 @@
 #define LV_USE_GIF 1
 #if LV_USE_GIF
 /*GIF decoder accelerate*/
-#define LV_GIF_CACHE_DECODE_DATA 0
+#define LV_GIF_CACHE_DECODE_DATA 16 * 1024 * 1024U
 #endif
 
 

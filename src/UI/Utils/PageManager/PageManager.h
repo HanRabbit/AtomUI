@@ -28,7 +28,7 @@ static ScreenAnim PM_SCR_ANIM_MOVE_RIGHT = {LV_SCR_LOAD_ANIM_MOVE_RIGHT, SCREEN_
 class Page_Manager {
     bool first_push = true;
 public:
-    Page *p = (Page *) malloc(sizeof(Page));
+    Page *p = static_cast<Page *> (malloc(sizeof(Page)));
     Page *p_tail = p;
     Page *p_head = p;
 

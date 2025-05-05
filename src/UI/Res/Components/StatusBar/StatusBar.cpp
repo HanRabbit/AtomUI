@@ -1,11 +1,11 @@
 #include "StatusBar.h"
-
 #include "Common/TimerManager/TimerManager.h"
 #include "Common/MessageManager/Account.h"
+#include "UI/Utils/PageManager/PageManager.h"
 
 Status_Bar StatusBar;
 
-void status_bar_update_wifi(String status) {
+void status_bar_update_wifi(const String& status) {
     /* 更新 Wi-Fi 状态 */
     if (status == MSG_CONTENT_WIFI_CONNECTED) {
         lv_image_set_src(StatusBar.wifi_icon, COMP_WIFI_OPEN_IMG_PATH);
@@ -14,10 +14,14 @@ void status_bar_update_wifi(String status) {
     }
 }
 
-void status_bar_update_battery(String percent) {
+void status_bar_update_battery(const String& percent) {
     /* 更新电池电量 */
     int w = percent.toFloat() * 16.0;
     lv_obj_set_width(StatusBar.battery_inside, w);
+}
+
+void status_bar_update_app_title(const String& title) {
+    lv_label_set_text(StatusBar.info_label, title.c_str());
 }
 
 void Status_Bar::create(lv_obj_t *root) {
@@ -46,7 +50,7 @@ void Status_Bar::create(lv_obj_t *root) {
     lv_obj_clear_flag(back_button, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_add_event_cb(
             back_button, [](lv_event_t *e) {
-        PageManager.p_push("PAGE/HOME", PM_SCR_ANIM_MOVE_BOTTOM);
+        PageManager.p_push_black_fade("SYSTEM/HOME");
     }, LV_EVENT_RELEASED, nullptr);
 
     back_icon = lv_img_create(back_button);
@@ -113,6 +117,7 @@ void Status_Bar::create(lv_obj_t *root) {
     lv_obj_set_style_text_font(battery_perc_label, &lv_font_montserrat_12, LV_PART_MAIN);
 
     /* 订阅消息回调函数，刷新状态栏 */
-    subscriber.subcribe(MSG_ID_WIFI_STATUS, status_bar_update_wifi);
-    subscriber.subcribe(MSG_ID_BATTERY_PERCENT, status_bar_update_battery);
+    subscriber.subscribe(MSG_ID_WIFI_STATUS, {"SUB_CB_STATUS_BAR_UPDATE_WIFI", status_bar_update_wifi});
+    subscriber.subscribe(MSG_ID_BATTERY_PERCENT, {"SUB_CB_STATUS_BAR_UPDATE_BATTERY", status_bar_update_battery});
+    subscriber.subscribe(MSG_ID_SYSTEM_APP_TITLE, {"SUB_CB_STATUS_BAR_UPDATE_APP_TITLE", status_bar_update_app_title});
 }

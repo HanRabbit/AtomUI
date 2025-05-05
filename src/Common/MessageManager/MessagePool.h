@@ -25,20 +25,26 @@
 /* 系统 APP 数量消息 */
 #define MSG_ID_SYSTEM_APP_NUM           "SYSTEM/APP_NUM"
 
+/* 系统 APP 状态栏标题 */
+#define MSG_ID_SYSTEM_APP_TITLE         "SYSTEM/APP_TITLE"
+
 /* 系统时间消息 */
 #define MSG_ID_TIME_HM                  "TIME/HM"
 #define MSG_ID_TIME_SEC                 "TIME/SEC"
 #define MSG_ID_TIME_WDAY                "TIME/WDAY"
 #define MSG_ID_TIME_DAY                 "TIME/DAY"
 
-
-
 using namespace std;
 
 typedef struct {
+    String sub_cb_name;                 /* 订阅者回调函数唯一名称 */
+    function<void(String)> sub_cb;      /* 消息发布时订阅者回调函数 */
+} SubscriberFunc;
+
+typedef struct {
     /* 消息缓存池 */
-    unordered_map<string, string> pub_msg_buf;                              /* id = content */
-    unordered_map<string, vector<function<void(String)>>> sub_msg_buf;      /* id = func */
+    unordered_map<string, string> pub_msg_buf;                      /* id = content */
+    unordered_map<string, vector<SubscriberFunc>> sub_msg_buf;      /* id = func */
 } Message_Pool;
 
 extern Message_Pool MessagePool;

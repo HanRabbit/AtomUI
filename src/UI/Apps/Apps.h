@@ -10,8 +10,9 @@
 #include "UI/Res/Pages/LaunchPage/LaunchPage.h"
 #include "UI/Res/Pages/LoadingPage/LoadingPage.h"
 #include "UI/Res/Pages/HomePage/HomePage.h"
+#include "UI/Res/Pages/TestPage/TestPage.h"
 
-class HomeApps {
+class Apps {
 public:
     void init();
 

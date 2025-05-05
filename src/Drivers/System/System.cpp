@@ -10,4 +10,5 @@ void AtomSystem::launch_begin() {
 void AtomSystem::launch_end() {
     start_duration = (float) ((float) millis() / 1000) - start_time_stamp;
     publisher.publish(MSG_ID_SYSTEM_START_DURATION, String(start_duration));
+    publisher.publish(MSG_ID_SYSTEM_APP_TITLE, "ATOM");
 }

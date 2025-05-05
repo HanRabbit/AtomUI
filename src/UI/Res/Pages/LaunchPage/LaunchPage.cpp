@@ -7,8 +7,7 @@ lv_obj_t *progress_bar;
 
 lv_obj_t *LaunchPage::create() {
     /* 主屏幕创建 */
-    lv_obj_t *root;
-    root = lv_obj_create(nullptr);
+    lv_obj_t *root = lv_obj_create(nullptr);
     lv_obj_set_style_bg_color(root, lv_color_black(), LV_PART_MAIN);
 
     /* Atom Logo */
@@ -29,9 +28,9 @@ lv_obj_t *LaunchPage::create() {
     }, 800, "LAUNCH/PROGRESS_BAR", nullptr, true);
 
     TimerManager.t_register([] (lv_timer_t *timer) {
-        PageManager.p_push_black_fade("SYSTEM/HOME");
+        PageManager.p_push_black_fade("SYSTEM/LOADING");
         lv_timer_delete(timer);
-    }, 3400, "LAUNCH/HOME", nullptr, true);
+    }, 3400, "LAUNCH/LOADING", nullptr, true);
 
     return root;
 }

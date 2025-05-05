@@ -2,15 +2,20 @@
 #include "UI/Res/ResourcePool/ResourcePool.h"
 #include "UI/Themes/Themes.h"
 #include "Common/TimerManager/TimerManager.h"
+#include "UI/Utils/PageManager/PageManager.h"
 
 lv_obj_t *loading_label;
+lv_obj_t *loading_motion;
 
 lv_obj_t *LoadingPage::create() {
+    /* 先清除主屏幕上的组件 */
+    lv_obj_clean(lv_scr_act());
+
     lv_obj_t *root;
     root = lv_obj_create(nullptr);
     lv_obj_remove_flag(root, LV_OBJ_FLAG_SCROLLABLE);
 
-    lv_obj_t *loading_motion = lv_gif_create(root);
+    loading_motion = lv_gif_create(root);
     lv_gif_set_src(loading_motion, LOADING_GIF_PATH);
     lv_obj_align(loading_motion, LV_ALIGN_CENTER, 0, -10);
 
@@ -28,9 +33,15 @@ lv_obj_t *LoadingPage::create() {
         lv_timer_delete(timer);
     }, 800, "LOADING_ANIM", nullptr, true);
 
+    TimerManager.t_register([] (lv_timer_t *timer) {
+        PageManager.p_push_black_fade("SYSTEM/HOME");
+        lv_timer_delete(timer);
+    }, 5000, "LOADING/HOME", nullptr, true);
+
     return root;
 }
 
 lv_obj_t *LoadingPage::del() {
+    lv_obj_clean(loading_motion);
     return nullptr;
 }

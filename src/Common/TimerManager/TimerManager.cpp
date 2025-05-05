@@ -16,7 +16,7 @@ uint8_t Timer_Manager::t_register(lv_timer_cb_t t_xcb, uint32_t period, const ch
     tm_reg_timer.name = t_name;
     tm_reg_timer.id = timer_group.size();
 
-    lv_timer_create(t_xcb, period, user_data);
+    tm_reg_timer.timer = lv_timer_create(t_xcb, period, user_data);
 
     timer_group.push_back(tm_reg_timer);
 
