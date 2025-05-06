@@ -1,5 +1,6 @@
 #include "PageManager.h"
 #include "Drivers/Display/Display.h"
+#include "Common/MessageManager/Account.h"
 
 Page_Manager PageManager;
 
@@ -29,6 +30,7 @@ void Page_Manager::p_register(const char *name, lv_obj_t *(*create)(), lv_obj_t 
     p_tail->next = nullptr;
 
     pages_num ++;
+    publisher.publish(MSG_ID_SYSTEM_APP_NUM, String(pages_num));
 }
 
 /**

@@ -11,6 +11,7 @@
 #include "UI/Res/Pages/LoadingPage/LoadingPage.h"
 #include "UI/Res/Pages/HomePage/HomePage.h"
 #include "UI/Res/Pages/TestPage/TestPage.h"
+#include "UI/Res/Pages/FBControllerPage/FBControllerPage.h"
 
 class Apps {
 public:

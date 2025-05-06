@@ -16,5 +16,6 @@ void lv_obj_add_anim(
 );
 
 void lv_set_no_out_line_theme();
+void lv_set_default_theme();
 
 #endif // ATOM_UI_LV9_THEMES_H

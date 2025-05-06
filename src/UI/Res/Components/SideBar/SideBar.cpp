@@ -20,10 +20,10 @@ void Side_Bar::init(lv_obj_t *root) {
     lv_obj_set_flex_flow(ui_side_bar, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_flex_align(ui_side_bar, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_add_flag(ui_side_bar, LV_OBJ_FLAG_SCROLLABLE);
-    lv_obj_set_style_radius(ui_side_bar, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui_side_bar, 0, LV_PART_MAIN);
     lv_obj_set_style_bg_color(ui_side_bar, lv_color_hex(SIDE_BAR_BG_COLOR), LV_PART_MAIN);
-    lv_obj_set_style_bg_opa(ui_side_bar, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui_side_bar, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_side_bar, 255, LV_PART_MAIN);
+    lv_obj_set_style_border_width(ui_side_bar, 0, LV_PART_MAIN);
     lv_obj_set_scroll_snap_y(ui_side_bar, LV_SCROLL_SNAP_CENTER);
 
     lv_obj_set_style_pad_left(ui_side_bar, 0, LV_PART_SCROLLBAR);
@@ -68,7 +68,7 @@ void Side_Bar::add_button(const char *name, const char *page_name, const char *i
     lv_obj_add_flag(ui_side_bar_btn, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
     lv_obj_clear_flag(ui_side_bar_btn, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_add_flag(ui_side_bar_btn, LV_OBJ_FLAG_SNAPPABLE);
-    lv_obj_set_style_radius(ui_side_bar_btn, 6, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui_side_bar_btn, 6, LV_PART_MAIN);
     lv_obj_set_style_bg_color(ui_side_bar_btn, lv_color_hex(SIDE_BAR_BG_COLOR), LV_PART_MAIN);
     lv_obj_set_style_bg_color(ui_side_bar_btn, lv_color_hex(0x2A82E4), LV_STATE_FOCUSED);
     lv_obj_set_style_bg_opa(ui_side_bar_btn, 255, LV_PART_MAIN);
@@ -92,7 +92,6 @@ void Side_Bar::add_button(const char *name, const char *page_name, const char *i
         if (TimerManager.t_seek("TIMER/SIDE_BAR_RESET").timer != nullptr) {
             lv_timer_reset(TimerManager.t_seek("TIMER/SIDE_BAR_RESET").timer);
         }
-        // LV_LOG_USER(TimerManager.t_seek("TIMER/SIDE_BAR_RESET").name);
     }, LV_EVENT_FOCUSED, ui_side_bar);
 
     lv_obj_t *ui_side_bar_btn_img = lv_img_create(ui_side_bar_btn);

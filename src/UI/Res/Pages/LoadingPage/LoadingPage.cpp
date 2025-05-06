@@ -1,7 +1,8 @@
 #include "LoadingPage.h"
+#include "Common/TimerManager/TimerManager.h"
+#include "Drivers/System/System.h"
 #include "UI/Res/ResourcePool/ResourcePool.h"
 #include "UI/Themes/Themes.h"
-#include "Common/TimerManager/TimerManager.h"
 #include "UI/Utils/PageManager/PageManager.h"
 
 lv_obj_t *loading_label;
@@ -34,6 +35,8 @@ lv_obj_t *LoadingPage::create() {
     }, 800, "LOADING_ANIM", nullptr, true);
 
     TimerManager.t_register([] (lv_timer_t *timer) {
+        /* 系统启动结束，发布系统状态消息，进入主界面 */
+        atom_system.launch_end();
         PageManager.p_push_black_fade("SYSTEM/HOME");
         lv_timer_delete(timer);
     }, 5000, "LOADING/HOME", nullptr, true);

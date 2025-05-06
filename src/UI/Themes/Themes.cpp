@@ -41,3 +41,10 @@ void lv_set_no_out_line_theme() {
                                                true, LV_FONT_DEFAULT);
     lv_disp_set_theme(disp, theme);
 }
+
+void lv_set_default_theme() {
+    lv_disp_t * disp = lv_disp_get_default();
+    lv_theme_t * theme = lv_theme_default_init(disp, lv_color_hex(0x747474), lv_palette_main(LV_PALETTE_BLUE),
+                                              true, LV_FONT_DEFAULT);
+    lv_disp_set_theme(disp, theme);
+}

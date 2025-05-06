@@ -1,10 +1,8 @@
 #include "HomePage.h"
 #include "view.h"
-#include "Drivers/System/System.h"
 #include "UI/Apps/HomeApps.h"
 #include "UI/Res/ResourcePool/ResourcePool.h"
 #include "Common/TimerManager/TimerManager.h"
-#include "UI/Utils/PageManager/PageManager.h"
 #include "Common/MessageManager/Account.h"
 
 lv_obj_t *root;
@@ -14,16 +12,15 @@ lv_obj_t *HomePage::create() {
     lv_obj_set_flex_flow(root, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(root, LV_FLEX_ALIGN_END, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
 
+    publisher.publish(MSG_ID_SYSTEM_APP_TITLE, "ATOM");
+
     /* 创建主页视图 */
     create_home_view(root);
     HomeApps.init(root);
 
     /* 创建主页 APPS */
     HomeApps.register_app("TEST", "APP/TEST", COMP_WIFI_OPEN_IMG_PATH);
-    HomeApps.register_app("TEST2", "APP/TEST", COMP_BACK_IMG_PATH);
-
-    /* 系统启动结束，发布系统状态消息，进入主界面 */
-    atom_system.launch_end();
+    HomeApps.register_app("FB_CONTROLLER", "APP/FB_CONTROLLER", HOME_APPS_IMG_PATH);
 
     return root;
 }
