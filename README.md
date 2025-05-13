@@ -39,9 +39,8 @@ Atom-Pocket 是一个基于ESP32的物联网终端平台，采用模块化设计
 - 锂电池
 
 ### 软件依赖
-- ESP-IDF 开发环境
+- PlatformIO 开发环境
 - LVGL 图形库
-- FreeRTOS
 
 ### 编译与烧录
 ```bash
