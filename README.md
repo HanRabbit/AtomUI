@@ -42,15 +42,6 @@ Atom-Pocket 是一个基于ESP32的物联网终端平台，采用模块化设计
 - PlatformIO 开发环境
 - LVGL 图形库
 
-### 编译与烧录
-```bash
-git clone https://github.com/your-repo/Atom-Pocket.git
-cd Atom-Pocket
-idf.py set-target esp32
-idf.py build
-idf.py -p /dev/ttyUSB0 flash monitor
-```
-
 ## 功能特性
 
 - 模块化设计，易于扩展
