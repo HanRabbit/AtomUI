@@ -2,6 +2,8 @@
 #include "Common/Common.h"
 #include "Drivers/Drivers.h"
 #include "UI/Apps/Apps.h"
+#include <esp_now.h>
+#include <WiFi.h>
 
 Drivers drivers;
 Common common;

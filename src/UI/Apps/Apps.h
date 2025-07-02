@@ -12,6 +12,7 @@
 #include "UI/Res/Pages/HomePage/HomePage.h"
 #include "UI/Res/Pages/TestPage/TestPage.h"
 #include "UI/Res/Pages/FBControllerPage/FBControllerPage.h"
+#include "UI/Res/Pages/WiFiConfigPage/WiFiConfigPage.h"
 
 class Apps {
 public:

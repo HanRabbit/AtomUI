@@ -19,7 +19,7 @@ lv_obj_t *HomePage::create() {
     HomeApps.init(root);
 
     /* 创建主页 APPS */
-    HomeApps.register_app("TEST", "APP/TEST", COMP_WIFI_OPEN_IMG_PATH);
+    HomeApps.register_app("WIFI_CONFIG", "APP/WIFI_STATUS", COMP_WIFI_OPEN_IMG_PATH);
     HomeApps.register_app("FB_CONTROLLER", "APP/FB_CONTROLLER", HOME_APPS_IMG_PATH);
 
     return root;

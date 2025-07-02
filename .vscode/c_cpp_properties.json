@@ -10,8 +10,8 @@
             "includePath": [
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/include",
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/src",
-                "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src",
+                "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/ESP32Encoder/src",
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/lvgl",
                 "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/lvgl/src",
@@ -254,8 +254,8 @@
                 "path": [
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/include",
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/src",
-                    "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/SD_MMC/src",
+                    "/Users/han/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/ESP32Encoder/src",
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/lvgl",
                     "/Users/han/Projects/Embedded/Atom/Software/Atom_UI-lv9/.pio/libdeps/esp32-s3-devkitc-1/lvgl/src",

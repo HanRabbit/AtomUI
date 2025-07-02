@@ -18,6 +18,9 @@ public:
     /* Wi-Fi 状态更新 */
     const char *status_update();
 
+    const char *get_ssid();
+    const char *get_password();
+
     void wifi_write_config(const char *ssid, const char *password);
 };
 

@@ -28,9 +28,9 @@ lv_obj_t *LaunchPage::create() {
     }, 800, "LAUNCH/PROGRESS_BAR", nullptr, true);
 
     TimerManager.t_register([] (lv_timer_t *timer) {
-        PageManager.p_push_black_fade("SYSTEM/LOADING");
+        PageManager.p_push_black_fade("SYSTEM/HOME");
         lv_timer_delete(timer);
-    }, 3400, "LAUNCH/LOADING", nullptr, true);
+    }, 3400, "LAUNCH/HOME", nullptr, true);
 
     return root;
 }

@@ -256,14 +256,14 @@ int32_t lv_anim_path_ease_in(const lv_anim_t * a)
 
 int32_t lv_anim_path_ease_out(const lv_anim_t * a)
 {
-    return lv_anim_path_cubic_bezier(a, LV_BEZIER_VAL_FLOAT(0), LV_BEZIER_VAL_FLOAT(0),
-                                     LV_BEZIER_VAL_FLOAT(0.58), LV_BEZIER_VAL_FLOAT(1));
+    return lv_anim_path_cubic_bezier(a, LV_BEZIER_VAL_FLOAT(0), LV_BEZIER_VAL_FLOAT(0.8),
+                                     LV_BEZIER_VAL_FLOAT(0.3), LV_BEZIER_VAL_FLOAT(1));
 }
 
 int32_t lv_anim_path_ease_in_out(const lv_anim_t * a)
 {
-    return lv_anim_path_cubic_bezier(a, LV_BEZIER_VAL_FLOAT(0.42), LV_BEZIER_VAL_FLOAT(0),
-                                     LV_BEZIER_VAL_FLOAT(0.58), LV_BEZIER_VAL_FLOAT(1));
+    return lv_anim_path_cubic_bezier(a, LV_BEZIER_VAL_FLOAT(0.8), LV_BEZIER_VAL_FLOAT(0),
+                                     LV_BEZIER_VAL_FLOAT(0.2), LV_BEZIER_VAL_FLOAT(1));
 }
 
 int32_t lv_anim_path_overshoot(const lv_anim_t * a)

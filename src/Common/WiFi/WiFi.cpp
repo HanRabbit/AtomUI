@@ -3,6 +3,8 @@
 #include "Common/MessageManager/Account.h"
 #include "Common/TimerManager/TimerManager.h"
 #include "Common/Time/Time.h"
+#include "Common/Log/Log.h"
+#include <esp_now.h>
 
 WiFi_OP WiFi_Op;
 
@@ -11,7 +13,7 @@ WiFi_OP WiFi_Op;
  */
 void WiFi_OP::init() {
     /* 调试专用 */
-    // wifi_write_config("iPhone4", "05133315");
+    // wifi_write_config("OpenWrt", "");
 
     /* 获取 Wi-Fi 配置文件 */
     JsonDocument wifi_config_json = FileManager.cfg_read(FILE_CONFIG_WIFI_PATH);
@@ -23,6 +25,8 @@ void WiFi_OP::init() {
 
     /* Wi-Fi 开始连接 */
     WiFi.begin(SSID, PASSWORD);
+
+    WiFi.mode(WIFI_STA);
 
     /* 注册 Wi-Fi 状态刷新定时器 */
     TimerManager.t_register([] (lv_timer_t *timer) {

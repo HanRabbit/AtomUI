@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "*.tcc": "cpp",
-        "algorithm": "cpp"
-    }
+        "algorithm": "cpp",
+        "string_view": "cpp",
+        "string": "cpp"
+    },
+    "python.languageServer": "None",
+    "openmv.languageServer": "Pyright"
 }

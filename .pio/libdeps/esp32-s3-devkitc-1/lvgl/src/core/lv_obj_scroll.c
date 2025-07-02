@@ -309,6 +309,7 @@ void lv_obj_scroll_by(lv_obj_t * obj, int32_t dx, int32_t dy, lv_anim_enable_t a
         lv_anim_t a;
         lv_anim_init(&a);
         lv_anim_set_var(&a, obj);
+        lv_anim_set_path_cb(&a, lv_anim_path_bounce);
         lv_anim_set_completed_cb(&a, scroll_completed_completed_cb);
 
         if(dx) {

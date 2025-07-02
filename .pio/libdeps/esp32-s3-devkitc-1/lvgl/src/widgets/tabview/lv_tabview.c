@@ -294,7 +294,7 @@ static void button_clicked_event_cb(lv_event_t * e)
 
     lv_obj_t * tv = lv_obj_get_parent(lv_obj_get_parent(button));
     int32_t idx = lv_obj_get_index_by_type(button, &lv_button_class);
-    lv_tabview_set_active(tv, idx, LV_ANIM_OFF);
+    lv_tabview_set_active(tv, idx, LV_ANIM_ON);
 }
 
 static void cont_scroll_end_event_cb(lv_event_t * e)

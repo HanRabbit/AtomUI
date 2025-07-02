@@ -181,5 +181,6 @@ lv_obj_t *FBControllerPage::create() {
 }
 
 lv_obj_t *FBControllerPage::del() {
+    // lv_obj_clean(root);
     return nullptr;
 }

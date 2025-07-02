@@ -55,8 +55,6 @@ String Time_::get_time_str(bool has_sec) {
     return time_str;
 }
 
-
-
 /**
  *
  * @param info 时间类型
@@ -89,6 +87,7 @@ uint8_t Time_::get_time_info(time_info info){
  * @return true: 校准完成, false: 未完成
  */
 bool Time_::time_adjusted() const {
+    /* 时光倒流 ~ */
     if (time_.tm_year == 2023 - 1900)
         return false;
     else

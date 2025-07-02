@@ -10,7 +10,11 @@ void Apps::init() {
 
     /* App 注册入口 */
     PageManager.p_register("APP/TEST",TestPage::create, TestPage::del);
+
     PageManager.p_register("APP/FB_CONTROLLER", FBControllerPage::create, FBControllerPage::del);
+
+    PageManager.p_register("APP/WIFI_STATUS", WiFiConfigPage::create, WiFiConfigPage::del);
+    PageManager.p_register("APP/WIFI_CONFIG", ConfigViewPage::create, ConfigViewPage::del);
 }
 
 /* 配置 ATOM 启动页面处理 */

@@ -50,6 +50,7 @@ void push_page(lv_event_t *event) {
     auto *page_name = static_cast<const char *> (event -> user_data);
     /* 这里由于 ESP32-S3 算力有限，所以采用背光黑场渐变的转场方式 */
     PageManager.p_push_black_fade(page_name);
+    // PageManager.p_push(page_name, PM_SCR_ANIM_MOVE_TOP);
 }
 
 /**

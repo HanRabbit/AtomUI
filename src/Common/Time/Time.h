@@ -7,7 +7,7 @@
 #define GET_TIME_OUT 50
 
 /* 时间校准常量 */
-#define NTP_SERVER "ntp.aliyun.com"
+#define NTP_SERVER "ntp.ntsc.ac.cn"
 #define GMT_OFFSET_SEC 28800
 #define DAYLIGHT_OFFSET_SEC 0
 
